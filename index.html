@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>GH-300 Practice — Microsoft-style Exam</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f3f6fb;
+    --card:#fff;
+    --accent:#0b63ff;
+    --muted:#6b7280;
+    --success:#18a558;
+    --danger:#d64545;
+  }
+  *{box-sizing:border-box}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; background:var(--bg); color:#0f172a;}
+  .wrap{max-width:1100px;margin:26px auto;padding:16px;}
+  .exam{display:grid;grid-template-columns:260px 1fr;gap:18px}
+  .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+  .sidebar .logo{display:flex;align-items:center;gap:10px}
+  .logo .dot{width:36px;height:36px;background:var(--accent);border-radius:8px;box-shadow:0 6px 18px rgba(11,99,255,0.12)}
+  h1{font-size:16px;margin:0}
+  .meta{color:var(--muted);font-size:13px;margin-top:6px}
+  .select-test{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+  .btn{padding:8px 12px;border-radius:8px;border:1px solid #e6eef9;background:#fff;cursor:pointer;font-weight:600}
+  .btn.primary{background:var(--accent);color:#fff;border:0}
+  .btn.ghost{background:transparent;border:1px dashed #dbeafe;color:var(--accent)}
+  .settings{margin-top:12px;color:var(--muted);font-size:13px}
+  .timer-input{width:100%;display:flex;gap:8px;align-items:center;margin-top:8px}
+  input[type=number]{width:80px;padding:8px;border-radius:8px;border:1px solid #e6eef9}
+  .start-row{margin-top:14px;display:flex;gap:8px}
+  /* main area */
+  .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .timer-display{font-weight:700;color:var(--accent);font-size:18px}
+  .qpanel{margin-top:14px}
+  .qhead{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .qindex{font-weight:600}
+  .qtext{font-size:16px;margin-top:10px;min-height:68px}
+  .instruction{color:var(--muted);font-size:13px;margin-top:6px}
+  .options{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+  .opt{padding:12px;border-radius:10px;border:1px solid #e6eef9;background:#fff;text-align:left;cursor:pointer;display:flex;gap:10px;align-items:flex-start}
+  .opt.disabled{opacity:0.8;cursor:default}
+  .opt .key{width:34px;height:34px;border-radius:8px;background:#f1f5fb;color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700}
+  .opt.correct{border:2px solid var(--success);background:#f0fff4}
+  .opt.wrong{border:2px solid var(--danger);background:#fff5f5}
+  .nav{display:flex;gap:8px;margin-top:12px;align-items:center}
+  .qnumbers{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:12px}
+  .qnum{padding:8px;border-radius:6px;background:#f8fafc;text-align:center;border:1px solid #e6eef9;cursor:pointer}
+  .qnum.answered{background:#eef2ff;border-color:var(--accent);color:var(--accent)}
+  .qnum.correct{background:#ecfdf5;border-color:var(--success);color:var(--success)}
+  .qnum.wrong{background:#fff7f7;border-color:var(--danger);color:var(--danger)}
+  .controls{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+  .footer{margin-top:14px;color:var(--muted);font-size:13px}
+  /* result */
+  .result{padding:12px;border-radius:8px;margin-top:12px;background:linear-gradient(90deg,#f8fafc,#ffffff)}
+  .breakdown{margin-top:12px}
+  .break-item{padding:10px;border-radius:8px;border:1px solid #eef2ff;margin-bottom:8px;background:#fff}
+  /* responsive */
+  @media(max-width:880px){
+    .exam{grid-template-columns:1fr; }
+    .qnumbers{grid-template-columns:repeat(8,1fr)}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="exam">
+      <!-- SIDEBAR -->
+      <div class="card sidebar">
+        <div class="logo">
+          <div class="dot"></div>
+          <div>
+            <h1>GH-300 Practice Test</h1>
+            <div class="meta">Microsoft-style exam UI</div>
+          </div>
+        </div>
+
+        <div class="select-test">
+          <label><strong>Select test file</strong></label>
+          <select id="test-select" style="padding:8px;border-radius:8px;border:1px solid #e6eef9;">
+            <option value="q1.txt">Test 1 — Q1 (1-40)</option>
+            <option value="q2.txt">Test 2 — Q2 (41-80)</option>
+            <option value="q3.txt">Test 3 — Q3 (81-120)</option>
+          </select>
+
+          <div class="settings">
+            <div><strong>Timer (minutes)</strong></div>
+            <div class="timer-input">
+              <input id="timer-mins" type="number" min="0" value="10"/>
+              <div class="meta">0 = no timer</div>
+            </div>
+
+            <div class="start-row">
+              <button id="load-btn" class="btn">Load & Preview</button>
+              <button id="start-btn" class="btn primary">Start Test</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">
+            Tips:
+            <ul style="padding-left:18px;margin:6px 0 0 0;">
+              <li>Place <code>q1.txt</code>, <code>q2.txt</code>, <code>q3.txt</code> beside this file.</li>
+              <li>Files must be valid JSON arrays (see your q*.json)</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MAIN -->
+      <div class="card main">
+        <div class="topbar">
+          <div>
+            <div id="status-title"><strong>Select a test and click Start</strong></div>
+            <div id="status-sub" class="meta">Questions: <span id="total-questions">0</span> · Answered: <span id="answered-count">0</span></div>
+          </div>
+          <div style="text-align:right">
+            <div class="timer-display" id="timer-display">—</div>
+            <div class="meta" id="progress-meta"></div>
+          </div>
+        </div>
+
+        <div id="test-area" style="display:none">
+          <div style="display:flex;gap:18px;align-items:flex-start">
+            <div style="flex:1">
+              <div class="qpanel">
+                <div class="qhead">
+                  <div class="qindex" id="q-index">Question 1</div>
+                  <div class="instruction" id="q-instruction"></div>
+                </div>
+                <div class="qtext" id="q-text">Loading…</div>
+                <div class="options" id="options"></div>
+
+                <div class="controls">
+                  <div>
+                    <button id="prev-btn" class="btn">Previous</button>
+                    <button id="next-btn" class="btn">Next</button>
+                  </div>
+                  <div>
+                    <button id="finish-btn" class="btn ghost">Finish & Grade</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="width:240px">
+              <div style="font-weight:600">Questions</div>
+              <div class="qnumbers" id="q-numbers"></div>
+
+              <div style="margin-top:12px">
+                <div class="meta">Legend</div>
+                <div style="display:flex;gap:8px;margin-top:6px">
+                  <div style="padding:6px;border-radius:6px;background:#eef2ff;border:1px solid var(--accent);color:var(--accent);font-weight:600">Answered</div>
+                  <div style="padding:6px;border-radius:6px;background:#ecfdf5;border:1px solid var(--success);color:var(--success);font-weight:600">Correct</div>
+                  <div style="padding:6px;border-radius:6px;background:#fff7f7;border:1px solid var(--danger);color:var(--danger);font-weight:600">Wrong</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="result-area" style="display:none"></div>
+        </div>
+
+        <div class="footer">Runs entirely in-browser. No network required except to fetch the local files you place beside this HTML.</div>
+      </div>
+    </div>
+  </div>
+
+<script>
+/* Exam app
+ - Fetches chosen test file (q1.txt / q2.txt / q3.txt)
+ - Handles single- and multi-select questions
+ - Enforces selection count when instruction says "Choose two/three/etc."
+ - Timer support; shows minutes:seconds
+ - Final grading: exact-match required for multi-select
+ - Per-question breakdown displayed after finishing
+*/
+
+let QUESTIONS = [];
+let currentIndex = 0;
+let selections = {}; // id -> array of selected option keys
+let locked = {}; // id -> boolean (question locked after evaluation)
+let score = 0;
+let timerId = null;
+let timeLeft = 0;
+
+const startBtn = document.getElementById('start-btn');
+const loadBtn  = document.getElementById('load-btn');
+const testSelect = document.getElementById('test-select');
+const timerMinsInput = document.getElementById('timer-mins');
+const statusTitle = document.getElementById('status-title');
+const totalEl = document.getElementById('total-questions');
+const answeredEl = document.getElementById('answered-count');
+const timerDisplay = document.getElementById('timer-display');
+const testArea = document.getElementById('test-area');
+const qIndexEl = document.getElementById('q-index');
+const qTextEl = document.getElementById('q-text');
+const qInstructionEl = document.getElementById('q-instruction');
+const optionsEl = document.getElementById('options');
+const qNumbersEl = document.getElementById('q-numbers');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const finishBtn = document.getElementById('finish-btn');
+const resultArea = document.getElementById('result-area');
+const progressMeta = document.getElementById('progress-meta');
+
+loadBtn.onclick = ()=> loadPreview();
+startBtn.onclick = ()=> startTest();
+prevBtn.onclick = ()=> { if(currentIndex>0) showQuestion(currentIndex-1); };
+nextBtn.onclick = ()=> { if(currentIndex<QUESTIONS.length-1) showQuestion(currentIndex+1); };
+finishBtn.onclick = ()=> finishTest();
+
+function showMessage(msg){
+  statusTitle.innerHTML = "<strong>"+msg+"</strong>";
+}
+
+async function loadPreview(){
+  const fname = testSelect.value;
+  try {
+    const data = await fetchLocalJSON(fname);
+    QUESTIONS = data;
+    resetState();
+    totalEl.textContent = QUESTIONS.length;
+    showMessage('Preview loaded — ready to start');
+    populateQNumbers();
+    renderQuestionPreview(0);
+  } catch(e){
+    alert('Failed to load file: '+e.message);
+  }
+}
+
+async function fetchLocalJSON(name){
+  // try direct fetch; file must be in same folder
+  const resp = await fetch(name);
+  if(!resp.ok) throw new Error('file not found: ' + name + '. Put it beside this HTML and ensure valid JSON.');
+  const text = await resp.text();
+  // it might be .txt containing JSON; try parse
+  try {
+    return JSON.parse(text);
+  } catch(err){
+    // try to fix common trailing commas? better to throw
+    throw new Error('Invalid JSON in ' + name + ' — open it and make sure it is a single JSON array of question objects.');
+  }
+}
+
+function resetState(){
+  selections = {};
+  locked = {};
+  score = 0;
+  currentIndex = 0;
+  if(timerId){ clearInterval(timerId); timerId = null; }
+  timerDisplay.textContent = '—';
+  answeredEl.textContent = '0';
+  resultArea.style.display = 'none';
+  testArea.style.display = 'none';
+  // clear UI
+  optionsEl.innerHTML = '';
+  qNumbersEl.innerHTML = '';
+}
+
+function populateQNumbers(){
+  qNumbersEl.innerHTML = '';
+  for(let i=0;i<QUESTIONS.length;i++){
+    const btn = document.createElement('div');
+    btn.className = 'qnum';
+    btn.textContent = i+1;
+    btn.dataset.idx = i;
+    btn.onclick = ()=> showQuestion(Number(btn.dataset.idx));
+    qNumbersEl.appendChild(btn);
+  }
+}
+
+function renderQuestionPreview(idx){
+  const q = QUESTIONS[idx];
+  qIndexEl.textContent = `Preview Q ${idx+1}`;
+  qTextEl.textContent = q.question || '(no text)';
+  qInstructionEl.textContent = q.instruction || '';
+  optionsEl.innerHTML = '';
+  for(const k of Object.keys(q.options || {})){
+    const opt = document.createElement('div');
+    opt.className = 'opt disabled';
+    opt.innerHTML = `<div class="key">${k}</div><div>${q.options[k]}</div>`;
+    optionsEl.appendChild(opt);
+  }
+}
+
+function startTest(){
+  if(QUESTIONS.length===0){
+    alert('Load a test file first (Load & Preview).');
+    return;
+  }
+  const mins = Number(timerMinsInput.value) || 0;
+  timeLeft = mins>0 ? mins*60 : 0;
+  if(timeLeft>0){
+    timerDisplay.textContent = formatTime(timeLeft);
+    timerId = setInterval(()=> {
+      timeLeft--;
+      timerDisplay.textContent = formatTime(timeLeft);
+      if(timeLeft<=0){
+        clearInterval(timerId);
+        finishTest();
+      }
+    },1000);
+  } else {
+    timerDisplay.textContent = '—';
+  }
+  // show test area
+  testArea.style.display = 'block';
+  resultArea.style.display = 'none';
+  showMessage('Test in progress');
+  totalEl.textContent = QUESTIONS.length;
+  showQuestion(0);
+  updateProgressMeta();
+}
+
+function formatTime(s){
+  const m = Math.floor(s/60); const sec = s%60;
+  return m + ':' + (sec<10? '0'+sec : sec);
+}
+
+function showQuestion(idx){
+  currentIndex = idx;
+  const q = QUESTIONS[idx];
+  qIndexEl.textContent = `Question ${idx+1} / ${QUESTIONS.length}`;
+  qTextEl.textContent = q.question || '(no question text)';
+  qInstructionEl.textContent = q.instruction || '';
+  optionsEl.innerHTML = '';
+  const letters = Object.keys(q.options || {});
+  const requiredCount = Array.isArray(q.correct) ? q.correct.length : 1;
+  // restore previous selection
+  const prevSel = selections[q.id] || [];
+  // create option nodes
+  for(const letter of letters){
+    const opt = document.createElement('div');
+    opt.className = 'opt';
+    opt.dataset.key = letter;
+    opt.innerHTML = `<div class="key">${letter}</div><div>${q.options[letter]}</div>`;
+    // if locked -> disabled else attach click
+    if(locked[q.id]){
+      opt.classList.add('disabled');
+    } else {
+      opt.onclick = ()=> handleSelect(q, letter, opt);
+    }
+    // visually mark selected in preview
+    if(prevSel.includes(letter)){
+      opt.style.outline = '2px solid '+getComputedStyle(document.documentElement).getPropertyValue('--accent') || 'blue';
+    }
+    optionsEl.appendChild(opt);
+  }
+  // navigation enable/disable
+  prevBtn.disabled = idx===0;
+  nextBtn.disabled = idx>=QUESTIONS.length-1;
+  answeredEl.textContent = Object.keys(selections).length;
+  highlightQnums();
+  updateProgressMeta();
+}
+
+function handleSelect(question, letter, optNode){
+  if(locked[question.id]) return;
+  const correct = (Array.isArray(question.correct) ? question.correct.map(x=>String(x).toUpperCase()) : [String(question.correct).toUpperCase()]);
+  const multi = correct.length>1;
+  selections[question.id] = selections[question.id] || [];
+  const sel = selections[question.id];
+
+  if(!multi){
+    // single-choice -> lock instantly
+    selections[question.id] = [letter];
+    locked[question.id] = true;
+    // mark and score
+    markButtons(question, selections[question.id]);
+    if(correct.includes(letter)) score++;
+  } else {
+    // multi: toggle selection
+    if(sel.includes(letter)){
+      selections[question.id] = sel.filter(x=>x!==letter);
+    } else {
+      selections[question.id].push(letter);
+    }
+    // visual toggles
+    for(const node of optionsEl.querySelectorAll('.opt')){
+      node.style.outline = '';
+      if((selections[question.id]||[]).includes(node.dataset.key)) node.style.outline = '2px solid var(--accent)';
+    }
+    // if user selected exactly required number -> evaluate (exact-match)
+    const selNow = Array.from(new Set(selections[question.id]));
+    if(selNow.length === correct.length){
+      locked[question.id] = true;
+      markButtons(question, selNow);
+      // evaluate exact match
+      const correctSet = new Set(correct);
+      const selSet = new Set(selNow);
+      const allMatch = [...correctSet].every(x=>selSet.has(x)) && [...selSet].every(x=>correctSet.has(x));
+      if(allMatch) score++;
+    }
+  }
+  answeredEl.textContent = Object.keys(selections).length;
+  highlightQnums();
+  updateProgressMeta();
+}
+
+function markButtons(question, selectedLetters){
+  const correct = (Array.isArray(question.correct) ? question.correct.map(x=>String(x).toUpperCase()) : [String(question.correct).toUpperCase()]);
+  for(const node of optionsEl.querySelectorAll('.opt')){
+    node.classList.add('disabled');
+    const k = node.dataset.key;
+    if(correct.includes(k)) node.classList.add('correct');
+    if(selectedLetters.includes(k) && !correct.includes(k)) node.classList.add('wrong');
+  }
+}
+
+function highlightQnums(){
+  // update sidebar numbers
+  const nodes = qNumbersEl.querySelectorAll('.qnum');
+  for(const n of nodes){
+    const idx = Number(n.dataset.idx);
+    const q = QUESTIONS[idx];
+    n.classList.remove('answered','correct','wrong');
+    if(selections[q.id]){
+      n.classList.add('answered');
+      // if locked and evaluated then mark correct/wrong
+      if(locked[q.id]){
+        // evaluate correctness
+        const correct = (Array.isArray(q.correct) ? q.correct.map(x=>String(x).toUpperCase()) : [String(q.correct).toUpperCase()]);
+        const sel = selections[q.id] || [];
+        const setA = new Set(correct);
+        const setB = new Set(sel);
+        const ok = sel.length===correct.length && [...setA].every(x=>setB.has(x)) && [...setB].every(x=>setA.has(x));
+        if(ok) n.classList.add('correct');
+        else n.classList.add('wrong');
+      }
+    }
+  }
+}
+
+function updateProgressMeta(){
+  const answered = Object.keys(selections).length;
+  const total = QUESTIONS.length;
+  progressMeta.textContent = `Answered ${answered} / ${total}`;
+}
+
+function finishTest(){
+  if(timerId){ clearInterval(timerId); timerId=null; }
+  // grade remaining unlocked multi-answers: they count as answered only if selection matches exactly and locked earlier; else they are treated as answered but not correct
+  // (scoring already incremented only when exact matches were locked)
+  // Build results
+  const total = QUESTIONS.length;
+  let correctCount = 0;
+  const breakdown = [];
+  for(const q of QUESTIONS){
+    const correct = (Array.isArray(q.correct) ? q.correct.map(x=>String(x).toUpperCase()) : [String(q.correct).toUpperCase()]);
+    const sel = selections[q.id] || [];
+    const setA = new Set(correct);
+    const setB = new Set(sel);
+    const ok = sel.length===correct.length && [...setA].every(x=>setB.has(x)) && [...setB].every(x=>setA.has(x));
+    if(ok) correctCount++;
+    breakdown.push({ id: q.id, question: q.question, correct: correct, selected: sel, isCorrect: ok});
+  }
+  // show results
+  testArea.style.display = 'block';
+  resultArea.style.display = 'block';
+  resultArea.innerHTML = '';
+  const percent = Math.round((correctCount/total)*10000)/100;
+  const resBox = document.createElement('div');
+  resBox.className = 'result';
+  resBox.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center">
+      <div>
+        <div style="font-size:18px;font-weight:700">${correctCount} / ${total} correct</div>
+        <div class="meta">Score: <strong>${percent}%</strong></div>
+      </div>
+      <div style="text-align:right">
+        <div class="meta">Time left: ${timerDisplay.textContent}</div>
+        <div style="margin-top:6px"><button class="btn" onclick="window.location.reload()">Restart</button></div>
+      </div>
+    </div>
+    <div class="breakdown"></div>`;
+  resultArea.appendChild(resBox);
+
+  const brDiv = resBox.querySelector('.breakdown');
+  for(const b of breakdown){
+    const di = document.createElement('div');
+    di.className = 'break-item';
+    const selText = b.selected.length ? b.selected.join(', ') : '<em>Not answered</em>';
+    const correctText = b.correct.join(', ');
+    const status = b.isCorrect ? `<span style="color:var(--success);font-weight:700">Correct</span>` : `<span style="color:var(--danger);font-weight:700">Wrong</span>`;
+    di.innerHTML = `<div style="display:flex;justify-content:space-between"><div><strong>Q${b.id}</strong></div><div>${status}</div></div>
+      <div style="margin-top:6px;color:var(--muted)">${truncate(b.question,120)}</div>
+      <div style="margin-top:8px"><strong>Your answer:</strong> ${escapeHtml(selText)}</div>
+      <div style="margin-top:6px"><strong>Correct:</strong> ${escapeHtml(correctText)}</div>`;
+    brDiv.appendChild(di);
+  }
+
+  // mark sidebar
+  highlightQnums();
+  showMessage('Test finished — see results below');
+  // clear interactive options
+  optionsEl.innerHTML = '';
+  // show summary in status
+  statusTitle.innerHTML = `<strong>Finished — ${correctCount}/${total} (${percent}%)</strong>`;
+}
+
+function truncate(s,n){ return s.length>n? s.slice(0,n-1)+'…' : s; }
+function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* Auto-load first file preview */
+(async ()=> {
+  try {
+    const data = await fetchLocalJSON(testSelect.value);
+    QUESTIONS = data;
+    totalEl.textContent = QUESTIONS.length;
+    populateQNumbers();
+    renderQuestionPreview(0);
+  } catch(e){
+    // ignore until user loads
+    totalEl.textContent = 0;
+  }
+})();
+
+</script>
+</body>
+</html>

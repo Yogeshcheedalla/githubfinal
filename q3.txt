@@ -1,0 +1,489 @@
+[
+  {
+    "id": 81,
+    "instruction": "Choose one.",
+    "question": "In what way can GitHub Copilot and GitHub Copilot Chat aid developers in modernizing applications?",
+    "options": {
+      "A": "GitHub Copilot can directly convert legacy applications into cloud-native architectures.",
+      "B": "GitHub Copilot can suggest modern programming patterns based on your code.",
+      "C": "GitHub Copilot can create and deploy full-stack applications based on a single query.",
+      "D": "GitHub Copilot can refactor applications to align with upcoming standards."
+    },
+    "correct": ["B"]
+  },
+  {
+    "id": 82,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "The API can track acceptance rate of code suggestions. Which statements are true?",
+    "options": {
+      "A": "The API can generate detailed reports on code quality improvements.",
+      "B": "The API can track the acceptance rate of code suggestions used in the organization.",
+      "C": "The API can refactor your code to improve productivity.",
+      "D": "The API can provide feedback on coding style compliance.",
+      "E": "The API can provide Copilot Chat specific suggestions acceptance metrics."
+    },
+    "correct": ["B", "E"]
+  },
+  {
+    "id": 83,
+    "instruction": "Choose one.",
+    "question": "How can GitHub Copilot aid developers in writing documentation for their code?",
+    "options": {
+      "A": "GitHub Copilot cannot assist in writing documentation or comments.",
+      "B": "GitHub Copilot can automatically generate complete and detailed documentation.",
+      "C": "GitHub Copilot can suggest summaries or descriptions based on the code's functionality.",
+      "D": "GitHub Copilot can only generate content in markdown format."
+    },
+    "correct": ["C"]
+  },
+  {
+    "id": 84,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "What are the potential limitations of GitHub Copilot Chat?",
+    "options": {
+      "A": "Limited training data",
+      "B": "No biases in code suggestions",
+      "C": "Ability to handle complex code structures",
+      "D": "Extensive support for all programming languages"
+    },
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 85,
+    "instruction": "Choose one.",
+    "question": "What is few-shot prompting?",
+    "options": {
+      "A": "Telling GitHub Copilot about the mechanism you want it to use and how to incorporate it",
+      "B": "Telling GitHub Copilot from which sources it should base responses",
+      "C": "Telling GitHub Copilot to try multiple times to answer the prompt",
+      "D": "Telling GitHub Copilot to iterate several times before returning the final answer"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 86,
+    "instruction": "Choose one.",
+    "question": "What method can be used to interact with GitHub Copilot?",
+    "options": {
+      "A": "Using a properly configured GitHub CLI",
+      "B": "Using chat capabilities in NeoVim",
+      "C": "From a watch window in an IDE debug session",
+      "D": "From a web browser at github.copilot.com"
+    },
+    "correct": ["B"]
+  },
+  {
+    "id": 87,
+    "instruction": "Choose one.",
+    "question": "Where is the proxy service hosted?",
+    "options": {
+      "A": "Self hosted",
+      "B": "Amazon Web Services",
+      "C": "Microsoft Azure",
+      "D": "Google Cloud Platform"
+    },
+    "correct": ["C"]
+  },
+  {
+    "id": 88,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which techniques can be used to improve prompts to GitHub Copilot?",
+    "options": {
+      "A": "Provide specific success criteria",
+      "B": "Provide all information about the utilized files",
+      "C": "Provide insight on where to get the content from",
+      "D": "Provide links to supporting documentation"
+    },
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 89,
+    "instruction": "Choose one.",
+    "question": "A team uses Copilot Individual and wants to exclude files from suggestions. How can they achieve this?",
+    "options": {
+      "A": "Have an organization owner configure content exclusions",
+      "B": "Add a .gitignore file",
+      "C": "Have a repo admin configure exclusions",
+      "D": "Use the #file chat variable",
+      "E": "Upgrade to Copilot Business"
+    },
+    "correct": ["E"]
+  },
+  {
+    "id": 90,
+    "instruction": "Choose one.",
+    "question": "Which of the following does GitHub Copilot's LLM derive context from?",
+    "options": {
+      "A": "Frequency of commits",
+      "B": "Syntax highlighting scheme",
+      "C": "Neighboring or related files in a project",
+      "D": "Version control system"
+    },
+    "correct": ["C"]
+  },
+  {
+    "id": 91,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "In what ways can GitHub Copilot support a developer during code refactoring?",
+    "options": {
+      "A": "By offering code transformation examples",
+      "B": "By ensuring regulatory compliance automatically",
+      "C": "By providing suggestions to improve readability",
+      "D": "By autonomously refactoring entire codebases"
+    },
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 92,
+    "instruction": "Choose one.",
+    "question": "What is the correct way to access audit log events for GitHub Copilot Business?",
+    "options": {
+      "A": "Security tab in the organization's settings",
+      "B": "Insights tab in a repository",
+      "C": "Audit log section in org settings",
+      "D": "Code tab in repository"
+    },
+    "correct": ["C"]
+  },
+  {
+    "id": 93,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "What method can a developer use to generate sample data with GitHub Copilot?",
+    "options": {
+      "A": "Using fictitious information from patterns in training data",
+      "B": "Using Copilot to create storage services",
+      "C": "Using direct database access",
+      "D": "Using suggestions based on API documentation"
+    },
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 94,
+    "instruction": "Choose one.",
+    "question": "How can insights from the metrics API improve development?",
+    "options": {
+      "A": "Real-time debugging statistics",
+      "B": "Insights on languages where Copilot helps most",
+      "C": "Auto-generation of documentation",
+      "D": "Analysis of Copilot suggestions vs manual coding"
+    },
+    "correct": ["D"]
+  },
+  {
+    "id": 95,
+    "instruction": "Choose one.",
+    "question": "Why is it important to ensure the security of code used in Gen AI tools?",
+    "options": {
+      "A": "Prevents unauthorized access and breaches",
+      "B": "Helps develop more advanced AI",
+      "C": "Enables handling larger datasets",
+      "D": "Maintains AI system integrity"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 96,
+    "instruction": "Choose one.",
+    "question": "What is zero-shot prompting?",
+    "options": {
+      "A": "Only giving GitHub Copilot a question with no examples",
+      "B": "Giving multiple examples of the task",
+      "C": "Telling Copilot to show only correct answers",
+      "D": "Giving examples of algorithm and outcome",
+      "E": "Providing as little context as possible"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 97,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "What prompts might be flagged by Copilot’s toxicity filter?",
+    "options": {
+      "A": "Hate speech or discriminatory language",
+      "B": "Sexually explicit content",
+      "C": "Code with logical errors",
+      "D": "Strong opinions in comments"
+    },
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 98,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which Copilot Enterprise features are available in all supported IDEs?",
+    "options": {
+      "A": "Inline suggestions",
+      "B": "Pull request summaries",
+      "C": "Knowledge bases",
+      "D": "Chat"
+    },
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 99,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which of the following are true about code suggestions?",
+    "options": {
+      "A": "They never expose known vulnerabilities",
+      "B": "You can use keyboard shortcuts to accept the next word",
+      "C": "They are limited to single-line suggestions",
+      "D": "They always compile without modification",
+      "E": "Alternative suggestions can be shown in a new tab"
+    },
+    "correct": ["B", "E"]
+  },
+  {
+    "id": 100,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which REST API endpoints modify details about a Copilot Business subscription?",
+    "options": {
+      "A": "Add teams to subscription",
+      "B": "Upgrade/downgrade subscription",
+      "C": "Migrate seat assignments",
+      "D": "Reassign seats based on repo size",
+      "E": "Remove teams from subscription"
+    },
+    "correct": ["A", "E"]
+  },
+  {
+    "id": 101,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which statements describe how Copilot Individual uses prompt data?",
+    "options": {
+      "A": "Prompt data is stored unencrypted",
+      "B": "Prompt data is used to improve search engine",
+      "C": "Prompt data is used to train ML models",
+      "D": "Real-time user input aids context-aware suggestions"
+    },
+    "correct": ["C", "D"]
+  },
+  {
+    "id": 102,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which prompts can guide Copilot Chat in refactoring?",
+    "options": {
+      "A": "Improve readability of this function.",
+      "B": "Enhance maintainability of this code.",
+      "C": "Refactor entire application to latest standards.",
+      "D": "Predict future coding trends and update my code."
+    },
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 103,
+    "instruction": "Choose one.",
+    "question": "What is used by Copilot in IDE to determine prompt context?",
+    "options": {
+      "A": "Open tabs, cursor location, selected code",
+      "B": "All code in repository",
+      "C": "Tabs and terminal folder",
+      "D": "All visible code"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 104,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which Copilot plans exclude your data from model training?",
+    "options": {
+      "A": "Copilot Business",
+      "B": "Copilot Codespace",
+      "C": "Copilot Individual",
+      "D": "Copilot Enterprise"
+    },
+    "correct": ["A", "D"]
+  },
+  {
+    "id": 105,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "What information can you retrieve from Copilot Business Subscription API?",
+    "options": {
+      "A": "Summary of Copilot usage",
+      "B": "List of seat assignments",
+      "C": "View code suggestions per user",
+      "D": "List unsubscribed members"
+    },
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 106,
+    "instruction": "Choose one.",
+    "question": "Best way to share feedback about Copilot Chat on GitHub Mobile?",
+    "options": {
+      "A": "Use emojis in chat interface",
+      "B": "GitHub feedback website",
+      "C": "Tweet GitHub support",
+      "D": "Use Settings menu"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 107,
+    "instruction": "Choose one.",
+    "question": "What describes intended use of Copilot Chat?",
+    "options": {
+      "A": "A complete replacement for developers",
+      "B": "A productivity tool requiring human judgment",
+      "C": "A solution requiring no oversight",
+      "D": "A debugging-only tool"
+    },
+    "correct": ["B"]
+  },
+  {
+    "id": 108,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Where do you configure duplicate detection?",
+    "options": {
+      "A": "Enterprise settings → Copilot → Policies",
+      "B": "Repository settings → Copilot → Policies",
+      "C": "Organization settings → Copilot → Policies",
+      "D": "User settings → Copilot → Policies"
+    },
+    "correct": ["A", "C"]
+  },
+  {
+    "id": 109,
+    "instruction": "Choose one.",
+    "question": "How can fairness be integrated into operating AI tools?",
+    "options": {
+      "A": "Focusing only on accessibility",
+      "B": "Collecting large datasets",
+      "C": "Regular monitoring of outputs",
+      "D": "Training algorithms to be free from bias"
+    },
+    "correct": ["D"]
+  },
+  {
+    "id": 110,
+    "instruction": "Choose one.",
+    "question": "Where can you validate if Copilot isn't returning suggestions due to content exclusions?",
+    "options": {
+      "A": "Copilot icon in editor status bar",
+      "B": "Logs on GitHub.com in user settings",
+      "C": "Suggestions window warning",
+      "D": "Copilot errors panel"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 111,
+    "instruction": "Choose one.",
+    "question": "Which Copilot plan allows prompt and suggestion collection?",
+    "options": {
+      "A": "Copilot Individuals",
+      "B": "Copilot Business",
+      "C": "Copilot Enterprise",
+      "D": "Copilot Codespace"
+    },
+    "correct": ["C"]
+  },
+  {
+    "id": 112,
+    "instruction": "Choose one.",
+    "question": "How can you get multiple suggestions from Copilot?",
+    "options": {
+      "A": "Ask in code comments",
+      "B": "Open the completions panel",
+      "C": "Use inline chat command 'multiple'",
+      "D": "Use @workspace"
+    },
+    "correct": ["B"]
+  },
+  {
+    "id": 113,
+    "instruction": "Choose one.",
+    "question": "When can Copilot still use content excluded through content exclusions?",
+    "options": {
+      "A": "If excluded content is referenced in non-excluded code",
+      "B": "When repo settings allow overrides",
+      "C": "When enterprise-level settings override org settings",
+      "D": "When using @workspace"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 114,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "What are the effects of content exclusions?",
+    "options": {
+      "A": "Excluded content is not directly available as context",
+      "B": "Copilot suggestions unavailable inside excluded files",
+      "C": "Excluded content is not used while debugging",
+      "D": "IDE will not count suggestions in excluded content"
+    },
+    "correct": ["A", "B"]
+  },
+  {
+    "id": 115,
+    "instruction": "Choose one.",
+    "question": "How long do content exclusions take to apply?",
+    "options": {
+      "A": "Up to 30 minutes",
+      "B": "45–60 minutes",
+      "C": "60–90 minutes",
+      "D": "24 hours"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 116,
+    "instruction": "Choose one.",
+    "question": "How do you establish an org-wide policy to restrict Copilot usage?",
+    "options": {
+      "A": "Use GitHub Actions",
+      "B": "Create copilot.policy file in each repo",
+      "C": "Configure policies in org settings",
+      "D": "Create copilot.policy in .github repo"
+    },
+    "correct": ["C"]
+  },
+  {
+    "id": 117,
+    "instruction": "Each correct answer presents part of the solution. Choose three.",
+    "question": "What content can Copilot Knowledge Base answer questions about?",
+    "options": {
+      "A": "Code snippets",
+      "B": "Compiled binaries",
+      "C": "Documentation",
+      "D": "Design patterns",
+      "E": "Screenshots"
+    },
+    "correct": ["A", "C", "D"]
+  },
+  {
+    "id": 118,
+    "instruction": "Choose one.",
+    "question": "When can Copilot still use excluded content?",
+    "options": {
+      "A": "When using @workspace",
+      "B": "When repo-level settings allow overrides",
+      "C": "If excluded content is referenced in non-excluded files",
+      "D": "When org-level overrides enterprise-level exclusions"
+    },
+    "correct": ["C"]
+  },
+  {
+    "id": 119,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "What insights does the Copilot usage metrics API provide?",
+    "options": {
+      "A": "Detailed code quality improvement reports",
+      "B": "Number of accepted code suggestions",
+      "C": "Copilot Chat suggestion acceptance metrics",
+      "D": "Automatic refactoring",
+      "E": "Coding style feedback"
+    },
+    "correct": ["B", "C"]
+  },
+  {
+    "id": 120,
+    "instruction": "Choose one.",
+    "question": "Which principle emphasizes transparent, explainable AI systems?",
+    "options": {
+      "A": "Fairness",
+      "B": "Transparency",
+      "C": "Inclusiveness",
+      "D": "Accountability"
+    },
+    "correct": ["B"]
+  }
+]
