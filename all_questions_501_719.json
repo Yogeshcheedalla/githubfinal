@@ -1,0 +1,3070 @@
+[
+  {
+    "id": 501,
+    "instruction": "Choose one.",
+    "question": "A company wants to implement detailed tracking of its cloud costs by department and project. Which AWS feature or service should the company use?",
+    "options": {
+      "A": "Consolidated billing",
+      "B": "Cost allocation tags",
+      "C": "AWS Marketplace",
+      "D": "AWS Budgets"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 502,
+    "instruction": "Choose one.",
+    "question": "A user wants to invoke an AWS Lambda function when an Amazon EC2 instance enters the “stopping” state. Which AWS service is appropriate for this use case?",
+    "options": {
+      "A": "Amazon EventBridge",
+      "B": "AWS Config",
+      "C": "Amazon Simple Notification Service (Amazon SNS)",
+      "D": "AWS CloudFormation"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 503,
+    "instruction": "Choose one.",
+    "question": "A company has a MariaDB database on premises. The company wants to move the data to the AWS Cloud. Which AWS service will host this database with the LEAST amount of operational overhead?",
+    "options": {
+      "A": "Amazon RDS",
+      "B": "Amazon Neptune",
+      "C": "Amazon S3",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 504,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature supports governance, compliance, and risk auditing of AWS accounts?",
+    "options": {
+      "A": "Multi-factor authentication (MFA)",
+      "B": "AWS Lambda",
+      "C": "Amazon Simple Notification Service (Amazon SNS)",
+      "D": "AWS CloudTrail"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 505,
+    "instruction": "Choose one.",
+    "question": "Which AWS Cloud design principle is a company using when the company implements AWS CloudTrail?",
+    "options": {
+      "A": "Activate traceability.",
+      "B": "Use serverless compute architectures.",
+      "C": "Perform operations as code.",
+      "D": "Go global in minutes."
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 506,
+    "instruction": "Choose one.",
+    "question": "A company needs a threat detection service that will continuously monitor its AWS accounts, workloads, and Amazon S3 buckets for malicious activity and unauthorized behavior. Which AWS service meets these requirements?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS Firewall Manager",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 507,
+    "instruction": "Choose one.",
+    "question": "A company is planning to migrate to the AWS Cloud. The company is conducting organizational transformation and wants to become more responsive to customer inquiries and feedback. Which task should the company perform to meet these requirements, according to the AWS Cloud Adoption Framework (AWS CAF)?",
+    "options": {
+      "A": "Realign teams to focus on products and value streams.",
+      "B": "Create new value propositions with new products and services.",
+      "C": "Use a new data and analytics platform to create actionable insights.",
+      "D": "Migrate and modernize legacy infrastructure."
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 508,
+    "instruction": "Choose one.",
+    "question": "A company wants to rightsize its Amazon EC2 instances. Which configuration change will meet this requirement with the LEAST operational overhead?",
+    "options": {
+      "A": "Add EC2 instances in another Availability Zone.",
+      "B": "Change the size and type of the EC2 instances based on utilization.",
+      "C": "Convert the payment method from On-Demand to Savings Plans.",
+      "D": "Reprovision the EC2 instances with a larger instance type."
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 509,
+    "instruction": "Choose one.",
+    "question": "Which AWS service supports user sign-up functionality and authentication to mobile and web applications?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS Config",
+      "C": "Amazon GuardDuty",
+      "D": "AWS Systems Manager"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 510,
+    "instruction": "Choose one.",
+    "question": "Which benefit of the AWS Cloud helps companies achieve lower usage costs because of the aggregate usage of all AWS users?",
+    "options": {
+      "A": "No need to guess capacity",
+      "B": "Ability to go global in minutes",
+      "C": "Economies of scale",
+      "D": "Increased speed and agility"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 511,
+    "instruction": "Choose one.",
+    "question": "Which task is the responsibility of the customer, according to the AWS shared responsibility model?",
+    "options": {
+      "A": "Patch the Amazon DynamoDB operating system.",
+      "B": "Secure Amazon CloudFront edge locations by allowing physical access according to the principle of least privilege.",
+      "C": "Protect the hardware that runs AWS services.",
+      "D": "Use AWS Identity and Access Management (IAM) according to the principle of least privilege."
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 512,
+    "instruction": "Choose one.",
+    "question": "A company wants to manage its cloud resources by using infrastructure as code (IaC) templates. The company needs to meet compliance requirements. Which AWS service should the company use to meet these requirements?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "AWS Resource Explorer",
+      "C": "AWS License Manager",
+      "D": "AWS Service Catalog"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 513,
+    "instruction": "Choose one.",
+    "question": "A systems administrator wants to monitor the CPU utilization of a company's Amazon EC2 instances. Which AWS service can provide this information?",
+    "options": {
+      "A": "AWS Config",
+      "B": "AWS Trusted Advisor",
+      "C": "AWS CloudTrail",
+      "D": "Amazon CloudWatch"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 514,
+    "instruction": "Choose one.",
+    "question": "A company wants to migrate all of its on-premises infrastructure to the AWS Cloud. Before migration, the company wants estimate of costs for running its as-is infrastructure. Which AWS service or principle should the company use to meet this requirement?",
+    "options": {
+      "A": "AWS Pricing Calculator",
+      "B": "AWS Well-Architected Framework",
+      "C": "AWS shared responsibility model",
+      "D": "AWS Cloud Adoption Framework (AWS CAF)"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 515,
+    "instruction": "Choose one.",
+    "question": "An independent software vendor wants to deliver and share its custom Amazon Machine Images (AMIs) to prospective customers. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS Marketplace",
+      "B": "AWS Data Exchange",
+      "C": "Amazon EC2",
+      "D": "AWS Organizations"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 516,
+    "instruction": "Choose one.",
+    "question": "Which component must be attached to a VPC to enable inbound internet access?",
+    "options": {
+      "A": "NAT gateway",
+      "B": "VPC endpoint",
+      "C": "VPN connection",
+      "D": "Internet gateway"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 517,
+    "instruction": "Choose one.",
+    "question": "Which AWS service supports a company's ability to treat infrastructure as code?",
+    "options": {
+      "A": "AWS CodeDeploy",
+      "B": "AWS Elastic Beanstalk",
+      "C": "Amazon API Gateway",
+      "D": "AWS CloudFormation"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 518,
+    "instruction": "Choose one.",
+    "question": "A company is building an application that will receive millions of database queries each second. The company needs the data store for the application to scale to meet these needs. Which AWS service will meet this requirement?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "AWS Cloud9",
+      "C": "Amazon ElastiCache for Memcached",
+      "D": "Amazon Neptune"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 519,
+    "instruction": "Choose one.",
+    "question": "An AWS user wants to proactively detect when an instance or account might be compromised or if there are threats from attacks. Which AWS service should the user choose?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS WAF",
+      "C": "AWS Shield",
+      "D": "Amazon Inspector"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 520,
+    "instruction": "Choose one.",
+    "question": "Which AWS Support plan provides the full set of AWS Trusted Advisor checks at the LOWEST cost?",
+    "options": {
+      "A": "AWS Developer Support",
+      "B": "AWS Business Support",
+      "C": "AWS Enterprise On-Ramp Support",
+      "D": "AWS Enterprise Support"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 521,
+    "instruction": "Choose one.",
+    "question": "A company's application is running on Amazon EC2 instances. The company is planning a partial migration to a serverless architecture in the next year and wants to pay for resources up front. Which AWS purchasing option will optimize the company's costs?",
+    "options": {
+      "A": "Convertible Reserved Instances",
+      "B": "Spot Instances",
+      "C": "EC2 Instance Savings Plans",
+      "D": "Compute Savings Plan"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 522,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "A retail company is building a new mobile app. The company is evaluating whether to build the app at an on-premises data center or in the AWS Cloud. Which of the following are benefits of building this app in the AWS Cloud? (Choose two.)",
+    "options": {
+      "A": "A large, upfront capital expense and low variable expenses",
+      "B": "Increased speed for trying out new projects",
+      "C": "Complete control over the physical security of the infrastructure",
+      "D": "Flexibility to scale up in minutes as the application becomes popular E. Ability to pick the specific data centers that will host the application servers"
+    },
+    "correct": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": 523,
+    "instruction": "Choose one.",
+    "question": "A company must archive its documents by using a write-once, read-many (WORM) model to meet legal and compliance obligations. Which feature of Amazon S3 can the company use to meet this requirement?",
+    "options": {
+      "A": "S3 Versioning",
+      "B": "S3 bucket policy",
+      "C": "S3 Glacier Vault Lock",
+      "D": "S3 multi-factor authentication (MFA) delete"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 524,
+    "instruction": "Choose one.",
+    "question": "A company has batch workloads that need to run for short periods of time on Amazon EC2. The workloads can handle interruptions and can start again from where they ended. What is the MOST cost-effective EC2 instance purchasing option to meet these requirements?",
+    "options": {
+      "A": "Reserved Instances",
+      "B": "Spot Instances",
+      "C": "Dedicated Instances",
+      "D": "On-Demand Instances"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 525,
+    "instruction": "Choose one.",
+    "question": "A company needs to deploy a PostgreSQL database into Amazon RDS. The database must be highly available and fault tolerant. Which AWS solution should the company use to meet these requirements?",
+    "options": {
+      "A": "Amazon RDS with a single Availability Zone",
+      "B": "Amazon RDS snapshots",
+      "C": "Amazon RDS with multiple Availability Zones",
+      "D": "AWS Database Migration Service (AWS DMS)"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 526,
+    "instruction": "Choose one.",
+    "question": "What is the MOST secure way to store passwords on AWS?",
+    "options": {
+      "A": "Store passwords in an Amazon S3 bucket.",
+      "B": "Store passwords as AWS CloudFormation parameters.",
+      "C": "Store passwords in AWS Storage Gateway.",
+      "D": "Store passwords in AWS Secrets Manager."
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 527,
+    "instruction": "Choose one.",
+    "question": "Which statements accurately describe the relationships among components of AWS global infrastructure? (Choose two.)",
+    "options": {
+      "A": "There are more AWS Regions than Availability Zones.",
+      "B": "There are more edge locations than AWS Regions.",
+      "C": "An edge location is an Availability Zone.",
+      "D": "There are more AWS Regions than edge locations. E. There are more Availability Zones than AWS Regions."
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 528,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides DNS resolution?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon VPC",
+      "C": "Amazon Route 53",
+      "D": "AWS Direct Connect"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 529,
+    "instruction": "Choose one.",
+    "question": "A company needs to host an application in a specific geographic area to comply with regulations. Which feature of the AWS global infrastructure will help the company meet this requirement?",
+    "options": {
+      "A": "Scalability",
+      "B": "Global footprint",
+      "C": "Availability",
+      "D": "Performance"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 530,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "An ecommerce company plans to move its data center workload to the AWS Cloud to support highly dynamic usage patterns. Which benefits make the AWS Cloud cost-effective for the migration of this type of workload? (Choose two.)",
+    "options": {
+      "A": "Reliability",
+      "B": "Security",
+      "C": "Elasticity",
+      "D": "Pay-as-you-go resource E. High availability"
+    },
+    "correct": [
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": 531,
+    "instruction": "Choose one.",
+    "question": "When designing AWS workloads to be operational even when there are component failures, what is an AWS best practice?",
+    "options": {
+      "A": "Perform quarterly disaster recovery tests.",
+      "B": "Place the main component on the us-east-1 Region.",
+      "C": "Design for automatic failover to healthy resources.",
+      "D": "Design workloads to fit on a single Amazon EC2 instance."
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 532,
+    "instruction": "Choose one.",
+    "question": "Which of the following can the AWS Pricing Calculator do?",
+    "options": {
+      "A": "Project monthly AWS costs.",
+      "B": "Calculate historical AWS costs.",
+      "C": "Provide in-depth information about AWS pricing strategies.",
+      "D": "Provide users with access to their monthly bills."
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 533,
+    "instruction": "Choose one.",
+    "question": "Which AWS solution gives companies the ability to use protocols such as NFS to store and retrieve objects in Amazon S3?",
+    "options": {
+      "A": "Amazon FSx for Lustre",
+      "B": "AWS Storage Gateway volume gateway",
+      "C": "AWS Storage Gateway file gateway",
+      "D": "Amazon Elastic File System (Amazon EFS)"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 534,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "A user has been granted permission to change their own IAM user password. Which AWS services can the user use to change the password? (Choose two.)",
+    "options": {
+      "A": "AWS Command Line Interface (AWS CLI)",
+      "B": "AWS Key Management Sen/ice (AWS KMS)",
+      "C": "AWS Management Console",
+      "D": "AWS Resource Access Manager (AWS RAM) E. AWS Secrets Manager"
+    },
+    "correct": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": 535,
+    "instruction": "Choose one.",
+    "question": "Which task is the customer's responsibility, according to the AWS shared responsibility model?",
+    "options": {
+      "A": "Patch a guest operating system that is deployed on an Amazon EC2 instance.",
+      "B": "Control physical access to an AWS data center.",
+      "C": "Control access to AWS underlying hardware.",
+      "D": "Patch a host operating system that is deployed on Amazon S3."
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 536,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature provides a firewall at the subnet level within a VPC?",
+    "options": {
+      "A": "Security group",
+      "B": "Network ACL",
+      "C": "Elastic network interface",
+      "D": "AWS WAF"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 537,
+    "instruction": "Choose one.",
+    "question": "A company wants to use automated video analysis to identify employees that are accessing its offices. Which AWS service will meet this requirement?",
+    "options": {
+      "A": "Amazon Rekognition",
+      "B": "Amazon Polly",
+      "C": "Amazon Cognito",
+      "D": "AWS Lambda"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 538,
+    "instruction": "Choose one.",
+    "question": "A company needs to host a web server on Amazon EC2 instances for at least 1 year. The web server cannot tolerate interruption. Which EC2 instance purchasing option will meet these requirements MOST cost-effectively?",
+    "options": {
+      "A": "On-Demand Instances",
+      "B": "Partial Upfront Reserved Instances",
+      "C": "Spot Instances",
+      "D": "No Upfront Reserved Instances"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 539,
+    "instruction": "Choose one.",
+    "question": "Which guidelines are best practices for using AWS Identity and Access Management (IAM)? (Choose two.)",
+    "options": {
+      "A": "Share access keys.",
+      "B": "Create individual IAM users.",
+      "C": "Use inline policies instead of customer managed policies.",
+      "D": "Grant maximum privileges to IAM users. E. Use groups to assign permissions to IAM users."
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 540,
+    "instruction": "Choose one.",
+    "question": "Which advantage of cloud computing allows users to scale resources up and down based on the amount of load that an application supports?",
+    "options": {
+      "A": "Go global in minutes",
+      "B": "Stop guessing capacity",
+      "C": "Benefit from massive economies of scale",
+      "D": "Trade fixed expense for variable expense"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 541,
+    "instruction": "Choose one.",
+    "question": "A company is requesting Payment Card Industry (PCI) reports that validate the operating effectiveness of AWS security controls. How should the company obtain these reports?",
+    "options": {
+      "A": "Contact AWS Support.",
+      "B": "Download reports from AWS Artifact.",
+      "C": "Download reports from AWS Security Hub.",
+      "D": "Contact an AWS technical account manager (TAM)."
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 542,
+    "instruction": "Choose one.",
+    "question": "An ecommerce company wants to distribute traffic between the Amazon EC2 instances that host its website. Which AWS service or resource will meet these requirements?",
+    "options": {
+      "A": "Application Load Balancer",
+      "B": "AWS WAF",
+      "C": "AWS CloudHSM",
+      "D": "AWS Direct Connect"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 543,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which AWS services or features form the AWS Cloud global infrastructure? (Choose two.)",
+    "options": {
+      "A": "Availability Zones",
+      "B": "Amazon ElastiCache",
+      "C": "AWS Regions",
+      "D": "Amazon S3 E. Amazon VPC"
+    },
+    "correct": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": 544,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "According to the AWS shared responsibility model, which of the following are AWS responsibilities? (Choose two.)",
+    "options": {
+      "A": "Network infrastructure and virtualization of infrastructure",
+      "B": "Security of application data",
+      "C": "Guest operating systems",
+      "D": "Physical security of hardware E. Credentials and policies"
+    },
+    "correct": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "id": 545,
+    "instruction": "Choose one.",
+    "question": "A company uses Amazon Aurora as its database service. The company wants to encrypt its databases and database backups. Which party manages the encryption of the database clusters and database snapshots, according to the AWS shared responsibility model?",
+    "options": {
+      "A": "AWS",
+      "B": "The company",
+      "C": "AWS Marketplace partners",
+      "D": "Third-party partners"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 546,
+    "instruction": "Choose one.",
+    "question": "A company is hosting a web application on Amazon EC2 instances. The company wants to implement custom conditions to filter and control inbound web traffic. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS WAF",
+      "C": "Amazon Macie",
+      "D": "AWS Shield"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 547,
+    "instruction": "Choose one.",
+    "question": "A company wants to maintain bandwidth throughput and provide a more consistent network experience than public internet-based connections. Which AWS service should the company choose?",
+    "options": {
+      "A": "AWS VPN",
+      "B": "AWS Direct Connect",
+      "C": "Amazon Connect",
+      "D": "Amazon CloudFront"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 548,
+    "instruction": "Choose one.",
+    "question": "A company has temporary workload that is also variable. The company needs to use Amazon EC2 instances for the workload. The EC2 instances need to handle short bursts of work that cannot stop before finishing. Which purchase option will meet these requirements?",
+    "options": {
+      "A": "Spot Instances",
+      "B": "On-Demand Instances",
+      "C": "Savings Plan",
+      "D": "Reserved Instances"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 549,
+    "instruction": "Choose one.",
+    "question": "A company's employees are working from home. The company wants its employees to use their personal devices to connect to a managed workstation in the AWS Cloud. Which AWS service should the company use to provide the remote environment?",
+    "options": {
+      "A": "Amazon Workspaces",
+      "B": "AWS Cloud9",
+      "C": "AWS Outposts",
+      "D": "Amazon Lightsail"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 550,
+    "instruction": "Choose one.",
+    "question": "A company needs to use SQL syntax to perform a direct query of objects in an Amazon S3 bucket. Which AWS service can the company use to meet this requirement?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "Amazon Athena",
+      "C": "AWS Lambda",
+      "D": "Amazon Kinesis"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 551,
+    "instruction": "Choose one.",
+    "question": "A company uses Amazon RDS for a product database. The company wants to ensure the database is highly available. Which feature of Amazon RDS will meet this requirement?",
+    "options": {
+      "A": "Read replicas",
+      "B": "Blue/green deployment",
+      "C": "Multi-AZ deployment",
+      "D": "Reserved Instances"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 552,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides serverless compute for use with containers?",
+    "options": {
+      "A": "Amazon Simple Queue Service (Amazon SQS)",
+      "B": "AWS Fargate",
+      "C": "AWS Elastic Beanstalk",
+      "D": "Amazon SageMaker"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 553,
+    "instruction": "Choose one.",
+    "question": "A company is using multiple AWS accounts for different business teams. The finance team wants to receive one bill for all of the company's accounts. Which AWS service or tool should the finance team use to meet this requirement?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "AWS Trusted Advisor",
+      "C": "Cost Explorer",
+      "D": "AWS Budgets"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 554,
+    "instruction": "Choose one.",
+    "question": "A company needs a firewall that will control network connections to and from a single Amazon EC2 instance. This firewall will not control network connections to and from other instances that are in the same subnet. Which AWS service or feature can the company use to meet these requirements?",
+    "options": {
+      "A": "Network ACL",
+      "B": "AWS WAF",
+      "C": "Route table",
+      "D": "Security group"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 555,
+    "instruction": "Choose one.",
+    "question": "A company is planning to use the Amazon EC2 instances as web servers. Customers from around the world will use the web servers. Most customers will use the web servers only during certain hours of the day. How should the company deploy the EC2 instances to achieve the LOWEST operational cost?",
+    "options": {
+      "A": "In multiple Availability Zones",
+      "B": "In an Auto Scaling group",
+      "C": "In a placement group",
+      "D": "In private subnets"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 556,
+    "instruction": "Choose one.",
+    "question": "Which benefit is always free of charge with AWS, regardless of a user’s AWS Support plan?",
+    "options": {
+      "A": "AWS Developer Support",
+      "B": "AWS Developer Forums",
+      "C": "Programmatic case management",
+      "D": "AWS technical account manager (TAM)"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 557,
+    "instruction": "Choose one.",
+    "question": "A company uses Amazon EC2 instances to run its application. The application needs to be available and running continuously for three or more years. What type of EC2 instance should the company purchase for a discount on the EC2 pricing?",
+    "options": {
+      "A": "Reserved Instances",
+      "B": "Spot Instances",
+      "C": "On-Demand Instances",
+      "D": "EC2 Fleet"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 558,
+    "instruction": "Choose one.",
+    "question": "A company needs to perform an audit of recent AWS account activity. The audit will investigate who initiated an event and what actions were performed. Which AWS service should the company use to meet these requirements?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Amazon Rekognition",
+      "C": "AWS CloudTrail",
+      "D": "Amazon Simple Notification Service (Amazon SNS)"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 559,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which design principles are included in the reliability pillar of the AWS Well-Architected Framework? (Choose two.)",
+    "options": {
+      "A": "Automatically recover from failure.",
+      "B": "Grant everyone access to increase AWS service quotas.",
+      "C": "Stop guessing capacity.",
+      "D": "Design applications to run in a single Availability Zone. E. Plan to increase AWS service quotas first in a secondary AWS Region."
+    },
+    "correct": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": 560,
+    "instruction": "Choose one.",
+    "question": "A company needs to use AWS technology to deploy a static website. Which solution meets this requirement with the LEAST amount of operational overhead?",
+    "options": {
+      "A": "Deploy the website on Amazon EC2.",
+      "B": "Host the website on AWS Elastic Beanstalk.",
+      "C": "Deploy the website with Amazon Lightsail.",
+      "D": "Host the website on Amazon S3."
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 561,
+    "instruction": "Choose one.",
+    "question": "Which recommendation can AWS Cost Explorer provide to help reduce cost?",
+    "options": {
+      "A": "Use a specific database engine.",
+      "B": "Change the programming language for an application.",
+      "C": "Deploy a specific operating system.",
+      "D": "Terminate an idle instance."
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 562,
+    "instruction": "Choose one.",
+    "question": "A company wants to deploy an application in multiple Availability Zones in a single AWS Region. Which benefit will this deployment provide to the company?",
+    "options": {
+      "A": "Improved connection performance for global customers",
+      "B": "Resilient architecture and a highly available solution",
+      "C": "Reduced overall data storage costs",
+      "D": "Ability to shut down an Availability Zone during periods of low demand"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 563,
+    "instruction": "Choose one.",
+    "question": "Which AWS service can companies use to subscribe to RSS feeds for updates about all AWS service issues?",
+    "options": {
+      "A": "Amazon Simple Notification Service (Amazon SNS)",
+      "B": "AWS Health Dashboard",
+      "C": "AWS Config",
+      "D": "AWS CodeCommit"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 564,
+    "instruction": "Choose one.",
+    "question": "Which Amazon EC2 Reserved Instances term commitment will give users the MOST cost savings?",
+    "options": {
+      "A": "1 year",
+      "B": "2 years",
+      "C": "3 years",
+      "D": "5 years"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 565,
+    "instruction": "Choose one.",
+    "question": "A company is running big data analytics and massive parallel computations on its AWS test and development servers. The company can tolerate occasional downtime. What is the MOST cost-effective Amazon EC2 purchasing option for the company to use?",
+    "options": {
+      "A": "On-Demand Instances",
+      "B": "Spot Instances",
+      "C": "Reserved Instances",
+      "D": "Savings Plans"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 566,
+    "instruction": "Choose one.",
+    "question": "A company runs Amazon EC2 instances in a research lab. The instances run for 3 hours each week and cannot be interrupted. What is the MOST cost-effective instance purchasing option to meet these requirements?",
+    "options": {
+      "A": "Compute Savings Plan",
+      "B": "On-Demand Instances",
+      "C": "Convertible Reserved Instances",
+      "D": "Spot Instances"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 567,
+    "instruction": "Choose one.",
+    "question": "A new AWS user needs to interact with AWS Support by using API calls. Which AWS Support plan will meet this requirement MOST cost-effectively?",
+    "options": {
+      "A": "AWS Basic Support",
+      "B": "AWS Developer Support",
+      "C": "AWS Business Support",
+      "D": "AWS Enterprise Support"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 568,
+    "instruction": "Choose one.",
+    "question": "A company migrated to the AWS Cloud. Now the company pays for services on an as-needed basis. Which advantage of cloud computing is the company benefiting from?",
+    "options": {
+      "A": "Stop spending money running and maintaining data centers",
+      "B": "Increase speed and agility",
+      "C": "Go global in minutes",
+      "D": "Trade fixed expense for variable expense"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 569,
+    "instruction": "Choose one.",
+    "question": "A company will run a predictable compute workload on Amazon EC2 instances for the next 3 years. The workload is critical for the company. The company wants to optimize costs to run the workload. Which solution will meet these requirements?",
+    "options": {
+      "A": "Spot Instances",
+      "B": "Dedicated Hosts",
+      "C": "Savings Plans",
+      "D": "On-Demand Instances"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 570,
+    "instruction": "Choose one.",
+    "question": "A company wants to estimate the cost for its AWS architecture solution before migration. Which AWS service or feature will meet this requirement?",
+    "options": {
+      "A": "Amazon Detective",
+      "B": "AWS Budgets",
+      "C": "AWS Resource Explorer",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 571,
+    "instruction": "Choose one.",
+    "question": "A company wants to centrally manage its employee's access to multiple AWS accounts. Which AWS service or feature should the company use to meet this requirement?",
+    "options": {
+      "A": "AWS Identity and Access Management Access Analyzer",
+      "B": "AWS Secrets Manager",
+      "C": "AWS IAM Identity Center",
+      "D": "AWS Security Token Service (AWS STS)"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 572,
+    "instruction": "Choose one.",
+    "question": "A university receives a grant to conduct research by using AWS services. The research team needs to make sure the grant money lasts for the entire school year. The team has decided on a monthly allocation that adds up to the total grant amount. Which AWS service or feature will notify the team if spending exceeds the planned amount?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "Cost Explorer",
+      "C": "Cost allocation tags",
+      "D": "Cost categories"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 573,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "A company has migrated its workload to the AWS Cloud. The company wants to optimize existing Amazon EC2 resources. Which AWS services or tools provide this functionality? (Choose two.)",
+    "options": {
+      "A": "AWS Elastic Beanstalk",
+      "B": "AWS Cost Explorer",
+      "C": "Amazon Detective",
+      "D": "AWS Compute Optimizer E. AWS Billing Conductor"
+    },
+    "correct": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": 574,
+    "instruction": "Choose one.",
+    "question": "A company with multiple accounts and teams wants to set up a new multi-account AWS environment. Which AWS service supports this requirement?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "AWS Control Tower",
+      "C": "AWS Config",
+      "D": "Amazon Virtual Private Cloud (Amazon VPC)"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 575,
+    "instruction": "Choose one.",
+    "question": "A company needs access to checks and recommendations that help the company follow AWS best practices for cost optimization, security, fault tolerance, performance, and service quotas. Which combination of an AWS service and AWS Support plan on the AWS account will meet these requirements?",
+    "options": {
+      "A": "AWS Trusted Advisor with AWS Developer Support",
+      "B": "AWS Health Dashboard with AWS Enterprise Support",
+      "C": "AWS Trusted Advisor with AWS Business Support",
+      "D": "AWS Health Dashboard with AWS Enterprise On-Ramp Support"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 576,
+    "instruction": "Choose one.",
+    "question": "Which AWS service helps users plan and track their server and application inventory migration data to AWS?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS DataSync",
+      "C": "AWS Migration Hub",
+      "D": "AWS Application Migration Service"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 577,
+    "instruction": "Choose one.",
+    "question": "Which AWS team or offering helps users accelerate cloud adoption through paid engagements in any of several specialty practice areas?",
+    "options": {
+      "A": "AWS Enterprise Support",
+      "B": "AWS solutions architects",
+      "C": "AWS Professional Services",
+      "D": "AWS account managers"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 578,
+    "instruction": "Choose one.",
+    "question": "A company needs to purchase Amazon EC2 instances to support an application that will run continuously for more than 1 year. Which EC2 instance purchasing option meets these requirements MOST cost-effectively?",
+    "options": {
+      "A": "Dedicated Instances",
+      "B": "Spot Instances",
+      "C": "Reserved Instances",
+      "D": "On-Demand Instances"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 579,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which programming languages does AWS Cloud Development Kit (AWS CDK) currently support? (Choose two.)",
+    "options": {
+      "A": "Python",
+      "B": "Swift",
+      "C": "TypeScript",
+      "D": "Ruby E. PHP"
+    },
+    "correct": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": 580,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature gives users the ability to provision AWS infrastructure programmatically?",
+    "options": {
+      "A": "AWS Cloud Development Kit (AWS CDK)",
+      "B": "Amazon CodeGuru",
+      "C": "AWS Config",
+      "D": "AWS CodeCommit"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 581,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature allows a company to have its own logically isolated section of the AWS Cloud?",
+    "options": {
+      "A": "AWS VPN",
+      "B": "Availability Zones",
+      "C": "Amazon Virtual Private Cloud (Amazon VPC)",
+      "D": "AWS Regions"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 582,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which of the following actions are controlled with AWS Identity and Access Management (IAM)? (Choose two.)",
+    "options": {
+      "A": "Control access to AWS service APIs and to other specific resources.",
+      "B": "Provide intelligent threat detection and continuous monitoring.",
+      "C": "Protect the AWS environment using multi-factor authentication (MFA).",
+      "D": "Grant users access to AWS data centers. E. Provide firewall protection for applications from common web attacks."
+    },
+    "correct": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": 583,
+    "instruction": "Choose one.",
+    "question": "Why are AWS CloudFormation templates used?",
+    "options": {
+      "A": "To reduce provisioning time by using automation.",
+      "B": "To transfer existing infrastructure to another company.",
+      "C": "To reuse on-premises infrastructure in the AWS Cloud.",
+      "D": "To deploy large infrastructure with no cost implications."
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 584,
+    "instruction": "Choose one.",
+    "question": "A company is using AWS Identity and Access Management (IAM). Who can manage the access keys of the AWS account root user?",
+    "options": {
+      "A": "IAM users in the same account that have been granted permission",
+      "B": "IAM roles in any account that have been granted permission",
+      "C": "IAM users and roles that have been granted permission",
+      "D": "The AWS account owner"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 585,
+    "instruction": "Choose one.",
+    "question": "Which group shares responsibility with AWS for security and compliance of AWS accounts and resources?",
+    "options": {
+      "A": "Third-party vendors",
+      "B": "Customers",
+      "C": "Reseller partners",
+      "D": "Internet providers"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 586,
+    "instruction": "Choose one.",
+    "question": "A company needs an event history of which AWS resources the company has created. Which AWS service will provide this information?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "Amazon Aurora",
+      "D": "Amazon EventBridge"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 587,
+    "instruction": "Choose one.",
+    "question": "A company wants to run relationship databases in the AWS Cloud. The company wants to use a managed service that will install the database and run regular software updates. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "Amazon S3",
+      "B": "Amazon RDS",
+      "C": "Amazon Elastic Block Store (Amazon EBS)",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 588,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a fully managed graph database for highly connected datasets?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "Amazon RDS",
+      "C": "Amazon Neptune",
+      "D": "Amazon Aurora"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 589,
+    "instruction": "Choose one.",
+    "question": "A company's cloud environment includes Amazon EC2 instances and Application Load Balancers. The company wants to improve protections for its cloud resources against DDoS attacks. The company also wants to have real-time visibility into any DDoS attacks. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS Shield Standard",
+      "B": "AWS Firewall Manager",
+      "C": "AWS Shield Advanced",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 590,
+    "instruction": "Choose one.",
+    "question": "A company wants to update its online data processing application by implementing container-based services that run for 4 hours at a time. The company does not want to provision or manage server instances. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS Lambda",
+      "B": "AWS Fargate",
+      "C": "Amazon EC2",
+      "D": "AWS Elastic Beanstalk"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 591,
+    "instruction": "Choose one.",
+    "question": "Which AWS service enables users to create copies of resources across AWS Regions?",
+    "options": {
+      "A": "Amazon ElastiCache",
+      "B": "AWS CloudFormation",
+      "C": "AWS CloudTrail",
+      "D": "AWS Systems Manager"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 592,
+    "instruction": "Choose one.",
+    "question": "Which task is the responsibility of AWS, according to the AWS shared responsibility model?",
+    "options": {
+      "A": "Apply guest operating system patches to Amazon EC2 instances.",
+      "B": "Provide monitoring of human resources information management (HRIM) systems.",
+      "C": "Perform automated backups of Amazon RDS instances.",
+      "D": "Optimize the costs of running AWS services."
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 593,
+    "instruction": "Choose one.",
+    "question": "A user needs to perform a one-time backup of an Amazon Elastic Block Store (Amazon EBS) volume that is attached to an Amazon EC2 instance. What is the MOST operationally efficient way to perform this backup?",
+    "options": {
+      "A": "Attach another EBS volume to the EC2 instance, and copy the contents.",
+      "B": "Copy the EBS volume to a server that is running outside AWS and is connected with AWS Direct Connect.",
+      "C": "Create an EBS snapshot of the volume.",
+      "D": "Create a custom script to copy the EBS file contents to Amazon S3."
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 594,
+    "instruction": "Choose one.",
+    "question": "A developer who has no AWS Cloud experience wants to use AWS technology to build a web application. Which AWS service should the developer use to start building the application?",
+    "options": {
+      "A": "Amazon SageMaker",
+      "B": "AWS Lambda",
+      "C": "Amazon Lightsail",
+      "D": "Amazon Elastic Container Service (Amazon ECS)"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 595,
+    "instruction": "Choose one.",
+    "question": "A company wants to manage access and permissions for its third-party software as a service (SaaS) applications. The company wants to use a portal where end users can access assigned AWS accounts and AWS Cloud applications. Which AWS service should the company use to meet these requirements?",
+    "options": {
+      "A": "Amazon Cognito",
+      "B": "AWS IAM Identity Center (AWS Single Sign-On)",
+      "C": "AWS Identity and Access Management (IAM)",
+      "D": "AWS Directory Service for Microsoft Active Directory"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 596,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is designed for users running workloads that include a NoSQL database?",
+    "options": {
+      "A": "Amazon RDS",
+      "B": "Amazon S3",
+      "C": "Amazon Redshift",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 597,
+    "instruction": "Choose one.",
+    "question": "A company has a website on AWS. The company wants to deliver the website to a worldwide audience and provide low-latency response times for global users. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "Amazon CloudFront",
+      "C": "Amazon ElastiCache",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 598,
+    "instruction": "Choose one.",
+    "question": "A company wants to add a conversational chatbot to its website. Which AWS service can the company use to meet this requirement?",
+    "options": {
+      "A": "Amazon Textract",
+      "B": "Amazon Lex",
+      "C": "AWS Glue",
+      "D": "Amazon Rekognition"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 599,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature can be used to monitor for potential disk write spikes on a system that is running on Amazon EC2?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Health Dashboard",
+      "C": "AWS Trusted Advisor",
+      "D": "Amazon CloudWatch"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 600,
+    "instruction": "Choose one.",
+    "question": "A company has applications that control on-premises factory equipment. Which AWS service should the company use to run these applications with the LEAST latency?",
+    "options": {
+      "A": "AWS Outposts",
+      "B": "Amazon EC2",
+      "C": "AWS Lambda",
+      "D": "AWS Fargate"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 601,
+    "instruction": "Choose one.",
+    "question": "Which AWS Cloud Adoption Framework (AWS CAF) perspective focuses on organizing an inventory of data products in a data catalog?",
+    "options": {
+      "A": "Operations",
+      "B": "Governance",
+      "C": "Business",
+      "D": "Platform"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 602,
+    "instruction": "Choose one.",
+    "question": "A company runs its production workload in the AWS Cloud. The company needs to choose one of the AWS Support Plans. Which of the AWS Support Plans will meet these requirements at the LOWEST cost?",
+    "options": {
+      "A": "Developer",
+      "B": "Enterprise On-Ramp",
+      "C": "Enterprise",
+      "D": "Business"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 603,
+    "instruction": "Choose one.",
+    "question": "What is the primary use case for Amazon GuardDuty?",
+    "options": {
+      "A": "Prevention of DDoS attacks",
+      "B": "Protection against SQL injection attacks",
+      "C": "Automatic monitoring for threats to AWS workloads",
+      "D": "Automatic provisioning of AWS resources"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 604,
+    "instruction": "Choose one.",
+    "question": "Which VPC component can a company use to set up a virtual firewall at the Amazon EC2 instance level?",
+    "options": {
+      "A": "Network ACL",
+      "B": "Security group",
+      "C": "Route table",
+      "D": "NAT gateway"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 605,
+    "instruction": "Choose one.",
+    "question": "A developer needs to interact with AWS by using the AWS CLI. Which security feature or AWS service must be provisioned in the developer's account to meet this requirement?",
+    "options": {
+      "A": "User name and password",
+      "B": "AWS Systems Manager",
+      "C": "Root password access",
+      "D": "AWS access key"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 606,
+    "instruction": "Choose one.",
+    "question": "A food delivery company needs to block users in certain countries from accessing its website. Which AWS service should the company use to meet this requirement?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "AWS Control Tower",
+      "C": "Amazon Fraud Detector",
+      "D": "Amazon Pinpoint"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 607,
+    "instruction": "Choose one.",
+    "question": "A company needs to use Amazon S3 to store audio files that are each 5 megabytes in size. The company will rarely access the files, but the company must be able to retrieve the files immediately. Which S3 storage class will meet these requirements MOST cost-effectively?",
+    "options": {
+      "A": "S3 Standard",
+      "B": "S3 Standard-Infrequent Access (S3 Standard-IA)",
+      "C": "S3 Glacier Flexible Retrieval",
+      "D": "S3 Glacier Deep Archive"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 608,
+    "instruction": "Choose one.",
+    "question": "A company wants to set up a secure network connection from on premises to the AWS Cloud within 1 week. Which solution will meet these requirements?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "Amazon VPC",
+      "C": "AWS Site-to-Site VPN",
+      "D": "Edge location"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 609,
+    "instruction": "Choose one.",
+    "question": "What is a customer responsibility under the AWS shared responsibility model when using AWS Lambda?",
+    "options": {
+      "A": "Maintenance of the underlying Lambda hardware.",
+      "B": "Maintenance of the Lambda networking infrastructure.",
+      "C": "The code and libraries that run in the Lambda functions.",
+      "D": "The Lambda server software."
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 610,
+    "instruction": "Choose one.",
+    "question": "Which tasks are the responsibility of AWS according to the AWS shared responsibility model? (Choose two.)",
+    "options": {
+      "A": "Configure AWS Identity and Access Management (IAM).",
+      "B": "Configure security groups on Amazon EC2 instances.",
+      "C": "Secure the access of physical AWS facilities.",
+      "D": "Patch applications that run on Amazon EC2 instances. E. Perform infrastructure patching and maintenance."
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 611,
+    "instruction": "Choose one.",
+    "question": "A company's compliance officer wants to review the AWS Service Organization Control (SOC) reports. Which AWS service or feature should the compliance officer use to complete this task?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "AWS Concierge Support",
+      "C": "AWS Support",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 612,
+    "instruction": "Choose one.",
+    "question": "A company has a compliance requirement to record and evaluate configuration changes, as well as perform remediation actions on AWS resources. Which AWS service should the company use?",
+    "options": {
+      "A": "AWS Config",
+      "B": "AWS Secrets Manager",
+      "C": "AWS CloudTrail",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 613,
+    "instruction": "Choose one.",
+    "question": "A company plans to perform a one-time migration of a large dataset with millions of files from its on-premises data center to the AWS Cloud. Which AWS service should the company use for the migration?",
+    "options": {
+      "A": "AWS Database Migration Service (AWS DMS)",
+      "B": "AWS DataSync",
+      "C": "AWS Migration Hub",
+      "D": "AWS Application Migration Service"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 614,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which AWS network services or features allow CIDR block notation when providing an IP address range? (Choose two.)",
+    "options": {
+      "A": "Security groups",
+      "B": "Amazon Machine Image (AMI)",
+      "C": "Network access control list (network ACL)",
+      "D": "AWS Budgets E. Amazon Elastic Block Store (Amazon EBS)"
+    },
+    "correct": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": 615,
+    "instruction": "Choose one.",
+    "question": "A company wants to develop an accessibility application that will convert text into audible speech. Which AWS service will meet this requirement?",
+    "options": {
+      "A": "Amazon MQ",
+      "B": "Amazon Polly",
+      "C": "Amazon Neptune",
+      "D": "Amazon Timestream"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 616,
+    "instruction": "Choose one.",
+    "question": "A company needs to set up dedicated network connectivity between its on-premises data center and the AWS Cloud. The network cannot use the public internet. Which AWS service or feature will meet these requirements?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "AWS VPN",
+      "C": "Amazon CloudFront",
+      "D": "AWS Direct Connect"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 617,
+    "instruction": "Choose one.",
+    "question": "A company needs to use dashboards and charts to analyze insights from business data. Which AWS service will provide the dashboards and charts for these insights?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon Aurora",
+      "C": "Amazon QuickSight",
+      "D": "AWS CloudTrail"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 618,
+    "instruction": "Choose one.",
+    "question": "A company wants to migrate its on-premises infrastructure to the AWS Cloud. Which advantage of cloud computing will help the company reduce upfront costs?",
+    "options": {
+      "A": "Go global in minutes",
+      "B": "Increase speed and agility",
+      "C": "Benefit from massive economies of scale",
+      "D": "Trade fixed expense for variable expense"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 619,
+    "instruction": "Choose one.",
+    "question": "A company is designing workloads in the AWS Cloud. The company wants the workloads to perform their intended function correctly and consistently throughout their lifecycle. Which pillar of the AWS Well-Architected Framework does this goal represent?",
+    "options": {
+      "A": "Operational excellence",
+      "B": "Security",
+      "C": "Reliability",
+      "D": "Performance efficiency"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 620,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to temporarily provide federated security credentials to access AWS resources?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Simple Token Service (AWS STS)",
+      "C": "AWS Secrets Manager",
+      "D": "AWS Certificate Manager"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 621,
+    "instruction": "Choose one.",
+    "question": "What is a benefit of using an Elastic Load Balancing (ELB) load balancer with applications running in the AWS Cloud?",
+    "options": {
+      "A": "An ELB will automatically scale resources to meet capacity needs.",
+      "B": "An ELB can balance traffic across multiple compute resources.",
+      "C": "An ELB can span multiple AWS Regions.",
+      "D": "An ELB can balance traffic between multiple internet gateways."
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 622,
+    "instruction": "Choose one.",
+    "question": "A company needs to convert video files and audio files to a format that will play on smartphones. Which AWS service will meet this requirement?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Rekognition",
+      "C": "Amazon Elastic Transcoder",
+      "D": "Amazon Polly"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 623,
+    "instruction": "Choose one.",
+    "question": "A company wants to securely store Amazon RDS database credentials and automatically rotate user passwords periodically. Which AWS service or capability will meet these requirements?",
+    "options": {
+      "A": "Amazon S3",
+      "B": "AWS Systems Manager Parameter Store",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudTrail"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 624,
+    "instruction": "Choose one.",
+    "question": "A company needs to have the ability to set up infrastructure for new applications in minutes. Which advantage of cloud computing will help the company meet this requirement?",
+    "options": {
+      "A": "Trade fixed expense for variable expense",
+      "B": "Go global in minutes",
+      "C": "Increase speed and agility",
+      "D": "Stop guessing capacity"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 625,
+    "instruction": "Choose one.",
+    "question": "A company needs a managed NFS file system that the company can use with its AWS compute resources. Which AWS service or feature will meet these requirements?",
+    "options": {
+      "A": "Amazon Elastic Block Store (Amazon EBS)",
+      "B": "AWS Storage Gateway Tape Gateway",
+      "C": "Amazon S3 Glacier Flexible Retrieval",
+      "D": "Amazon Elastic File System (Amazon EFS)"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 626,
+    "instruction": "Choose one.",
+    "question": "A company plans to migrate to the AWS Cloud. The company wants to gather information about its on-premises data center. Which AWS service should the company use to meet these requirements?",
+    "options": {
+      "A": "AWS Application Discovery Service",
+      "B": "AWS DataSync",
+      "C": "AWS Storage Gateway",
+      "D": "AWS Database Migration Service (AWS DMS)"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 627,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which tasks are responsibilities of the customer, according to the AWS shared responsibility model? (Choose two.)",
+    "options": {
+      "A": "Secure the virtualization layer.",
+      "B": "Encrypt data and maintain data integrity.",
+      "C": "Patch the Amazon RDS operating system.",
+      "D": "Maintain identity and access management controls. E. Secure Availability Zones."
+    },
+    "correct": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": 628,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "An online retail company wants to migrate its on-premises workload to AWS. The company needs to automatically handle a seasonal workload increase in a cost-effective manner. Which AWS Cloud features will help the company meet this requirement? (Choose two.)",
+    "options": {
+      "A": "Cross-Region workload deployment",
+      "B": "Pay-as-you-go pricing",
+      "C": "Built-in AWS CloudTrail audit capabilities",
+      "D": "Auto Scaling policies E. Centralized logging"
+    },
+    "correct": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": 629,
+    "instruction": "Choose one.",
+    "question": "A developer needs to use a standardized template to create copies of a company's AWS architecture for development, test, and production environments. Which AWS service should the developer use to meet this requirement?",
+    "options": {
+      "A": "AWS Cloud Map",
+      "B": "AWS CloudFormation",
+      "C": "Amazon Cloud Front",
+      "D": "AWS CloudTrail"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 630,
+    "instruction": "Choose one.",
+    "question": "Which AWS service can create a private network connection from on premises to the AWS Cloud?",
+    "options": {
+      "A": "AWS Config",
+      "B": "Virtual Private Cloud (Amazon VPC)",
+      "C": "AWS Direct Connect",
+      "D": "Amazon Route 53"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 631,
+    "instruction": "Choose one.",
+    "question": "Under the AWS shared responsibility model, which of the following is a responsibility of the customer?",
+    "options": {
+      "A": "Shred disk drives before they leave a data center.",
+      "B": "Prevent customers from gathering packets or collecting traffic at the hypervisor level.",
+      "C": "Patch the guest operating system with the latest security patches.",
+      "D": "Maintain security systems that provide physical monitoring of data centers."
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 632,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses speech-to-text conversion to help users create meeting notes?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Textract",
+      "C": "Amazon Rekognition",
+      "D": "Amazon Transcribe"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 633,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or tool provides users with a graphical interface that they can use to manage AWS services?",
+    "options": {
+      "A": "AWS Copilot",
+      "B": "AWS CLI",
+      "C": "AWS Management Console",
+      "D": "AWS software development kits (SDKs)"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 634,
+    "instruction": "Choose one.",
+    "question": "A company has a workload that will run continuously for 1 year. The workload cannot tolerate service interruptions. Which Amazon EC2 purchasing option will be MOST cost-effective?",
+    "options": {
+      "A": "All Upfront Reserved Instances",
+      "B": "Partial Upfront Reserved Instances",
+      "C": "Dedicated Instances",
+      "D": "On-Demand Instances"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 635,
+    "instruction": "Choose one.",
+    "question": "A company migrated its systems to the AWS Cloud. The systems are rightsized, and a security review did not reveal any issues. The company must ensure that additional developments, integrations, changes, and system usage growth do not jeopardize this optimized AWS infrastructure. Which AWS service should the company use to report ongoing optimization and security?",
+    "options": {
+      "A": "AWS Trusted Advisor",
+      "B": "AWS Health Dashboard",
+      "C": "Amazon Connect",
+      "D": "AWS Systems Manager"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 636,
+    "instruction": "Choose one.",
+    "question": "Which AWS service integrates with other AWS services to provide the ability to encrypt data at rest?",
+    "options": {
+      "A": "AWS Key Management Service (AWS KMS)",
+      "B": "AWS Certificate Manager (ACM)",
+      "C": "AWS Identity and Access Management (IAM)",
+      "D": "AWS Security Hub"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 637,
+    "instruction": "Choose one.",
+    "question": "A company wants to track the monthly cost and usage of all Amazon EC2 instances in a specific AWS environment. Which AWS service or tool will meet these requirements?",
+    "options": {
+      "A": "AWS Cost Anomaly Detection",
+      "B": "AWS Budgets",
+      "C": "AWS Compute Optimizer",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 638,
+    "instruction": "Choose one.",
+    "question": "A company wants the ability to automatically acquire resources as needed and release the resources when they are no longer needed. Which cloud concept describes this functionality?",
+    "options": {
+      "A": "Availability",
+      "B": "Elasticity",
+      "C": "Durability",
+      "D": "Reliability"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 639,
+    "instruction": "Choose one.",
+    "question": "A company wants a cost-effective option when running its applications in an Amazon EC2 instance for short time periods. The applications can be interrupted. Which EC2 instance type will meet these requirements?",
+    "options": {
+      "A": "Spot Instances",
+      "B": "On-Demand Instances",
+      "C": "Reserved Instances",
+      "D": "Dedicated Instances"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 640,
+    "instruction": "Choose one.",
+    "question": "A company has an AWS Business Support plan. The company needs to gain access to the AWS DDoS Response Team (DRT) to help mitigate DDoS events. Which AWS service or resource must the company use to meet these requirements?",
+    "options": {
+      "A": "AWS Shield Standard",
+      "B": "AWS Enterprise Support",
+      "C": "AWS WAF",
+      "D": "AWS Shield Advanced"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 641,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or tool provides a visualization of historical AWS spending patterns and projections of future AWS costs?",
+    "options": {
+      "A": "AWS Cost and Usage Report",
+      "B": "AWS Budgets",
+      "C": "Cost Explorer",
+      "D": "Amazon Cloud Watch"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 642,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "A company is migrating to the AWS Cloud instead of running its infrastructure on premises. Which of the following are advantages of this migration? (Choose two.)",
+    "options": {
+      "A": "Elimination of the need to perform security auditing",
+      "B": "Increased global reach and agility",
+      "C": "Ability to deploy globally in minutes",
+      "D": "Elimination of the cost of IT staff members E. Redundancy by default for all compute services"
+    },
+    "correct": [
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": 643,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses edge locations to cache content?",
+    "options": {
+      "A": "Amazon Kinesis",
+      "B": "Amazon Simple Queue Service (Amazon SQS)",
+      "C": "Amazon CloudFront",
+      "D": "Amazon Route 53"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 644,
+    "instruction": "Choose one.",
+    "question": "A company wants to securely access an Amazon S3 bucket from an Amazon EC2 instance without accessing the internet. What should the company use to accomplish this goal?",
+    "options": {
+      "A": "VPN connection",
+      "B": "Internet gateway",
+      "C": "VPC endpoint",
+      "D": "NAT gateway"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 645,
+    "instruction": "Choose one.",
+    "question": "A company wants an AWS service that can automate software deployment in Amazon EC2 instances and on-premises instances. Which AWS service will meet this requirement?",
+    "options": {
+      "A": "AWS CodeCommit",
+      "B": "AWS CodeBuild",
+      "C": "AWS CodeDeploy",
+      "D": "AWS CodePipeline"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 646,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "Which AWS services are serverless? (Choose two.)",
+    "options": {
+      "A": "AWS Fargate",
+      "B": "Amazon Managed Streaming for Apache Kafka",
+      "C": "Amazon EMR",
+      "D": "Amazon S3 E. Amazon EC2"
+    },
+    "correct": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "id": 647,
+    "instruction": "Choose one.",
+    "question": "A company wants to continuously improve processes and procedures to deliver business value. Which pillar of the AWS Well-Architected Framework does this goal represent?",
+    "options": {
+      "A": "Performance efficiency",
+      "B": "Operational excellence",
+      "C": "Reliability",
+      "D": "Sustainability"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 648,
+    "instruction": "Choose one.",
+    "question": "Which of the following is a customer responsibility according to the AWS shared responsibility model?",
+    "options": {
+      "A": "Apply security patches for Amazon S3 infrastructure devices.",
+      "B": "Provide physical security for AWS datacenters.",
+      "C": "Install operating system updates on Lambda@Edge.",
+      "D": "Implement multi-factor authentication (MFA) for IAM user accounts."
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 649,
+    "instruction": "Choose one.",
+    "question": "Which AWS service should a company use to organize, characterize, and search large numbers of images?",
+    "options": {
+      "A": "Amazon Transcribe",
+      "B": "Amazon Rekognition",
+      "C": "Amazon Aurora",
+      "D": "Amazon QuickSight"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 650,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is always available free of charge to users?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "AWS Identity and Access Management (IAM)",
+      "C": "AWS Secrets Manager",
+      "D": "Amazon ElastiCache"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 651,
+    "instruction": "Choose one.",
+    "question": "A company needs to run some of its workloads on premises to comply with regulatory guidelines. The company wants to use the AWS Cloud to run workloads that are not required to be on premises. The company also wants to be able to use the same API calls for the on-premises workloads and the cloud workloads. Which AWS service or feature should the company use to meet these requirements?",
+    "options": {
+      "A": "Dedicated Hosts",
+      "B": "AWS Outposts",
+      "C": "Availability Zones",
+      "D": "AWS Wavelength"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 652,
+    "instruction": "Choose one.",
+    "question": "What is the recommended use case for Amazon EC2 On-Demand Instances?",
+    "options": {
+      "A": "A steady-state workload that requires a particular EC2 instance configuration for a long period of time",
+      "B": "A workload that can be interrupted for a project that requires the lowest possible cost",
+      "C": "An unpredictable workload that does not require a long-term commitment",
+      "D": "A workload that is expected to run for longer than 1 year"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 653,
+    "instruction": "Choose one.",
+    "question": "A company wants to use an AWS networking solution that can act as a centralized gateway between multiple VPCs and on-premises networks. Which AWS service or feature will meet this requirement?",
+    "options": {
+      "A": "Gateway VPC endpoint",
+      "B": "AWS Direct Connect",
+      "C": "AWS Transit Gateway",
+      "D": "AWS PrivateLink"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 654,
+    "instruction": "Choose one.",
+    "question": "An administrator observed that multiple AWS resources were deleted yesterday. Which AWS service will help identify the cause and determine which user deleted the resources?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "Amazon Inspector",
+      "C": "Amazon GuardDuty",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 655,
+    "instruction": "Choose one.",
+    "question": "To assist companies with Payment Card Industry Data Security Standard (PCI DSS) compliance in the cloud, AWS provides:",
+    "options": {
+      "A": "physical Inspections of data centers by appointment.",
+      "B": "required PCI compliance certifications for any application running on AWS.",
+      "C": "an AWS Attestation of Compliance (AOC) report for specific AWS services.",
+      "D": "professional PCI compliance services."
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 656,
+    "instruction": "Choose one.",
+    "question": "In which situations should a company create an IAM user instead of an IAM role?",
+    "options": {
+      "A": "When an application that runs on Amazon EC2 instances requires access to other AWS services",
+      "B": "When the company creates AWS access credentials for individuals",
+      "C": "When the company creates an application that runs on a mobile phone that makes requests to AWS",
+      "D": "When the company needs to add users to IAM groups E. When users are authenticated in the corporate network and want to be able to use AWS without having to sign in a second time"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 657,
+    "instruction": "Choose one.",
+    "question": "A company hosts a web application on AWS. The company has improved the availability of its application by provisioning multiple Amazon EC2 instances. The company wants to distribute its traffic across the EC2 instances while providing a single point of contact to the web clients. Which AWS service can distribute the traffic to multiple EC2 instances as targets?",
+    "options": {
+      "A": "VPC endpoints",
+      "B": "Application Load Balancer",
+      "C": "NAT gateway",
+      "D": "Internet gateway"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 658,
+    "instruction": "Choose one.",
+    "question": "What is the total volume of data that can be stored in Amazon S3?",
+    "options": {
+      "A": "10 PB",
+      "B": "50 PB",
+      "C": "100 PB",
+      "D": "Virtually unlimited"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 659,
+    "instruction": "Choose one.",
+    "question": "Which design principle is related to the reliability pillar according to the AWS Well-Architected Framework?",
+    "options": {
+      "A": "Test recovery procedures",
+      "B": "Experiment more often",
+      "C": "Go global in minutes",
+      "D": "Analyze and attribute to expenditure"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 660,
+    "instruction": "Choose one.",
+    "question": "A company stores data in an Amazon S3 bucket. Which task is the responsibility of AWS?",
+    "options": {
+      "A": "Configure an S3 Lifecycle policy.",
+      "B": "Activate S3 Versioning.",
+      "C": "Configure S3 bucket policies.",
+      "D": "Protect the infrastructure that supports S3 storage."
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 661,
+    "instruction": "Choose one.",
+    "question": "A company wants to transfer a virtual Windows Server 2022 that is currently running in its own data center to AWS. The company wants to automatically convert the existing server to run directly on AWS infrastructure instead of visualized hardware. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS DataSync",
+      "B": "AWS Database Migration Service (AWS DMS)",
+      "C": "AWS Application Discovery Service",
+      "D": "AWS Application Migration Service"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 662,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed NoSQL database service?",
+    "options": {
+      "A": "Amazon RDS",
+      "B": "Amazon Redshift",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon Aurora"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 663,
+    "instruction": "Choose one.",
+    "question": "A company deployed an application in multiple AWS Regions around the world. The company wants to improve the application’s performance and availability. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "Amazon DataZone",
+      "C": "AWS Cloud Map",
+      "D": "AWS Auto Scaling"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 664,
+    "instruction": "Choose one.",
+    "question": "A company wants to migrate its on-premises SQL Server database to the AWS Cloud. The company wants AWS to handle the day-to-day administration of the database. Which AWS service will meet the company's requirements?",
+    "options": {
+      "A": "Amazon EC2 for Microsoft SQL Server",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon RDS",
+      "D": "Amazon Aurora"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 665,
+    "instruction": "Choose one.",
+    "question": "A company needs stateless network filtering for its VPC. Which AWS service, tool, or feature will meet this requirement?",
+    "options": {
+      "A": "AWS PrivateLink",
+      "B": "Security group",
+      "C": "Network access control list (ACL)",
+      "D": "AWS WAF"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 666,
+    "instruction": "Choose one.",
+    "question": "Which option is an advantage of AWS Cloud computing that minimizes variable costs?",
+    "options": {
+      "A": "High availability",
+      "B": "Economies of scale",
+      "C": "Global reach",
+      "D": "Agility"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 667,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "A company wants to migrate its server-based applications to the AWS Cloud. The company wants to determine the total cost of ownership for its compute resources that will be hosted on the AWS Cloud. Which combination of AWS services or tools will meet these requirements? (Choose two.)",
+    "options": {
+      "A": "AWS Pricing Calculator",
+      "B": "Migration Evaluator",
+      "C": "AWS Support Center",
+      "D": "AWS Application Discovery Service E. AWS Database Migration Service (AWS DMS)"
+    },
+    "correct": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 668,
+    "instruction": "Choose one.",
+    "question": "A company has data lakes designed for high performance computing (HPC) workloads. Which Amazon EC2 instance type should the company use to meet these requirements?",
+    "options": {
+      "A": "General purpose instances",
+      "B": "Compute optimized instances",
+      "C": "Memory optimized instances",
+      "D": "Storage optimized instances"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 669,
+    "instruction": "Choose one.",
+    "question": "Which benefits does a company gain when the company moves from on-premises IT architecture to the AWS Cloud? (Choose two.)",
+    "options": {
+      "A": "Reduced or eliminated tasks for hardware troubleshooting, capacity planning, and procurement",
+      "B": "Elimination of the need for trained IT staff",
+      "C": "Automatic security configuration of all applications that are migrated to the cloud",
+      "D": "Elimination of the need for disaster recovery planning E. Faster deployment of new features and applications"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 670,
+    "instruction": "Each correct answer presents part of the solution. Choose two.",
+    "question": "A company is planning to migrate to the AWS Cloud. The company is conducting organizational transformation and wants to become more responsive to customer inquiries and feedback. Which task should the company perform to meet these requirements, according to the AWS Cloud Adoption Framework (AWS CAF)? (Choose two.)",
+    "options": {
+      "A": "Realign teams to focus on products and value streams.",
+      "B": "Create new value propositions with new products and services.",
+      "C": "Use agile methods to rapidly iterate and evolve.",
+      "D": "Use a new data and analytics platform to create actionable insights. E. Migrate and modernize legacy infrastructure."
+    },
+    "correct": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": 671,
+    "instruction": "Choose one.",
+    "question": "A company that is planning to migrate to the AWS Cloud is based in an isolated area that has limited internet connectivity. The company needs to perform local data processing on premises. The company needs a solution that can operate without a stable internet connection. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "Amazon S3",
+      "B": "AWS Snowball Edge",
+      "C": "AWS Storage Gateway",
+      "D": "AWS Backup"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 672,
+    "instruction": "Choose one.",
+    "question": "A company wants to build graph queries for real-time fraud pattern detection. Which AWS service will meet this requirement?",
+    "options": {
+      "A": "Amazon Neptune",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Timestream",
+      "D": "Amazon Forecast"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 673,
+    "instruction": "Choose one.",
+    "question": "A company wants to migrate to the AWS Cloud. The company needs the ability to acquire resources when the resources are necessary. The company also needs the ability to release those resources when the resources are no longer necessary. Which architecture concept of the AWS Cloud meets these requirements?",
+    "options": {
+      "A": "Elasticity",
+      "B": "Availability",
+      "C": "Reliability",
+      "D": "Durability"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 674,
+    "instruction": "Choose one.",
+    "question": "A company wants to deploy a web application as a containerized application. The company wants to use a managed service that can automatically create container images from source code and deploy the containerized application. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS Elastic Beanstalk",
+      "B": "Amazon Elastic Container Service (Amazon ECS)",
+      "C": "AWS App Runner",
+      "D": "Amazon EC2"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 675,
+    "instruction": "Choose one.",
+    "question": "A company has moved all its infrastructure to the AWS Cloud. To plan ahead for each quarter, the finance team wants to track the cost and usage data of all resources from previous months. The finance team wants to automatically generate reports that contains the data. Which AWS service or feature should the finance team use to meet these requirements?",
+    "options": {
+      "A": "Amazon Detective",
+      "B": "AWS Pricing Calculator",
+      "C": "AWS Budgets",
+      "D": "AWS Savings Plans"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 676,
+    "instruction": "Choose one.",
+    "question": "Which AWS Cloud Adoption Framework (AWS CAF) perspective focuses on real-time insights and answers questions about strategy?",
+    "options": {
+      "A": "Operations",
+      "B": "People",
+      "C": "Business",
+      "D": "Platform"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 677,
+    "instruction": "Choose one.",
+    "question": "A company wants to migrate critical on-premises production systems to Amazon EC2 instances. The production instances will be used for at least 3 years. The company wants a pricing option that will minimize cost. Which solution will meet these requirements?",
+    "options": {
+      "A": "On-Demand Instances",
+      "B": "Reserved Instances",
+      "C": "Spot Instances",
+      "D": "AWS Free Tier"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 678,
+    "instruction": "Choose one.",
+    "question": "Which AWS Well-Architected Framework concept represents a system's ability to remain functional when the system encounters operational problems?",
+    "options": {
+      "A": "Consistency",
+      "B": "Elasticity",
+      "C": "Durability",
+      "D": "Latency"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 679,
+    "instruction": "Choose one.",
+    "question": "Which pillar of the AWS Well-Architected Framework focuses on the ability to recover automatically from service interruptions?",
+    "options": {
+      "A": "Security",
+      "B": "Performance efficiency",
+      "C": "Operational excellence",
+      "D": "Reliability"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 680,
+    "instruction": "Choose one.",
+    "question": "A company has multiple SQL-based databases located in a data center. The company needs to migrate all database servers to the AWS Cloud to reduce the cost of operating physical servers. Which AWS service or resource will meet these requirements with the LEAST operational overhead?",
+    "options": {
+      "A": "Amazon EC2 instances",
+      "B": "Amazon RDS",
+      "C": "Amazon DynamoDB",
+      "D": "OpenSearch"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 681,
+    "instruction": "Choose one.",
+    "question": "A company wants to build, train, and deploy machine learning (ML) models. Which AWS service can the company use to meet this requirement?",
+    "options": {
+      "A": "Amazon Personalize",
+      "B": "Amazon Comprehend",
+      "C": "Amazon Forecast",
+      "D": "Amazon SageMaker"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 682,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or tool provides recommendations to help users get rightsized Amazon EC2 instances based on historical workload usage data?",
+    "options": {
+      "A": "AWS Pricing Calculator",
+      "B": "AWS Compute Optimizer",
+      "C": "AWS App Runner",
+      "D": "AWS Systems Manager"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 683,
+    "instruction": "Choose one.",
+    "question": "A company wants to explore and analyze data in Amazon S3 by using a programming language. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "Amazon Kendra",
+      "B": "Amazon Athena",
+      "C": "Amazon Comprehend",
+      "D": "Amazon SageMaker"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 684,
+    "instruction": "Choose one.",
+    "question": "A company needs to run an application on Amazon EC2 instances without interruption. Which EC2 instance purchasing option will meet this requirement MOST cost-effectively?",
+    "options": {
+      "A": "Standard Reserved Instances",
+      "B": "Convertible Reserved Instances",
+      "C": "On-Demand Instances",
+      "D": "Spot Instances"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 685,
+    "instruction": "Choose one.",
+    "question": "A company wants a fully managed service that centralizes and automates data protection across AWS services and hybrid workloads. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "AWS Backup",
+      "C": "AWS Batch",
+      "D": "AWS Shield"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 686,
+    "instruction": "Choose one.",
+    "question": "A company plans to migrate its application from on premises to the AWS Cloud. The company needs to gather usage and configuration data for the application components. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS Database Migration Service (AWS DMS)",
+      "B": "AWS Transfer Family",
+      "C": "AWS Application Discovery Service",
+      "D": "AWS Global Accelerator"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 687,
+    "instruction": "Choose one.",
+    "question": "Which design principle aligns with performance efficiency pillar of the AWS Well-Architected Framework?",
+    "options": {
+      "A": "Using serverless architectures",
+      "B": "Scaling horizontally",
+      "C": "Measuring the cost of workloads",
+      "D": "Using managed services"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 688,
+    "instruction": "Choose one.",
+    "question": "A company wants to provide low latency to its users around the world. Which feature of the AWS Cloud meet this requirement?",
+    "options": {
+      "A": "Global infrastructure",
+      "B": "Pay as-you-go pricing",
+      "C": "Managed services",
+      "D": "Economy of scale"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 689,
+    "instruction": "Choose one.",
+    "question": "Which type of workload should a company run on Amazon EC2 Spot Instances?",
+    "options": {
+      "A": "A steady-state workload that requires a particular EC2 instance configuration for a long period of time",
+      "B": "A workload that can be interrupted and can control costs",
+      "C": "A steady-state workload that does not require a long-term commitment",
+      "D": "A workload that cannot be interrupted and can control costs"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 690,
+    "instruction": "Choose one.",
+    "question": "A company has multiple AWS accounts. The company needs to receive a consolidated bill from AWS and must centrally manage security and compliance. Which AWS service or feature should the company use to meet these requirements?",
+    "options": {
+      "A": "AWS Cost and Usage Report",
+      "B": "AWS Organizations",
+      "C": "AWS Config",
+      "D": "AWS Security Hub"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 691,
+    "instruction": "Choose one.",
+    "question": "For which use case are Amazon EC2 On-Demand Instances MOST cost-effective?",
+    "options": {
+      "A": "Compute-intensive video transcoding that can be restarted if necessary",
+      "B": "An instance in continual use for 1 month to conduct quality assurance tests",
+      "C": "An instance that runs a web server that will run for 1 year",
+      "D": "An instance that runs a database that will run for 3 years"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 692,
+    "instruction": "Choose one.",
+    "question": "A company has developed a new In-house application. The company does not have a way to determine or predict the usage demand that the application will create. Which AWS Cloud computing benefit is the company seeking?",
+    "options": {
+      "A": "Easy to use",
+      "B": "Cost-effective",
+      "C": "Secure",
+      "D": "Scalable and high performance"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 693,
+    "instruction": "Choose one.",
+    "question": "Which AWS offering can analyze a company’s AWS environment to discover security vulnerabilities on Amazon EC2 instances?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon Macie",
+      "C": "AWS Shield Standard",
+      "D": "Security groups"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 694,
+    "instruction": "Choose one.",
+    "question": "A company plans to onboard new employees that will be working remotely. The company needs to set up Windows virtual desktops to create a working environment for the new employees. The employees must be able access the working environment from anywhere and by using their computer or a web browser. Which AWS service or feature will meet these requirements?",
+    "options": {
+      "A": "Dedicated Hosts",
+      "B": "AWS Global Accelerator",
+      "C": "Amazon Workspaces",
+      "D": "Amazon CloudFront"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 695,
+    "instruction": "Choose one.",
+    "question": "A company wants to visualize and manage AWS Cloud costs and usage for a specific period of time. Which AWS service or feature will meet these requirements?",
+    "options": {
+      "A": "Cost Explorer",
+      "B": "Consolidated billing",
+      "C": "AWS Organizations",
+      "D": "AWS Budgets"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 696,
+    "instruction": "Choose one.",
+    "question": "Which AWS service supports MySQL database engines?",
+    "options": {
+      "A": "Amazon Dynamo D В",
+      "B": "Amazon RDS",
+      "C": "Amazon DocumentDB (with MongoDB compatibility)",
+      "D": "Amazon ElastiCache"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 697,
+    "instruction": "Choose one.",
+    "question": "A company purchased Amazon EC2 Standard Reserved Instances (RIs) for a workload in the AWS Cloud. The company needs to move part of the workload to an instance family that does not match the instance family of these Standard RIs. How can the company take advantage of the Standard RIs that it no longer needs?",
+    "options": {
+      "A": "Contact the AWS Support team, and ask the team to sell the Standard RIs",
+      "B": "Sell the Standard RIs on the Amazon EC2 Reserved Instance Marketplace",
+      "C": "Sell the Standard RIs as a third-party seller on the AWS Marketplace",
+      "D": "Convert the Standard RIs to Savings Plans"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 698,
+    "instruction": "Choose one.",
+    "question": "A company is releasing a business-critical application. Before the release, the company needs strategic planning assistance from AWS. During the release, the company needs AWS infrastructure event management and real-time support. What should the company do to meet these requirements?",
+    "options": {
+      "A": "Access AWS Trusted Advisor",
+      "B": "Contact the AWS Partner Network (APN)",
+      "C": "Sign up for AWS Enterprise Support",
+      "D": "Contact AWS Professional Services"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 699,
+    "instruction": "Choose one.",
+    "question": "A company wants to improve employee productivity by providing a way for employees to search for questions and retrieve specific answers. The company wants to use a single intelligent search interface. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "Amazon Connect",
+      "B": "Amazon Kendra",
+      "C": "Amazon Lex",
+      "D": "Amazon Comprehend"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 700,
+    "instruction": "Choose one.",
+    "question": "A company wants an Amazon S3 solution that provides access to object storage within single-digit milliseconds. Which solution will meet these requirements?",
+    "options": {
+      "A": "S3 Express One Zone",
+      "B": "S3 Standard",
+      "C": "S3 Glacier Flexible Retrieval",
+      "D": "S3 Glacier Instant Retrieval"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 702,
+    "instruction": "Choose one.",
+    "question": "A company wants to run its application's code without having to provision and manage servers. Which AWS service will meet this requirement?",
+    "options": {
+      "A": "AWS Glue",
+      "B": "AWS Lambda",
+      "C": "AWS CodeDeploy",
+      "D": "Amazon CodeGuru"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 703,
+    "instruction": "Choose one.",
+    "question": "A company is planning to migrate to the AWS Cloud. The company needs to understand the existing on-premises usage and configuration. The company does not want to replicate its workloads to AWS, yet. Which AWS service or tool will meet these requirements?",
+    "options": {
+      "A": "AWS Application Discovery Service",
+      "B": "AWS Application Migration Service",
+      "C": "Cloud Migration Factory",
+      "D": "AWS Transfer Family"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 704,
+    "instruction": "Choose one.",
+    "question": "A company wants to allow its employees to work remotely from home. The company's employees use Windows or Linux desktops. The company's employees need access from anywhere and at anytime by using any supported devices. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "Amazon Workspaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Keyspaces (for Apache Cassandra)",
+      "D": "AWS Cloud9"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 705,
+    "instruction": "Choose one.",
+    "question": "A company wants to test a new application. Which AWS principle will help the company test the application?",
+    "options": {
+      "A": "Make long-term commitments in exchange for a cost discount.",
+      "B": "Scale up and down when needed without any long-term commitments.",
+      "C": "Have total control over the application infrastructure.",
+      "D": "Manage all of the maintenance tasks associated with the cloud."
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 706,
+    "instruction": "Choose one.",
+    "question": "A company plans to launch an ecommerce website that contains many images for a product catalog. The company wants to keep the cost of running the website within a specific budget. Which AWS service or tool should the company use to monitor the ongoing costs of the website?",
+    "options": {
+      "A": "AWS Cost Explorer",
+      "B": "AWS SDKs",
+      "C": "EC2 Image Builder",
+      "D": "AWS CloudFormation"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 707,
+    "instruction": "Choose one.",
+    "question": "A company has deployed several public applications behind Application Load Balancers. The company wants to improve the performance of the applications. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "Amazon Connect",
+      "C": "Amazon ElastiCache",
+      "D": "Amazon CloudWatch"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 708,
+    "instruction": "Choose one.",
+    "question": "A company has an on-premises application. The application has processing times of less than 5 minutes and is invoked only a few times each day. The company wants to move the application to the AWS Cloud. Which AWS service will support this application MOST cost-effectively?",
+    "options": {
+      "A": "Amazon Elastic Container Service (Amazon ECS)",
+      "B": "AWS Lambda",
+      "C": "Amazon Elastic Kubernetes Service (Amazon EKS)",
+      "D": "Amazon EC2"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 709,
+    "instruction": "Choose one.",
+    "question": "A company is learning about the perspectives of the AWS Cloud Adoption Framework (AWS CAF). Which perspective of the AWS CAF addresses the strategy management capability?",
+    "options": {
+      "A": "Business perspective",
+      "B": "People perspective",
+      "C": "Governance perspective",
+      "D": "Operations perspective"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 710,
+    "instruction": "Choose one.",
+    "question": "A company wants to consolidate its call centers to improve the customer voice and chat experience with call center agents. Which AWS service or tool will meet these requirements?",
+    "options": {
+      "A": "Amazon Simple Notification Service (Amazon SNS)",
+      "B": "AWS Support Center",
+      "C": "Amazon Cognito",
+      "D": "Amazon Connect"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 711,
+    "instruction": "Choose one.",
+    "question": "A company needs to provision uninterruptible Amazon EC2 instances, when needed, and pay for compute capacity by the second. Which EC2 instance purchasing option will meet these requirements?",
+    "options": {
+      "A": "Reserved Instances",
+      "B": "Spot Instances",
+      "C": "On-Demand Instances",
+      "D": "Dedicated Instances"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 712,
+    "instruction": "Choose one.",
+    "question": "Which AWS service can migrate Amazon EC2 instances from one AWS Region to another?",
+    "options": {
+      "A": "AWS Application Migration Service",
+      "B": "AWS Database Migration Service (AWS DMS)",
+      "C": "AWS DataSync",
+      "D": "AWS Migration Hub"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 713,
+    "instruction": "Choose one.",
+    "question": "A company needs to block SQL injection attacks. Which AWS service or feature provides this functionality?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "Network ACLs",
+      "C": "Security groups",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": [
+      "A"
+    ]
+  },
+  {
+    "id": 714,
+    "instruction": "Choose one.",
+    "question": "A company wants to run its application on Amazon EC2 instances. The company needs to keep the application on-premises to meet a compliance requirement. Which AWS offering will meet these requirements?",
+    "options": {
+      "A": "Dedicated Instances",
+      "B": "Amazon CloudFront",
+      "C": "AWS Fargate",
+      "D": "AWS Outposts"
+    },
+    "correct": [
+      "D"
+    ]
+  },
+  {
+    "id": 715,
+    "instruction": "Choose one.",
+    "question": "A company wants to connect its supported AWS services and VPCs. The company does not want to expose its internal traffic to the public internet. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "AWS PrivateLink",
+      "C": "Amazon Connect",
+      "D": "AWS Internet Gateway"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 716,
+    "instruction": "Choose one.",
+    "question": "Which AWS service can manage permissions for AWS resources by using policies?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon Detective",
+      "C": "AWS Identity and Access Management (IAM)",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": [
+      "C"
+    ]
+  },
+  {
+    "id": 717,
+    "instruction": "Choose one.",
+    "question": "A company needs to run some of its workload in the AWS Cloud. The company needs to keep some of the workload in its own on-site data center due to compliance reasons. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "AWSConfig",
+      "B": "AWS Outposts",
+      "C": "Amazon Lightsail",
+      "D": "Amazon Connect"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 718,
+    "instruction": "Choose one.",
+    "question": "A company wants to deploy an application that stores data in a relational database. The company wants database tasks, such as automated backups and database snapshots, to be managed by AWS. Which AWS service will meet these requirements?",
+    "options": {
+      "A": "Amazon DocumentDB",
+      "B": "Amazon RDS",
+      "C": "Amazon Elastic Block Store (Amazon EBS)",
+      "D": "Amazon S3"
+    },
+    "correct": [
+      "B"
+    ]
+  },
+  {
+    "id": 719,
+    "instruction": "Choose one.",
+    "question": "A company that operates on-premises servers decides to start a new line of business. The company determines that additional servers are required for the new workloads. Which advantage of cloud computing can help the company to provision additional infrastructure as quickly as possible?",
+    "options": {
+      "A": "Benefit from massive economies of scale",
+      "B": "Increase speed and agility",
+      "C": "Trade fixed expense for variable expense",
+      "D": "Go global in minutes"
+    },
+    "correct": [
+      "B"
+    ]
+  }
+]

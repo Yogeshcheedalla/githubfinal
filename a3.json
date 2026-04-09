@@ -1,0 +1,3825 @@
+[
+  {
+    "id": 401,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to set up, operate, and scale a relational database in the cloud?",
+    "options": {
+      "A": "Amazon RDS",
+      "B": "Amazon DynamoDB",
+      "C": "Amazon Redshift",
+      "D": "Amazon Aurora"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 402,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a simple and secure way for you to connect your on-premises data centers to the AWS Cloud using a dedicated network connection?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "AWS Site-to-Site VPN",
+      "C": "Amazon VPC",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 403,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers without having to manage servers or clusters of Amazon EC2 instances?",
+    "options": {
+      "A": "AWS Fargate",
+      "B": "Amazon ECS",
+      "C": "Amazon EKS",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 404,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to collect, process, and analyze real-time, streaming data?",
+    "options": {
+      "A": "Amazon Kinesis",
+      "B": "Amazon Redshift",
+      "C": "Amazon EMR",
+      "D": "Amazon Athena"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 405,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a set of tools to help you manage your AWS costs and usage?",
+    "options": {
+      "A": "AWS Billing and Cost Management",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 406,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Trusted Advisor",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 407,
+    "instruction": "Choose one.",
+    "question": "Which AWS tool provides visualizations of your AWS cost and usage data and allows you to forecast future costs?",
+    "options": {
+      "A": "AWS Cost Explorer",
+      "B": "AWS Pricing Calculator",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 408,
+    "instruction": "Choose one.",
+    "question": "Which AWS tool allows you to estimate the cost of AWS services for your use case before you build your application?",
+    "options": {
+      "A": "AWS Pricing Calculator",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 409,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides protection against Distributed Denial of Service (DDoS) attacks for all AWS customers at no additional cost?",
+    "options": {
+      "A": "AWS Shield Standard",
+      "B": "AWS Shield Advanced",
+      "C": "AWS WAF",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 410,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides an additional layer of protection against DDoS attacks for your AWS resources for an additional fee?",
+    "options": {
+      "A": "AWS Shield Advanced",
+      "B": "AWS Shield Standard",
+      "C": "AWS WAF",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 411,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature can be used to protect a web application from common web exploits that may affect availability or security?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "AWS Shield",
+      "C": "Security Groups",
+      "D": "Network ACLs"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 412,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to centralize the management of multiple AWS accounts and benefit from consolidated billing?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "AWS Control Tower",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 413,
+    "instruction": "Choose one.",
+    "question": "Which feature of AWS Organizations allows a company to receive a single bill for multiple AWS accounts?",
+    "options": {
+      "A": "Consolidated billing",
+      "B": "Tag-based cost allocation",
+      "C": "AWS Budgets",
+      "D": "Cost Explorer"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 414,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides real-time guidance to help you provision your resources according to AWS best practices?",
+    "options": {
+      "A": "AWS Trusted Advisor",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Systems Manager"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 415,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to evaluate and audit the configuration of your AWS resources for compliance?",
+    "options": {
+      "A": "AWS Config",
+      "B": "AWS Trusted Advisor",
+      "C": "AWS CloudTrail",
+      "D": "Amazon CloudWatch"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 416,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to capture and log API calls made to your AWS account?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 417,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to monitor the health and performance of your AWS resources and applications in real-time?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "AWS Config",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 418,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a comprehensive view of your security alerts and security posture across your AWS accounts?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 419,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed threat detection to protect your AWS accounts and workloads?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 420,
+    "instruction": "Choose one.",
+    "question": "Which AWS service automatically discovers, classifies, and protects sensitive data in Amazon S3 using machine learning?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 421,
+    "instruction": "Choose one.",
+    "question": "Which AWS service performs automated security assessments on Amazon EC2 instances to identify vulnerabilities and deviations from best practices?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Macie",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 422,
+    "instruction": "Choose one.",
+    "question": "Where can a user download AWS compliance reports and security certifications?",
+    "options": {
+      "A": "AWS Artifact",
+      "B": "AWS Trusted Advisor",
+      "C": "AWS Config",
+      "D": "AWS Marketplace"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 423,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a central place to manage and view security alerts from multiple AWS services and partners?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 424,
+    "instruction": "Choose one.",
+    "question": "Which AWS service makes it easy to analyze, investigate, and quickly identify the root cause of potential security issues or suspicious activities?",
+    "options": {
+      "A": "Amazon Detective",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 425,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides Command Line access to AWS tools and resources directly from a web browser?",
+    "options": {
+      "A": "AWS CloudShell",
+      "B": "AWS Command Line Interface (CLI)",
+      "C": "AWS SDK",
+      "D": "AWS Cloud9"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 426,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a browser-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser?",
+    "options": {
+      "A": "AWS Cloud9",
+      "B": "AWS CloudShell",
+      "C": "AWS CodeDeploy",
+      "D": "AWS CodeBuild"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 427,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a central place to review your workloads and compare them against AWS best practices using the Well-Architected Framework?",
+    "options": {
+      "A": "AWS Well-Architected Tool",
+      "B": "AWS Trusted Advisor",
+      "C": "AWS Config",
+      "D": "AWS Artifact"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 428,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for creating, managing, and controlling encryption keys?",
+    "options": {
+      "A": "AWS KMS",
+      "B": "AWS Secrets Manager",
+      "C": "AWS Certificate Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 429,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to securely store and automatically rotate database credentials and API keys?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "AWS KMS",
+      "C": "AWS Certificate Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 430,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "AWS KMS",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 431,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a cloud-based hardware security module (HSM) that enables you to easily generate and use your own encryption keys on the AWS Cloud?",
+    "options": {
+      "A": "AWS CloudHSM",
+      "B": "AWS KMS",
+      "C": "AWS Secrets Manager",
+      "D": "AWS Certificate Manager"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 432,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed protection against DDoS attacks?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS WAF",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 433,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature provides a private connection between your VPC and supported AWS services without using an internet gateway?",
+    "options": {
+      "A": "VPC Endpoints",
+      "B": "AWS Direct Connect",
+      "C": "AWS Site-to-Site VPN",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 434,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature provides a private connection between your on-premises data center and the AWS Cloud?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "AWS Site-to-Site VPN",
+      "C": "VPC Endpoints",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 435,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a managed VPN connection between your on-premises network and your VPC over the internet?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "AWS Direct Connect",
+      "C": "VPC Endpoints",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 436,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature is used to connect multiple VPCs and on-premises networks through a central hub?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "AWS Direct Connect",
+      "C": "AWS Site-to-Site VPN",
+      "D": "VPC Peering"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 437,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a highly available and scalable Domain Name System (DNS) web service?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon CloudFront",
+      "C": "AWS Global Accelerator",
+      "D": "Amazon Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 438,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a content delivery network (CDN) that provides low latency and high transfer speeds?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Route 53",
+      "C": "AWS Global Accelerator",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 439,
+    "instruction": "Choose one.",
+    "question": "Which AWS service improves the availability and performance of applications with its global network infrastructure by routing traffic to the nearest healthy endpoint?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Route 53",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 440,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows on-premises applications to use AWS Cloud storage through a local cache?",
+    "options": {
+      "A": "AWS Storage Gateway",
+      "B": "AWS Snowball",
+      "C": "AWS DataSync",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 441,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used for migrating large amounts of data to AWS using physical storage devices?",
+    "options": {
+      "A": "AWS Snowball",
+      "B": "AWS Storage Gateway",
+      "C": "AWS DataSync",
+      "D": "AWS Transfer Family"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 442,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to move data between on-premises storage and AWS storage services over the network?",
+    "options": {
+      "A": "AWS DataSync",
+      "B": "AWS Snowball",
+      "C": "AWS Storage Gateway",
+      "D": "AWS Transfer Family"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 443,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides fully managed support for file transfers directly into and out of Amazon S3 using SFTP, FTPS, and FTP?",
+    "options": {
+      "A": "AWS Transfer Family",
+      "B": "AWS DataSync",
+      "C": "AWS Snowball",
+      "D": "AWS Storage Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 444,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers using Kubernetes without needing to install, operate, and maintain your own Kubernetes control plane or nodes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 445,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops in the cloud?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 446,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed, non-persistent desktop and application streaming service?",
+    "options": {
+      "A": "Amazon AppStream 2.0",
+      "B": "Amazon WorkSpaces",
+      "C": "Amazon Connect",
+      "D": "Amazon Chime"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 447,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run AWS infrastructure and services on-premises for a consistent hybrid experience?",
+    "options": {
+      "A": "AWS Outposts",
+      "B": "AWS Local Zones",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 448,
+    "instruction": "Choose one.",
+    "question": "Which AWS feature allows you to place compute and storage resources closer to your end users in specific geographic areas?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Regions",
+      "C": "Availability Zones",
+      "D": "Edge Locations"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 449,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a cloud-powered business intelligence (BI) service that makes it easy to deliver insights throughout your organization?",
+    "options": {
+      "A": "Amazon QuickSight",
+      "B": "Amazon Redshift",
+      "C": "Amazon Athena",
+      "D": "Amazon EMR"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 450,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses machine learning to automatically analyze images and videos for people, objects, and activities?",
+    "options": {
+      "A": "Amazon Rekognition",
+      "B": "Amazon SageMaker",
+      "C": "Amazon Polly",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 451,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses advanced deep learning technologies to synthesize natural-sounding human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 452,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for building conversational interfaces for applications using voice and text?",
+    "options": {
+      "A": "Amazon Lex",
+      "B": "Amazon Polly",
+      "C": "Amazon Rekognition",
+      "D": "Amazon SageMaker"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 453,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to translate text from one language to another?",
+    "options": {
+      "A": "Amazon Translate",
+      "B": "Amazon Comprehend",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 454,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses machine learning to find insights and relationships in text?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Translate",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 455,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses automatic speech recognition (ASR) to convert speech to text?",
+    "options": {
+      "A": "Amazon Transcribe",
+      "B": "Amazon Translate",
+      "C": "Amazon Comprehend",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 456,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to extract text and data from scanned documents?",
+    "options": {
+      "A": "Amazon Textract",
+      "B": "Amazon Rekognition",
+      "C": "Amazon Comprehend",
+      "D": "Amazon Translate"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 457,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to build, scale, and manage a blockchain network?",
+    "options": {
+      "A": "Amazon Managed Blockchain",
+      "B": "Amazon Quantum Ledger Database (QLDB)",
+      "C": "Amazon Aurora",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 458,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log?",
+    "options": {
+      "A": "Amazon Quantum Ledger Database (QLDB)",
+      "B": "Amazon Managed Blockchain",
+      "C": "Amazon Aurora",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 459,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a set of tools to help you manage your AWS costs and usage?",
+    "options": {
+      "A": "AWS Billing and Cost Management",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 460,
+    "instruction": "Choose one.",
+    "question": "Which AWS tool allows you to estimate the cost of AWS services for your use case before you build your application?",
+    "options": {
+      "A": "AWS Pricing Calculator",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 461,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Trusted Advisor",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 462,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides real-time guidance to help you provision your resources according to AWS best practices?",
+    "options": {
+      "A": "AWS Trusted Advisor",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Systems Manager"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 463,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to evaluate and audit the configuration of your AWS resources for compliance?",
+    "options": {
+      "A": "AWS Config",
+      "B": "AWS Trusted Advisor",
+      "C": "AWS CloudTrail",
+      "D": "Amazon CloudWatch"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 464,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to capture and log API calls made to your AWS account?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 465,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to monitor the health and performance of your AWS resources and applications in real-time?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "AWS Config",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 466,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed threat detection to protect your AWS accounts and workloads?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 467,
+    "instruction": "Choose one.",
+    "question": "Which AWS service automatically discovers, classifies, and protects sensitive data in Amazon S3 using machine learning?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 468,
+    "instruction": "Choose one.",
+    "question": "Which AWS service performs automated security assessments on Amazon EC2 instances to identify vulnerabilities and deviations from best practices?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Macie",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 469,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a comprehensive view of your security alerts and security posture across your AWS accounts?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 470,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for creating, managing, and controlling encryption keys?",
+    "options": {
+      "A": "AWS KMS",
+      "B": "AWS Secrets Manager",
+      "C": "AWS Certificate Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 471,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to securely store and automatically rotate database credentials and API keys?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "AWS KMS",
+      "C": "AWS Certificate Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 472,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to easily provision, manage, and deploy public and private SSL/TLS certificates?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "AWS KMS",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 473,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a cloud-based hardware security module (HSM)?",
+    "options": {
+      "A": "AWS CloudHSM",
+      "B": "AWS KMS",
+      "C": "AWS Secrets Manager",
+      "D": "AWS Certificate Manager"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 474,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides protection against DDoS attacks?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS WAF",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 475,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature provides a private connection between your on-premises data center and the AWS Cloud?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "AWS Site-to-Site VPN",
+      "C": "VPC Endpoints",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 476,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a managed VPN connection between your on-premises network and your VPC over the internet?",
+    "options": {
+      "A": "AWS Site-to-Site VPN",
+      "B": "AWS Direct Connect",
+      "C": "VPC Endpoints",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 477,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature is used to connect multiple VPCs and on-premises networks through a central hub?",
+    "options": {
+      "A": "AWS Transit Gateway",
+      "B": "AWS Direct Connect",
+      "C": "AWS Site-to-Site VPN",
+      "D": "VPC Peering"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 478,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a highly available and scalable Domain Name System (DNS) web service?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon CloudFront",
+      "C": "AWS Global Accelerator",
+      "D": "Amazon Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 479,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a content delivery network (CDN) that provides low latency and high transfer speeds?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Route 53",
+      "C": "AWS Global Accelerator",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 480,
+    "instruction": "Choose one.",
+    "question": "Which AWS service improves the availability and performance of applications with its global network infrastructure?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Route 53",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 481,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows on-premises applications to use AWS Cloud storage through a local cache?",
+    "options": {
+      "A": "AWS Storage Gateway",
+      "B": "AWS Snowball",
+      "C": "AWS DataSync",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 482,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used for migrating large amounts of data to AWS using physical storage devices?",
+    "options": {
+      "A": "AWS Snowball",
+      "B": "AWS Storage Gateway",
+      "C": "AWS DataSync",
+      "D": "AWS Transfer Family"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 483,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to move data between on-premises storage and AWS storage services over the network?",
+    "options": {
+      "A": "AWS DataSync",
+      "B": "AWS Snowball",
+      "C": "AWS Storage Gateway",
+      "D": "AWS Transfer Family"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 484,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides fully managed support for file transfers directly into and out of Amazon S3 using SFTP, FTPS, and FTP?",
+    "options": {
+      "A": "AWS Transfer Family",
+      "B": "AWS DataSync",
+      "C": "AWS Snowball",
+      "D": "AWS Storage Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 485,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 486,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops in the cloud?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 487,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed, non-persistent desktop and application streaming service?",
+    "options": {
+      "A": "Amazon AppStream 2.0",
+      "B": "Amazon WorkSpaces",
+      "C": "Amazon Connect",
+      "D": "Amazon Chime"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 488,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run AWS infrastructure and services on-premises for a consistent hybrid experience?",
+    "options": {
+      "A": "AWS Outposts",
+      "B": "AWS Local Zones",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 489,
+    "instruction": "Choose one.",
+    "question": "Which AWS feature allows you to place compute and storage resources closer to your end users in specific geographic areas?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Regions",
+      "C": "Availability Zones",
+      "D": "Edge Locations"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 490,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a cloud-powered business intelligence (BI) service?",
+    "options": {
+      "A": "Amazon QuickSight",
+      "B": "Amazon Redshift",
+      "C": "Amazon Athena",
+      "D": "Amazon EMR"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 491,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses machine learning to automatically analyze images and videos?",
+    "options": {
+      "A": "Amazon Rekognition",
+      "B": "Amazon SageMaker",
+      "C": "Amazon Polly",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 492,
+    "instruction": "Choose one.",
+    "question": "Which AWS service summarizes natural-sounding human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 493,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for building conversational interfaces?",
+    "options": {
+      "A": "Amazon Lex",
+      "B": "Amazon Polly",
+      "C": "Amazon Rekognition",
+      "D": "Amazon SageMaker"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 494,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to translate text from one language to another?",
+    "options": {
+      "A": "Amazon Translate",
+      "B": "Amazon Comprehend",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 495,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses machine learning to find insights and relationships in text?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Translate",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 496,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses automatic speech recognition (ASR) to convert speech to text?",
+    "options": {
+      "A": "Amazon Transcribe",
+      "B": "Amazon Translate",
+      "C": "Amazon Comprehend",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 497,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to extract text and data from scanned documents?",
+    "options": {
+      "A": "Amazon Textract",
+      "B": "Amazon Rekognition",
+      "C": "Amazon Comprehend",
+      "D": "Amazon Translate"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 498,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to build, scale, and manage a blockchain network?",
+    "options": {
+      "A": "Amazon Managed Blockchain",
+      "B": "Amazon Quantum Ledger Database (QLDB)",
+      "C": "Amazon Aurora",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 499,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed ledger database?",
+    "options": {
+      "A": "Amazon Quantum Ledger Database (QLDB)",
+      "B": "Amazon Managed Blockchain",
+      "C": "Amazon Aurora",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 500,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a set of tools to help you manage your AWS costs and usage?",
+    "options": {
+      "A": "AWS Billing and Cost Management",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 501,
+    "instruction": "Choose one.",
+    "question": "Which AWS tool provides a graphical representation of your AWS costs and usage over time?",
+    "options": {
+      "A": "AWS Cost Explorer",
+      "B": "AWS Budgets",
+      "C": "AWS Pricing Calculator",
+      "D": "AWS Billing and Cost Management"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 502,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to create and manage your cloud infrastructure using a set of best practices and blueprints?",
+    "options": {
+      "A": "AWS Control Tower",
+      "B": "AWS Organizations",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 503,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provide a central location for you to manage your AWS quotas?",
+    "options": {
+      "A": "AWS Service Quotas",
+      "B": "AWS Trusted Advisor",
+      "C": "AWS Organizations",
+      "D": "AWS Budgets"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 504,
+    "instruction": "Choose one.",
+    "question": "Which AWS service helps you set up and govern a secure, multi-account AWS environment?",
+    "options": {
+      "A": "AWS Control Tower",
+      "B": "AWS Organizations",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 505,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to deploy, manage, and scale serverless applications?",
+    "options": {
+      "A": "AWS Lambda",
+      "B": "Amazon EC2",
+      "C": "Amazon ECS",
+      "D": "AWS Fargate"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 506,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers using Docker without needing to install, operate, and maintain your own cluster management infrastructure?",
+    "options": {
+      "A": "Amazon ECS",
+      "B": "Amazon EKS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 507,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides low-latency access to AWS services from specific geographic locations?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Outposts",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 508,
+    "instruction": "Which AWS service is optimized for ultra-low latency applications for mobile devices?",
+    "options": {
+      "A": "AWS Wavelength",
+      "B": "AWS Local Zones",
+      "C": "AWS Outposts",
+      "D": "Amazon CloudFront"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 509,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a fully managed global ground station as a service?",
+    "options": {
+      "A": "AWS Ground Station",
+      "B": "AWS Wavelength",
+      "C": "AWS Local Zones",
+      "D": "AWS Outposts"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 510,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to build, train, and deploy machine learning models quickly?",
+    "options": {
+      "A": "Amazon SageMaker",
+      "B": "Amazon Rekognition",
+      "C": "Amazon Polly",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 511,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a MySQL and PostgreSQL-compatible relational database?",
+    "options": {
+      "A": "Amazon Aurora",
+      "B": "Amazon RDS",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon Redshift"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 512,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed, serverless, NoSQL database service?",
+    "options": {
+      "A": "Amazon DynamoDB",
+      "B": "Amazon RDS",
+      "C": "Amazon Aurora",
+      "D": "Amazon Redshift"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 513,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed data warehouse service?",
+    "options": {
+      "A": "Amazon Redshift",
+      "B": "Amazon Athena",
+      "C": "Amazon RDS",
+      "D": "Amazon EMR"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 514,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to run Apache Spark, Apache Hive, and other big data frameworks?",
+    "options": {
+      "A": "Amazon EMR",
+      "B": "Amazon Redshift",
+      "C": "Amazon Athena",
+      "D": "Amazon Kinesis"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 515,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a content delivery network (CDN)?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Route 53",
+      "C": "AWS Global Accelerator",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 516,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a highly available and scalable DNS web service?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon CloudFront",
+      "C": "AWS Global Accelerator",
+      "D": "Amazon Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 517,
+    "instruction": "Choose one.",
+    "question": "Which AWS service improves the availability and performance of applications?",
+    "options": {
+      "A": "AWS Global Accelerator",
+      "B": "Amazon CloudFront",
+      "C": "Amazon Route 53",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 518,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a dedicated network connection from your premises to AWS?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "AWS Site-to-Site VPN",
+      "C": "Amazon VPC",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 519,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a simple way to create and manage an AWS account and its resources?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "AWS Control Tower",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 520,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to evaluate and audit the configuration of your AWS resources?",
+    "options": {
+      "A": "AWS Config",
+      "B": "AWS Trusted Advisor",
+      "C": "AWS CloudTrail",
+      "D": "Amazon CloudWatch"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 521,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to automate infrastructure deployment by using code?",
+    "options": {
+      "A": "AWS CloudFormation",
+      "B": "AWS OpsWorks",
+      "C": "AWS Elastic Beanstalk",
+      "D": "AWS Systems Manager"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 522,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides protection against DDoS attacks?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS WAF",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 523,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is an intelligent search service powered by machine learning?",
+    "options": {
+      "A": "Amazon Kendra",
+      "B": "Amazon OpenSearch Service",
+      "C": "Amazon CloudSearch",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 524,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed search service?",
+    "options": {
+      "A": "Amazon OpenSearch Service",
+      "B": "Amazon Kendra",
+      "C": "Amazon CloudSearch",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 525,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is an interactive query service that makes it easy to analyze data in Amazon S3?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "Amazon Redshift",
+      "C": "Amazon EMR",
+      "D": "AWS Glue"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 526,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 527,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed, non-persistent desktop and application streaming service?",
+    "options": {
+      "A": "Amazon AppStream 2.0",
+      "B": "Amazon WorkSpaces",
+      "C": "Amazon Connect",
+      "D": "Amazon Chime"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 528,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to securely store and automatically rotate database credentials?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "AWS KMS",
+      "C": "AWS Certificate Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 529,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for creating, managing, and controlling encryption keys?",
+    "options": {
+      "A": "AWS KMS",
+      "B": "AWS Secrets Manager",
+      "C": "AWS Certificate Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 530,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allow you to centrally manage and enforce policies across multiple AWS accounts?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "AWS Identity and Access Management (IAM)",
+      "C": "AWS Trusted Advisor",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 531,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a comprehensive view of your security alerts?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 532,
+    "instruction": "Choose one.",
+    "question": "Which AWS service performs automated security assessments on Amazon EC2 instances?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Macie",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 533,
+    "instruction": "Choose one.",
+    "question": "Which AWS service automatically discovers, classifies, and protects sensitive data in Amazon S3?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 534,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed threat detection?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 535,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to monitor the health and performance of your AWS resources?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "AWS Config",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 536,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to capture and log API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 537,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides real-time guidance to help you provision your resources?",
+    "options": {
+      "A": "AWS Trusted Advisor",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Systems Manager"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 538,
+    "instruction": "Choose one.",
+    "question": "Which AWS tool provides visualizations of your AWS cost and usage data?",
+    "options": {
+      "A": "AWS Cost Explorer",
+      "B": "AWS Pricing Calculator",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 539,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to estimate the cost of AWS services?",
+    "options": {
+      "A": "AWS Pricing Calculator",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 540,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature provides a private connection without using an internet gateway?",
+    "options": {
+      "A": "VPC Endpoints",
+      "B": "AWS Direct Connect",
+      "C": "AWS Site-to-Site VPN",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 541,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed message queuing service?",
+    "options": {
+      "A": "Amazon SQS",
+      "B": "Amazon SNS",
+      "C": "AWS Step Functions",
+      "D": "Amazon Kinesis"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 542,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to send notifications to users?",
+    "options": {
+      "A": "Amazon SNS",
+      "B": "Amazon SES",
+      "C": "Amazon SQS",
+      "D": "Amazon Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 543,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to send automated emails to customers?",
+    "options": {
+      "A": "Amazon SES",
+      "B": "Amazon SNS",
+      "C": "Amazon SQS",
+      "D": "Amazon Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 544,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service that makes it easy to collect real-time streaming data?",
+    "options": {
+      "A": "Amazon Kinesis",
+      "B": "Amazon Redshift",
+      "C": "Amazon EMR",
+      "D": "Amazon Athena"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 545,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides low-latency access to AWS services?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Outposts",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 546,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses machine learning to automatically analyze images?",
+    "options": {
+      "A": "Amazon Rekognition",
+      "B": "Amazon SageMaker",
+      "C": "Amazon Polly",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 547,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for building conversational interfaces?",
+    "options": {
+      "A": "Amazon Lex",
+      "B": "Amazon Polly",
+      "C": "Amazon Rekognition",
+      "D": "Amazon SageMaker"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 548,
+    "instruction": "Choose one.",
+    "question": "Which AWS service summarizes human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 549,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a fully managed ledger database?",
+    "options": {
+      "A": "Amazon Quantum Ledger Database (QLDB)",
+      "B": "Amazon Managed Blockchain",
+      "C": "Amazon Aurora",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 550,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service to translate text?",
+    "options": {
+      "A": "Amazon Translate",
+      "B": "Amazon Comprehend",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 551,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses machine learning to find insights in text?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Translate",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 552,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses automatic speech recognition (ASR)?",
+    "options": {
+      "A": "Amazon Transcribe",
+      "B": "Amazon Translate",
+      "C": "Amazon Comprehend",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 553,
+    "instruction": "Choose one.",
+    "question": "Which AWS service extracts text and data from scanned documents?",
+    "options": {
+      "A": "Amazon Textract",
+      "B": "Amazon Rekognition",
+      "C": "Amazon Comprehend",
+      "D": "Amazon Translate"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 554,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed blockchain service?",
+    "options": {
+      "A": "Amazon Managed Blockchain",
+      "B": "Amazon Quantum Ledger Database (QLDB)",
+      "C": "Amazon Aurora",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 555,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is an interactive query service for Amazon S3?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "Amazon Redshift",
+      "C": "Amazon EMR",
+      "D": "AWS Glue"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 556,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a shared storage for Linux-based workloads?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon S3",
+      "C": "Amazon EBS",
+      "D": "Amazon Glacier"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 557,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allowed you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 558,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers Docker?",
+    "options": {
+      "A": "Amazon ECS",
+      "B": "Amazon EKS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 559,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 560,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for creating encryption keys?",
+    "options": {
+      "A": "AWS KMS",
+      "B": "AWS Secrets Manager",
+      "C": "AWS Certificate Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 561,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to store database credentials?",
+    "options": {
+      "A": "AWS Secrets Manager",
+      "B": "AWS KMS",
+      "C": "AWS Certificate Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 562,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature provides a private connection between VPC and services?",
+    "options": {
+      "A": "VPC Endpoints",
+      "B": "AWS Direct Connect",
+      "C": "AWS Site-to-Site VPN",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 563,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides protection against DDoS attacks?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS WAF",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 564,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a set of tools to help you manage costs?",
+    "options": {
+      "A": "AWS Billing and Cost Management",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 565,
+    "instruction": "Choose one.",
+    "question": "Which AWS tool provides visualizations of cost data?",
+    "options": {
+      "A": "AWS Cost Explorer",
+      "B": "AWS Pricing Calculator",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 566,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used for migrating large amounts of data using physical devices?",
+    "options": {
+      "A": "AWS Snowball",
+      "B": "AWS Storage Gateway",
+      "C": "AWS DataSync",
+      "D": "AWS Transfer Family"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 567,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is content delivery network?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Route 53",
+      "C": "AWS Global Accelerator",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 568,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides real-time guidance?",
+    "options": {
+      "A": "AWS Trusted Advisor",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Systems Manager"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 569,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to monitor health and performance?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "AWS Config",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 570,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to build, train, and deploy ML models?",
+    "options": {
+      "A": "Amazon SageMaker",
+      "B": "Amazon Rekognition",
+      "C": "Amazon Polly",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 571,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a MySQL and PostgreSQL relational database?",
+    "options": {
+      "A": "Amazon Aurora",
+      "B": "Amazon RDS",
+      "C": "Amazon DynamoDB",
+      "D": "Amazon Redshift"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 572,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides low-latency access to service from locations?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Outposts",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 573,
+    "instruction": "Which AWS service allows you to estimate the cost?",
+    "options": {
+      "A": "AWS Pricing Calculator",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 574,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to set custom budgets?",
+    "options": {
+      "A": "AWS Budgets",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Trusted Advisor",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 575,
+    "instruction": "Choose one.",
+    "question": "Which AWS service perform automated security assessments on Amazon EC2?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Macie",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 576,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed threat detection?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 577,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to capture and log API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 578,
+    "instruction": "Choose one.",
+    "question": "Which AWS service helps you set up and govern multi-account AWS environment?",
+    "options": {
+      "A": "AWS Control Tower",
+      "B": "AWS Organizations",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 579,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a comprehensive view of your security alerts?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 580,
+    "instruction": "Choose one.",
+    "question": "Which AWS service summarize natural-sounding human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 581,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used for migrating data using physical devices?",
+    "options": {
+      "A": "AWS Snowball",
+      "B": "AWS Storage Gateway",
+      "C": "AWS DataSync",
+      "D": "AWS Transfer Family"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 582,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides shared storage for Linux workloads?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon S3",
+      "C": "Amazon EBS",
+      "D": "Amazon Glacier"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 583,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a highly available and scalable DNS?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon CloudFront",
+      "C": "AWS Global Accelerator",
+      "D": "Amazon Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 584,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to runContainers Docker?",
+    "options": {
+      "A": "Amazon ECS",
+      "B": "Amazon EKS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 585,
+    "instruction": "Which AWS service uses ML to find insights in text?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Translate",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 586,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed blockchain service?",
+    "options": {
+      "A": "Amazon Managed Blockchain",
+      "B": "Amazon Quantum Ledger Database (QLDB)",
+      "C": "Amazon Aurora",
+      "D": "Amazon DynamoDB"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 587,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is an interactive query service?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "Amazon Redshift",
+      "C": "Amazon EMR",
+      "D": "AWS Glue"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 588,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 589,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides low-latency access from locations?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Outposts",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 590,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses ML to automatically analyze images?",
+    "options": {
+      "A": "Amazon Rekognition",
+      "B": "Amazon SageMaker",
+      "C": "Amazon Polly",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 591,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provide a central location for quotas?",
+    "options": {
+      "A": "AWS Service Quotas",
+      "B": "AWS Trusted Advisor",
+      "C": "AWS Organizations",
+      "D": "AWS Budgets"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 592,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature provides a private connection between VPC and AWS?",
+    "options": {
+      "A": "VPC Endpoints",
+      "B": "AWS Direct Connect",
+      "C": "AWS Site-to-Site VPN",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 593,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a dedicated network connection from premises?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "AWS Site-to-Site VPN",
+      "C": "Amazon VPC",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 594,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allowed you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 595,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used for migrating large amounts of data?",
+    "options": {
+      "A": "AWS Snowball",
+      "B": "AWS Storage Gateway",
+      "C": "AWS DataSync",
+      "D": "AWS Transfer Family"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 596,
+    "instruction": "Choose one.",
+    "question": "Which AWS service automatically discovers, classifies sensitive data in Amazon S3?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 597,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to monitor health and performance?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "AWS Config",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 598,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows on-premises apps to use AWS Cloud storage through local cache?",
+    "options": {
+      "A": "AWS Storage Gateway",
+      "B": "AWS Snowball",
+      "C": "AWS DataSync",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 599,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed protection against DDoS attacks?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS WAF",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 600,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to capture API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 601,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to centralize management of multiple AWS accounts?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "AWS Control Tower",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 602,
+    "instruction": "Choose one.",
+    "question": "Which feature of AWS Organizations allows a company to receive a single bill for multiple accounts?",
+    "options": {
+      "A": "Consolidated billing",
+      "B": "Tag-based cost allocation",
+      "C": "AWS Budgets",
+      "D": "Cost Explorer"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 603,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to easily provision, manage, and deploy SSL/TLS certificates?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "AWS KMS",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 604,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provide protection against DDoS attacks for all AWS customers at no additional cost?",
+    "options": {
+      "A": "AWS Shield Standard",
+      "B": "AWS Shield Advanced",
+      "C": "AWS WAF",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 605,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides an additional layer of protection against DDoS attacks for an additional fee?",
+    "options": {
+      "A": "AWS Shield Advanced",
+      "B": "AWS Shield Standard",
+      "C": "AWS WAF",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 606,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature can be used to protect a web application from common web exploits?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "AWS Shield",
+      "C": "Security Groups",
+      "D": "Network ACLs"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 607,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a set of tools to help you manage your AWS costs?",
+    "options": {
+      "A": "AWS Billing and Cost Management",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 608,
+    "instruction": "Choose one.",
+    "question": "Which AWS tool provides visualizations of your cost and usage data?",
+    "options": {
+      "A": "AWS Cost Explorer",
+      "B": "AWS Pricing Calculator",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 609,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 610,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 611,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for building conversational interfaces?",
+    "options": {
+      "A": "Amazon Lex",
+      "B": "Amazon Polly",
+      "C": "Amazon Rekognition",
+      "D": "Amazon SageMaker"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 612,
+    "instruction": "Choose one.",
+    "question": "Which AWS service summarize natural-sounding human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 613,
+    "instruction": "Choose one.",
+    "question": "Which AWS service perform automated security assessments on Amazon EC2?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Macie",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 614,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed threat detection?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 615,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to capture and log API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 616,
+    "instruction": "Choose one.",
+    "question": "Which AWS service helps you set up and govern multi-account AWS environment?",
+    "options": {
+      "A": "AWS Control Tower",
+      "B": "AWS Organizations",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 617,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a comprehensive view of your security alerts?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 618,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used for migrating data using physical devices?",
+    "options": {
+      "A": "AWS Snowball",
+      "B": "AWS Storage Gateway",
+      "C": "AWS DataSync",
+      "D": "AWS Transfer Family"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 619,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides shared storage for Linux workloads?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon S3",
+      "C": "Amazon EBS",
+      "D": "Amazon Glacier"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 620,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a highly available Domain Name System?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon CloudFront",
+      "C": "AWS Global Accelerator",
+      "D": "Amazon Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 621,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers Docker without managing servers?",
+    "options": {
+      "A": "AWS Fargate",
+      "B": "Amazon ECS",
+      "C": "Amazon EKS",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 622,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is an interactive query service?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "Amazon Redshift",
+      "C": "Amazon EMR",
+      "D": "AWS Glue"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 623,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is content delivery network?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Route 53",
+      "C": "AWS Global Accelerator",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 624,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 625,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses ML to find insights in text?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Translate",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 626,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allow on-premises apps to use AWS Cloud storage through local cache?",
+    "options": {
+      "A": "AWS Storage Gateway",
+      "B": "AWS Snowball",
+      "C": "AWS DataSync",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 627,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provide low-latency access to services from locations?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Outposts",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 628,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses ML to automatically analyze images?",
+    "options": {
+      "A": "Amazon Rekognition",
+      "B": "Amazon SageMaker",
+      "C": "Amazon Polly",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 629,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to monitor health and performance?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "AWS Config",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 630,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a dedicated network connection from premises?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "AWS Site-to-Site VPN",
+      "C": "Amazon VPC",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 631,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allowed you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 632,
+    "instruction": "Choose one.",
+    "question": "Which AWS service automatically discovers sensitive data in Amazon S3?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 633,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed protection against DDoS attacks?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS WAF",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 634,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to capture API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 635,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allowed you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 636,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is content delivery network?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Route 53",
+      "C": "AWS Global Accelerator",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 637,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 638,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses ML to find insights in text?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Translate",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 639,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allow on-premises apps to use AWS Cloud storage through local cache?",
+    "options": {
+      "A": "AWS Storage Gateway",
+      "B": "AWS Snowball",
+      "C": "AWS DataSync",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 640,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provide low-latency access from locations?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Outposts",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 641,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to monitor health and performance?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "AWS Config",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 642,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allowed you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 643,
+    "instruction": "Choose one.",
+    "question": "Which AWS service automatically discovers sensitive data in Amazon S3?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 644,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed protection against DDoS attacks?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS WAF",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 645,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to capture API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 646,
+    "instruction": "Choose one.",
+    "question": "Which AWS service summarize natural-sounding human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 647,
+    "instruction": "Choose one.",
+    "question": "Which AWS service perform automated security assessments on Amazon EC2?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Macie",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 648,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed threat detection?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 649,
+    "instruction": "Which AWS service provides a comprehensive view of security alerts?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 650,
+    "instruction": "Choose one.",
+    "question": "Which AWS service help you set up and govern multi-account environment?",
+    "options": {
+      "A": "AWS Control Tower",
+      "B": "AWS Organizations",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 651,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to centralize management of multiple AWS accounts?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "AWS Control Tower",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 652,
+    "instruction": "Choose one.",
+    "question": "Which feature of AWS Organizations allows a company to receive a single bill for multiple accounts?",
+    "options": {
+      "A": "Consolidated billing",
+      "B": "Tag-based cost allocation",
+      "C": "AWS Budgets",
+      "D": "Cost Explorer"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 653,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to easily provision, manage, and deploy SSL/TLS certificates?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "AWS KMS",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 654,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provide protection against DDoS attacks for all AWS customers at no additional cost?",
+    "options": {
+      "A": "AWS Shield Standard",
+      "B": "AWS Shield Advanced",
+      "C": "AWS WAF",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 655,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides an additional layer of protection against DDoS attacks for an additional fee?",
+    "options": {
+      "A": "AWS Shield Advanced",
+      "B": "AWS Shield Standard",
+      "C": "AWS WAF",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 656,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature can be used to protect a web application from common web exploits?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "AWS Shield",
+      "C": "Security Groups",
+      "D": "Network ACLs"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 657,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a set of tools to help you manage your AWS costs?",
+    "options": {
+      "A": "AWS Billing and Cost Management",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 658,
+    "instruction": "Choose one.",
+    "question": "Which AWS tool provides visualizations of your cost and usage data?",
+    "options": {
+      "A": "AWS Cost Explorer",
+      "B": "AWS Pricing Calculator",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 659,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 660,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 661,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for building conversational interfaces?",
+    "options": {
+      "A": "Amazon Lex",
+      "B": "Amazon Polly",
+      "C": "Amazon Rekognition",
+      "D": "Amazon SageMaker"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 662,
+    "instruction": "Choose one.",
+    "question": "Which AWS service summarize natural-sounding human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 663,
+    "instruction": "Choose one.",
+    "question": "Which AWS service perform automated security assessments on Amazon EC2?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Macie",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 664,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed threat detection?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 665,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to capture and log API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 666,
+    "instruction": "Choose one.",
+    "question": "Which AWS service helps you set up and govern multi-account AWS environment?",
+    "options": {
+      "A": "AWS Control Tower",
+      "B": "AWS Organizations",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 667,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a comprehensive view of your security alerts?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 668,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used for migrating data using physical devices?",
+    "options": {
+      "A": "AWS Snowball",
+      "B": "AWS Storage Gateway",
+      "C": "AWS DataSync",
+      "D": "AWS Transfer Family"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 669,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides shared storage for Linux workloads?",
+    "options": {
+      "A": "Amazon EFS",
+      "B": "Amazon S3",
+      "C": "Amazon EBS",
+      "D": "Amazon Glacier"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 670,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a highly available Domain Name System?",
+    "options": {
+      "A": "Amazon Route 53",
+      "B": "Amazon CloudFront",
+      "C": "AWS Global Accelerator",
+      "D": "Amazon Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 671,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers Docker without managing servers?",
+    "options": {
+      "A": "AWS Fargate",
+      "B": "Amazon ECS",
+      "C": "Amazon EKS",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 672,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is an interactive query service?",
+    "options": {
+      "A": "Amazon Athena",
+      "B": "Amazon Redshift",
+      "C": "Amazon EMR",
+      "D": "AWS Glue"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 673,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is content delivery network?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Route 53",
+      "C": "AWS Global Accelerator",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 674,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 675,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses ML to find insights in text?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Translate",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 676,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allow on-premises apps to use AWS Cloud storage through local cache?",
+    "options": {
+      "A": "AWS Storage Gateway",
+      "B": "AWS Snowball",
+      "C": "AWS DataSync",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 677,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provide low-latency access to services from locations?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Outposts",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 678,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses ML to automatically analyze images?",
+    "options": {
+      "A": "Amazon Rekognition",
+      "B": "Amazon SageMaker",
+      "C": "Amazon Polly",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 679,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to monitor health and performance?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "AWS Config",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 680,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a dedicated network connection from premises?",
+    "options": {
+      "A": "AWS Direct Connect",
+      "B": "AWS Site-to-Site VPN",
+      "C": "Amazon VPC",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 681,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allowed you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 682,
+    "instruction": "Choose one.",
+    "question": "Which AWS service automatically discovers sensitive data in Amazon S3?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 683,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed protection against DDoS attacks?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS WAF",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 684,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to capture API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 685,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allowed you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 686,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is content delivery network?",
+    "options": {
+      "A": "Amazon CloudFront",
+      "B": "Amazon Route 53",
+      "C": "AWS Global Accelerator",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 687,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 688,
+    "instruction": "Choose one.",
+    "question": "Which AWS service uses ML to find insights in text?",
+    "options": {
+      "A": "Amazon Comprehend",
+      "B": "Amazon Translate",
+      "C": "Amazon Transcribe",
+      "D": "Amazon Polly"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 689,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allow on-premises apps to use AWS Cloud storage through local cache?",
+    "options": {
+      "A": "AWS Storage Gateway",
+      "B": "AWS Snowball",
+      "C": "AWS DataSync",
+      "D": "AWS Direct Connect"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 690,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provide low-latency access from locations?",
+    "options": {
+      "A": "AWS Local Zones",
+      "B": "AWS Outposts",
+      "C": "AWS Wavelength",
+      "D": "AWS Ground Station"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 691,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to monitor health and performance?",
+    "options": {
+      "A": "Amazon CloudWatch",
+      "B": "AWS CloudTrail",
+      "C": "AWS Config",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 692,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allowed you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 693,
+    "instruction": "Choose one.",
+    "question": "Which AWS service automatically discovers sensitive data in Amazon S3?",
+    "options": {
+      "A": "Amazon Macie",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 694,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed protection against DDoS attacks?",
+    "options": {
+      "A": "AWS Shield",
+      "B": "AWS WAF",
+      "C": "Amazon GuardDuty",
+      "D": "Amazon Inspector"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 695,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to capture API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 696,
+    "instruction": "Choose one.",
+    "question": "Which AWS service summarize natural-sounding human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 697,
+    "instruction": "Choose one.",
+    "question": "Which AWS service perform automated security assessments on Amazon EC2?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Macie",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 698,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed threat detection?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 699,
+    "instruction": "Which AWS service provides a comprehensive view of security alerts?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 700,
+    "instruction": "Choose one.",
+    "question": "Which AWS service help you set up and govern multi-account environment?",
+    "options": {
+      "A": "AWS Control Tower",
+      "B": "AWS Organizations",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 701,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to centralize management of multiple AWS accounts?",
+    "options": {
+      "A": "AWS Organizations",
+      "B": "AWS Control Tower",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 702,
+    "instruction": "Choose one.",
+    "question": "Which feature of AWS Organizations allows a company to receive a single bill for multiple accounts?",
+    "options": {
+      "A": "Consolidated billing",
+      "B": "Tag-based cost allocation",
+      "C": "AWS Budgets",
+      "D": "Cost Explorer"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 703,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to easily provision, manage, and deploy SSL/TLS certificates?",
+    "options": {
+      "A": "AWS Certificate Manager",
+      "B": "AWS KMS",
+      "C": "AWS Secrets Manager",
+      "D": "AWS CloudHSM"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 704,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provide protection against DDoS attacks for all AWS customers at no additional cost?",
+    "options": {
+      "A": "AWS Shield Standard",
+      "B": "AWS Shield Advanced",
+      "C": "AWS WAF",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 705,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides an additional layer of protection against DDoS attacks for an additional fee?",
+    "options": {
+      "A": "AWS Shield Advanced",
+      "B": "AWS Shield Standard",
+      "C": "AWS WAF",
+      "D": "Amazon GuardDuty"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 706,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature can be used to protect a web application from common web exploits?",
+    "options": {
+      "A": "AWS WAF",
+      "B": "AWS Shield",
+      "C": "Security Groups",
+      "D": "Network ACLs"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 707,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides you with a set of tools to help you manage your AWS costs?",
+    "options": {
+      "A": "AWS Billing and Cost Management",
+      "B": "AWS Cost Explorer",
+      "C": "AWS Budgets",
+      "D": "AWS Pricing Calculator"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 708,
+    "instruction": "Choose one.",
+    "question": "Which AWS tool provides visualizations of your cost and usage data?",
+    "options": {
+      "A": "AWS Cost Explorer",
+      "B": "AWS Pricing Calculator",
+      "C": "AWS Budgets",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 709,
+    "instruction": "Choose one.",
+    "question": "Which AWS service allows you to run containers using Kubernetes?",
+    "options": {
+      "A": "Amazon EKS",
+      "B": "Amazon ECS",
+      "C": "AWS Fargate",
+      "D": "AWS Lambda"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 710,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides persistent, managed Windows or Linux desktops?",
+    "options": {
+      "A": "Amazon WorkSpaces",
+      "B": "Amazon AppStream 2.0",
+      "C": "Amazon Connect",
+      "D": "AWS Client VPN"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 711,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is a managed service for building conversational interfaces?",
+    "options": {
+      "A": "Amazon Lex",
+      "B": "Amazon Polly",
+      "C": "Amazon Rekognition",
+      "D": "Amazon SageMaker"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 712,
+    "instruction": "Choose one.",
+    "question": "Which AWS service summarize natural-sounding human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 713,
+    "instruction": "Choose one.",
+    "question": "Which AWS service perform automated security assessments on Amazon EC2?",
+    "options": {
+      "A": "Amazon Inspector",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Macie",
+      "D": "AWS Security Hub"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 714,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides managed threat detection?",
+    "options": {
+      "A": "Amazon GuardDuty",
+      "B": "AWS Security Hub",
+      "C": "Amazon Inspector",
+      "D": "Amazon Macie"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 715,
+    "instruction": "Choose one.",
+    "question": "Which AWS service is used to capture and log API calls?",
+    "options": {
+      "A": "AWS CloudTrail",
+      "B": "AWS Config",
+      "C": "Amazon CloudWatch",
+      "D": "AWS Trusted Advisor"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 716,
+    "instruction": "Choose one.",
+    "question": "Which AWS service helps you set up and govern multi-account AWS environment?",
+    "options": {
+      "A": "AWS Control Tower",
+      "B": "AWS Organizations",
+      "C": "AWS Managed Services",
+      "D": "AWS Service Catalog"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 717,
+    "instruction": "Choose one.",
+    "question": "Which AWS service provides a comprehensive view of your security alerts?",
+    "options": {
+      "A": "AWS Security Hub",
+      "B": "Amazon GuardDuty",
+      "C": "Amazon Inspector",
+      "D": "AWS Config"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 718,
+    "instruction": "Choose one.",
+    "question": "Which AWS service or feature provides a private connection between VPC and AWS?",
+    "options": {
+      "A": "VPC Endpoints",
+      "B": "AWS Direct Connect",
+      "C": "AWS Site-to-Site VPN",
+      "D": "AWS Transit Gateway"
+    },
+    "correct": ["A"]
+  },
+  {
+    "id": 719,
+    "instruction": "Choose one.",
+    "question": "Which AWS service summarize natural-sounding human speech from text?",
+    "options": {
+      "A": "Amazon Polly",
+      "B": "Amazon Rekognition",
+      "C": "Amazon SageMaker",
+      "D": "Amazon Lex"
+    },
+    "correct": ["A"]
+  }
+]
