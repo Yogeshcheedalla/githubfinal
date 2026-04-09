@@ -71,9 +71,10 @@ html,body{height:100%;margin:0;background:var(--bg);color:#0f172a}
 
     <div class="panel-title">Select test file</div>
     <select id="fileSelect" class="select">
-      <option value="a1.json">AWS Practitioner - Set 1 (1-200)</option>
-      <option value="a2.json">AWS Practitioner - Set 2 (201-400)</option>
-      <option value="a3.json">AWS Practitioner - Set 3 (401-719)</option>
+      <option value="a4.json" selected>Complete Question Bank (1-719)</option>
+      <option value="a1.json">AWS Set 1 (1-200)</option>
+      <option value="a2.json">AWS Set 2 (201-400)</option>
+      <option value="a3.json">AWS Set 3 (401-719)</option>
     </select>
 
     <div style="margin-top:10px">
@@ -653,7 +654,7 @@ window.addEventListener('beforeunload', saveProgress);
 /* Try preload */
 (async ()=>{
   try{
-    const arr = await loadFromFetch('a1.json');
+    const arr = await loadFromFetch('a4.json');
     if(Array.isArray(arr)){
       rawQuestions = arr;
       if (applyRange()) {
