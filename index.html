@@ -514,15 +514,38 @@ function exportResults(){
 
 /* --- Range Application --- */
 function applyRange() {
-  const start = parseInt(el('startRange').value) || 1;
-  const endInput = el('endRange').value;
-  const end = endInput ? parseInt(endInput) : rawQuestions.length;
+  const startVal = parseInt(el('startRange').value) || 0;
+  const endVal = parseInt(el('endRange').value) || Infinity;
   
-  // Slice rawQuestions to get the active test set
-  questions = rawQuestions.slice(Math.max(0, start - 1), Math.min(rawQuestions.length, end));
+  if (rawQuestions.length === 0) return true;
+
+  // Try to find indices based on ID property
+  let startIndex = rawQuestions.findIndex(q => q.id >= startVal);
+  if (startIndex === -1) startIndex = 0;
+
+  let endIndex = -1;
+  for (let i = rawQuestions.length - 1; i >= 0; i--) {
+    if (rawQuestions[i].id <= endVal) {
+      endIndex = i + 1;
+      break;
+    }
+  }
+  if (endIndex === -1) endIndex = rawQuestions.length;
+
+  // If IDs don't match (e.g. user entered a small number for a2.json), 
+  // we might get endIndex < startIndex. In that case, fallback to simple index-based slicing
+  // OR if the user is using indexes 1-200.
+  if (endIndex <= startIndex || (startVal < rawQuestions[0].id && endVal < rawQuestions[0].id)) {
+     // Fallback to simple slice logic if no IDs found in range
+     const s = Math.max(0, startVal - 1);
+     const e = el('endRange').value ? Math.min(rawQuestions.length, endVal) : rawQuestions.length;
+     questions = rawQuestions.slice(s, e);
+  } else {
+     questions = rawQuestions.slice(startIndex, endIndex);
+  }
   
   if (questions.length === 0) {
-    alert("No questions found in this range!");
+    alert("No questions found in this range (Checked IDs " + startVal + " to " + endVal + ")");
     return false;
   }
   return true;

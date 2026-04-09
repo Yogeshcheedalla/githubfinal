@@ -1192,7 +1192,8 @@
       "C": "Share IAM user credentials among multiple users.",
       "D": "Use the account root user for daily administrative tasks.",
       "E": "Avoid rotating IAM access keys."
-     "correct": ["A", "B"]
+    },
+    "correct": ["A", "B"]
   },
   {
     "id": 300,
