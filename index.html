@@ -267,10 +267,12 @@
 
         <div id="options" class="options"></div>
 
-        <div class="center-actions">
+        <div class="center-actions" style="display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;">
           <button id="prevBtn" class="btn secondary">Previous</button>
           <button id="nextBtn" class="btn">Next</button>
-          <button id="finishBtn" class="finish">Finish & Grade</button>
+          <button id="clearAnswerBtn" class="btn secondary">Clear Selection</button>
+          <button id="showAnswerBtn" class="btn secondary">Show Answer</button>
+          <button id="finishBtn" class="finish btn">Finish & Grade</button>
         </div>
       </div>
 
@@ -316,7 +318,7 @@
 
   <script>
     // UI Persistence Initialization
-    const savedTheme = localStorage.getItem('exam_theme') || 'light';
+    const savedTheme = localStorage.getItem('exam_theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
     document.documentElement.style.setProperty('--left-width', localStorage.getItem('exam_left_width') || '260px');
     document.documentElement.style.setProperty('--right-width', localStorage.getItem('exam_right_width') || '280px');
@@ -463,6 +465,12 @@
         opts.appendChild(wrapper);
       }
 
+      const btn = el('showAnswerBtn');
+      if (btn) {
+        btn.setAttribute('data-revealed', 'false');
+        btn.textContent = 'Show Answer';
+      }
+
       updateCounts();
     }
 
@@ -501,6 +509,37 @@
 
       });
 
+    }
+
+    function toggleCorrectAnswer() {
+      const q = questions[currentIndex];
+      if (!q) return;
+
+      const btn = el('showAnswerBtn');
+      if (!btn) return;
+
+      const isRevealed = btn.getAttribute('data-revealed') === 'true';
+
+      if (isRevealed) {
+        btn.setAttribute('data-revealed', 'false');
+        btn.textContent = 'Show Answer';
+        markInstantResult(q);
+      } else {
+        btn.setAttribute('data-revealed', 'true');
+        btn.textContent = 'Hide Answer';
+
+        const opts = document.querySelectorAll('#options .option');
+        const correctSet = new Set(q.correct);
+
+        opts.forEach(opt => {
+          const key = opt.getAttribute('data-key');
+          if (correctSet.has(key)) {
+            opt.style.borderColor = 'var(--success)';
+            opt.style.background = 'rgba(16, 185, 129, 0.15)';
+            opt.style.boxShadow = '0 0 10px rgba(16, 185, 129, 0.3)';
+          }
+        });
+      }
     }
 
     /* ---------------------------------------
@@ -854,6 +893,32 @@
 
     el('prevBtn').addEventListener('click', () => showQuestion(currentIndex - 1));
     el('nextBtn').addEventListener('click', () => showQuestion(currentIndex + 1));
+    el('clearAnswerBtn').addEventListener('click', () => {
+      const q = questions[currentIndex];
+      if (!q) return;
+
+      const inputs = document.querySelectorAll('#options input');
+      inputs.forEach(i => i.checked = false);
+
+      answers[q.id] = [];
+      saveProgress();
+      updateCounts();
+
+      const btn = el('showAnswerBtn');
+      if (btn && btn.getAttribute('data-revealed') === 'true') {
+        btn.setAttribute('data-revealed', 'false');
+        btn.textContent = 'Show Answer';
+      }
+      
+      const opts = document.querySelectorAll('#options .option');
+      opts.forEach(opt => {
+        opt.style.borderColor = 'var(--border)';
+        opt.style.background = 'var(--bg)';
+        opt.style.color = 'var(--text)';
+        opt.style.boxShadow = 'none';
+      });
+    });
+    el('showAnswerBtn').addEventListener('click', toggleCorrectAnswer);
     el('finishBtn').addEventListener('click', () => {
       if (confirm('Finish and grade the test?')) finishAndGrade();
     });
