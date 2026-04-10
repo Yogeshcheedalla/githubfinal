@@ -1,441 +1,582 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Practice Exam — GH-300 Style</title>
-<style>
-:root{
-  --bg:#f3f6f9; --card:#fff; --muted:#6b7280;
-  --accent:#1f6feb; --accent-2:#0b57d0;
-  --success:#10b981; --danger:#ef4444;
-  --shadow: 0 8px 28px rgba(16,24,40,0.08);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;background:var(--bg);color:#0f172a}
-.container{max-width:1200px;margin:28px auto;display:flex;gap:24px;padding:12px}
-.card{background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:18px}
-.left{width:260px;flex-shrink:0}
-.center{flex:1;min-width:480px}
-.right{width:260px;flex-shrink:0}
-.brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 18px rgba(11,87,208,0.14)}
-.h2{font-weight:700;margin:0 0 6px 0}
-.small{color:var(--muted);font-size:13px}
-.select, input[type="number"], button, .file-btn{width:100%;padding:8px 10px;border-radius:8px;border:1px solid #e6e9ee;background:#fff}
-.row{display:flex;gap:8px;align-items:center}
-.gap{height:12px}
-.left .card{position:sticky;top:24px}
-.panel-title{font-weight:600;margin-bottom:8px}
-.tips{font-size:13px;color:var(--muted);margin-top:12px}
-.controls{display:flex;gap:8px;margin-top:12px}
-.btn{padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer}
-.btn.secondary{background:#eef6ff;color:var(--accent-2);border:1px solid rgba(11,87,208,0.08)}
-.timer{font-weight:700;color:var(--accent-2);font-size:18px;text-align:right;margin-bottom:10px}
-.question-card{padding:18px;border-radius:10px;border:1px solid #eef2f7;background:#fff}
-.qmeta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.qtext{font-size:16px;line-height:1.45;margin-bottom:14px}
-.options{display:flex;flex-direction:column;gap:10px}
-.option{display:flex;align-items:flex-start;gap:12px;padding:12px;border-radius:8px;border:1px solid #eef2f7;background:#fafbfd;cursor:pointer}
-.option input{margin-top:3px}
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:8px;max-height:540px;overflow:auto}
-.qbtn{padding:10px;border-radius:8px;border:1px solid #e6e9ee;background:#fff;cursor:pointer}
-.qbtn.answered{background:#f9fff6;border-color:rgba(16,185,129,0.12)}
-.legend{display:flex;gap:8px;align-items:center;margin-top:12px}
-.legend span{font-size:13px}
-.footer{margin-top:12px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.small-muted{color:var(--muted);font-size:13px}
-.right .card{position:sticky;top:24px}
-.export-btn{background:#111827;color:#fff;border-radius:8px;padding:8px;border:none;cursor:pointer}
-.center-actions{display:flex;gap:8px;margin-top:14px}
-.finish{background:var(--success);color:#fff;border:none;border-radius:8px;padding:8px 12px;cursor:pointer}
-.score-box{padding:12px;border-radius:10px;border:1px solid #eef2f7;background:#fff;text-align:center}
-@media (max-width:1024px){
-  .container{flex-direction:column;max-width:920px}
-  .left,.right{width:100%}
-  .grid{grid-template-columns:repeat(6,1fr)}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Practice Exam — GH-300 Style</title>
+  <style>
+    :root {
+      /* Light Theme (Default) */
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #4f46e5;
+      --accent-hover: #4338ca;
+      --success: #10b981;
+      --danger: #ef4444;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+      --glass: rgba(255, 255, 255, 0.7);
+      
+      --zoom-scale: 1;
+      --left-width: 260px;
+      --right-width: 280px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #050814;
+      --card: #0a0e17;
+      --text: #e2f1ff;
+      --muted: #4b6a8f;
+      --accent: #00f0ff;
+      --accent-hover: #00c3d9;
+      --success: #00ff88;
+      --danger: #ff0055;
+      --border: #1e3a5f;
+      --shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+      --glass: rgba(10, 14, 23, 0.8);
+      --grid-bg: #03050a;
+    }
+
+    * { box-sizing: border-box; transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s; }
+    
+    body {
+      height: 100%; margin: 0; background: var(--bg); color: var(--text);
+      font-family: 'Consolas', 'Courier New', 'Outfit', 'Inter', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-image: linear-gradient(rgba(30, 58, 95, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 58, 95, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .container {
+      max-width: 1440px; margin: 28px auto; display: flex; gap: 0; padding: 12px; width: 98%;
+    }
+
+    .card {
+      background: var(--card); border-radius: 6px; box-shadow: var(--shadow); padding: 20px;
+      border: 1px solid var(--border); height: fit-content;
+      position: relative; overflow: hidden;
+    }
+    
+    [data-theme="dark"] .card::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    .left { width: var(--left-width); flex-shrink: 0; min-width: 180px; max-width: 500px; }
+    .center { flex: 1; min-width: 400px; padding: 0 15px; }
+    .right { width: var(--right-width); flex-shrink: 0; min-width: 200px; max-width: 600px; }
+
+    /* Resizer Bars */
+    .resizer {
+      width: 12px; cursor: col-resize; z-index: 10; align-self: stretch;
+      display: flex; align-items: center; justify-content: center; position: relative;
+    }
+    .resizer::after {
+      content: ''; width: 4px; height: 40px; background: var(--border); border-radius: 10px;
+      transition: background 0.2s;
+    }
+    .resizer:hover::after, .resizer.active::after { background: var(--accent); }
+
+    /* UI Elements */
+    .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .logo {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #818cf8);
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+    }
+    .h2 { font-size: 1.25rem; font-weight: 700; margin: 0; letter-spacing: -0.02em; }
+    
+    .select, input[type="number"], .file-btn {
+      width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border);
+      background: var(--card); color: var(--text); outline: none;
+    }
+    .select:focus, input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1); }
+
+    .btn {
+      padding: 10px 16px; border-radius: 10px; border: none; font-weight: 600;
+      background: var(--accent); color: #fff; cursor: pointer; display: inline-flex;
+      align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .btn.secondary { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
+    .btn.secondary:hover { background: var(--border); }
+
+    .theme-toggle {
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border);
+      background: var(--card); cursor: pointer; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 12px; color: var(--text);
+    }
+    .theme-toggle:hover { background: var(--bg); }
+
+    .zoom-ctrl { display: flex; gap: 6px; margin-top: 10px; }
+    .zoom-btn {
+      flex: 1; padding: 8px; font-weight: 600; font-size: 12px; cursor: pointer;
+      border: 1px solid var(--border); background: var(--card); color: var(--text); border-radius: 8px;
+    }
+    .zoom-btn:hover { background: var(--bg); }
+
+    .qtext, .option { font-size: calc(16px * var(--zoom-scale)) !important; line-height: 1.6; }
+    
+    .question-card {
+      padding: 24px; border-radius: 6px; border: 1px solid var(--border);
+      background: var(--card); margin-bottom: 20px; box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .option {
+      display: flex; align-items: flex-start; gap: 14px; padding: 16px;
+      border-radius: 6px; border: 1px solid var(--border); 
+      background: var(--bg); color: var(--text);
+      cursor: pointer; margin-bottom: 8px; transition: all 0.2s;
+    }
+    .option:hover { 
+      border-color: var(--accent); background: var(--card); 
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+    }
+
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+      gap: 10px; padding: 12px 0; max-height: 540px; overflow: auto;
+    }
+    .qbtn {
+      aspect-ratio: 1; border-radius: 4px; border: 1px solid var(--border);
+      background: var(--card); color: var(--text); font-weight: bold; cursor: pointer;
+      font-family: 'Consolas', 'Courier New', monospace; font-size: 13px;
+    }
+    .qbtn:hover { border-color: var(--accent); color: var(--accent); box-shadow: 0 0 8px var(--accent); }
+    .qbtn.correct { 
+      background: rgba(16, 185, 129, 0.1); border-color: var(--success); color: var(--success); 
+      text-shadow: 0 0 5px var(--success);
+    }
+    .qbtn.wrong { 
+      background: rgba(239, 68, 68, 0.1); border-color: var(--danger); color: var(--danger); 
+      text-shadow: 0 0 5px var(--danger);
+    }
+    [data-theme="dark"] .qbtn.correct { background: rgba(0, 255, 136, 0.05); }
+    [data-theme="dark"] .qbtn.wrong { background: rgba(255, 0, 85, 0.05); }
+
+    .timer { font-size: 1.5rem; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; text-shadow: 0 0 8px rgba(0, 240, 255, 0.4); }
+    
+    .swipe-indicator {
+      position: fixed; top: 50%; transform: translateY(-50%); font-size: 60px;
+      color: var(--accent); opacity: 0; pointer-events: none; z-index: 100;
+      text-shadow: 0 0 15px var(--accent);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+  </style>
 </head>
+
 <body>
-<div class="container">
-  <div class="left card">
-    <div class="brand">
-      <div class="logo"></div>
-      <div>
-        <div class="h2">GH-300 Practice Test</div>
-        <div class="small">Microsoft-style exam UI</div>
+  <div class="container">
+    <div class="left card">
+      <div style="display:flex; justify-content: space-between; align-items: flex-start;">
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            <div class="h2">GH-300 Test</div>
+            <div class="small">Azure/AWS Style</div>
+          </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle" title="Toggle Dark/Bright Mode">🌓</button>
+      </div>
+
+      <div class="panel-title">Select test file</div>
+      <select id="fileSelect" class="select">
+        <option value="a4.json" selected>Complete Question Bank (1-719)</option>
+        <option value="a1.json">AWS Set 1 (1-200)</option>
+        <option value="a2.json">AWS Set 2 (201-400)</option>
+        <option value="a3.json">AWS Set 3 (401-719)</option>
+      </select>
+
+      <div style="margin-top:10px">
+        <label class="small-muted">Or upload JSON</label>
+        <input id="fileInput" type="file" accept=".json" style="margin-top:6px" />
+      </div>
+
+      <div style="margin-top:12px">
+        <label class="small-muted">Timer (minutes)</label>
+        <input id="timerInput" type="number" min="0" value="60" />
+      </div>
+
+      <div style="margin-top:12px; display: flex; gap: 8px;">
+        <div style="flex: 1;">
+          <label class="small-muted">Start #</label>
+          <input id="startRange" type="number" min="1" value="1" />
+        </div>
+        <div style="flex: 1;">
+          <label class="small-muted">End #</label>
+          <input id="endRange" type="number" min="1" placeholder="Max" />
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="loadBtn" class="btn secondary" title="Load file">Load & Preview</button>
+        <button id="startBtn" class="btn">Start Test</button>
+      </div>
+
+      <div class="tips">
+        <ul style="padding-left:18px;margin:10px 0;color:var(--muted)">
+          <li>Place <code>questions.json</code> beside this file when using fetch.</li>
+          <li>Or upload a JSON (array of question objects) above.</li>
+          <li>Files must be valid JSON arrays (see your q*.txt)</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px" class="panel-title">Actions</div>
+      <div class="controls">
+        <button id="exportBtn" class="export-btn">Export Results</button>
+        <button id="resetBtn" class="btn secondary">Reset</button>
+      </div>
+
+      <div style="margin-top:12px" class="panel-title">Zoom / Font Size</div>
+      <div class="zoom-ctrl">
+        <button id="zoomOut" class="zoom-btn" title="Decrease Font Size">A-</button>
+        <button id="zoomReset" class="zoom-btn" title="Reset Font Size">100%</button>
+        <button id="zoomIn" class="zoom-btn" title="Increase Font Size">A+</button>
+      </div>
+
+    </div>
+
+    <div class="center card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-size:14px;color:var(--muted)">Test in progress</div>
+          <div style="font-weight:700">Questions: <span id="totalQuestions">0</span> · Answered: <span
+              id="answeredCount">0</span></div>
+        </div>
+        <div class="timer" id="timerDisplay">00:00</div>
+      </div>
+
+      <div class="gap"></div>
+
+      <div id="questionArea" class="question-card" style="display:none">
+        <div class="qmeta">
+          <div><strong id="qNumber">Question 1</strong> <span class="small-muted" id="qInstruction"></span></div>
+          <div class="small-muted" id="qType"></div>
+        </div>
+
+        <div id="qText" class="qtext"></div>
+
+        <div id="options" class="options"></div>
+
+        <div class="center-actions">
+          <button id="prevBtn" class="btn secondary">Previous</button>
+          <button id="nextBtn" class="btn">Next</button>
+          <button id="finishBtn" class="finish">Finish & Grade</button>
+        </div>
+      </div>
+
+      <div id="previewArea" style="display:block" class="small-muted">
+        <p>No questions loaded yet — click <strong>Load & Preview</strong> or upload a file.</p>
+      </div>
+
+      <div id="resultArea" style="display:none;margin-top:12px"></div>
+
+    </div>
+
+    <div class="resizer" id="leftResizer"></div>
+    <div class="resizer" id="rightResizer"></div>
+
+    <div class="right card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div><strong>Questions</strong></div>
+        <div class="small-muted" id="progressSummary">Answered 0 / 0</div>
+      </div>
+
+      <div class="gap"></div>
+
+      <div class="grid" id="questionGrid" aria-label="Question grid"></div>
+
+      <div class="legend">
+        <div class="small-muted"><button class="qbtn" style="width:30px;height:30px;border-radius:6px"></button>
+          Unanswered</div>
+        <div class="small-muted"><button class="qbtn correct"
+            style="width:30px;height:30px;border-radius:6px"></button> Correct</div>
+        <div class="small-muted"><button class="qbtn wrong"
+            style="width:30px;height:30px;border-radius:6px"></button> Incorrect</div>
+      </div>
+
+      <div class="footer">
+        <div class="small-muted">Runs entirely in-browser.</div>
+        <div><button id="jumpFirst" class="btn secondary">First</button></div>
       </div>
     </div>
-
-    <div class="panel-title">Select test file</div>
-    <select id="fileSelect" class="select">
-      <option value="a4.json" selected>Complete Question Bank (1-719)</option>
-      <option value="a1.json">AWS Set 1 (1-200)</option>
-      <option value="a2.json">AWS Set 2 (201-400)</option>
-      <option value="a3.json">AWS Set 3 (401-719)</option>
-    </select>
-
-    <div style="margin-top:10px">
-      <label class="small-muted">Or upload JSON</label>
-      <input id="fileInput" type="file" accept=".json" style="margin-top:6px" />
-    </div>
-
-    <div style="margin-top:12px">
-      <label class="small-muted">Timer (minutes)</label>
-      <input id="timerInput" type="number" min="0" value="60" />
-    </div>
-
-    <div style="margin-top:12px; display: flex; gap: 8px;">
-      <div style="flex: 1;">
-        <label class="small-muted">Start #</label>
-        <input id="startRange" type="number" min="1" value="1" />
-      </div>
-      <div style="flex: 1;">
-        <label class="small-muted">End #</label>
-        <input id="endRange" type="number" min="1" placeholder="Max" />
-      </div>
-    </div>
-
-    <div class="controls">
-      <button id="loadBtn" class="btn secondary" title="Load file">Load & Preview</button>
-      <button id="startBtn" class="btn">Start Test</button>
-    </div>
-
-    <div class="tips">
-      <ul style="padding-left:18px;margin:10px 0;color:var(--muted)">
-        <li>Place <code>questions.json</code> beside this file when using fetch.</li>
-        <li>Or upload a JSON (array of question objects) above.</li>
-        <li>Files must be valid JSON arrays (see your q*.txt)</li>
-      </ul>
-    </div>
-
-    <div style="margin-top:12px" class="panel-title">Actions</div>
-    <div class="controls">
-      <button id="exportBtn" class="export-btn">Export Results</button>
-      <button id="resetBtn" class="btn secondary">Reset</button>
-    </div>
-
   </div>
 
-  <div class="center card">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div>
-        <div style="font-size:14px;color:var(--muted)">Test in progress</div>
-        <div style="font-weight:700">Questions: <span id="totalQuestions">0</span> · Answered: <span id="answeredCount">0</span></div>
-      </div>
-      <div class="timer" id="timerDisplay">00:00</div>
-    </div>
+  <div id="swipeLeft" class="swipe-indicator swipe-left">←</div>
+  <div id="swipeRight" class="swipe-indicator swipe-right">→</div>
 
-    <div class="gap"></div>
+  <script>
+    // UI Persistence Initialization
+    const savedTheme = localStorage.getItem('exam_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.documentElement.style.setProperty('--left-width', localStorage.getItem('exam_left_width') || '260px');
+    document.documentElement.style.setProperty('--right-width', localStorage.getItem('exam_right_width') || '280px');
 
-    <div id="questionArea" class="question-card" style="display:none">
-      <div class="qmeta">
-        <div><strong id="qNumber">Question 1</strong> <span class="small-muted" id="qInstruction"></span></div>
-        <div class="small-muted" id="qType"></div>
-      </div>
+    /* ---------------------------
+       Your Existing Script Starts
+    ----------------------------- */
 
-      <div id="qText" class="qtext"></div>
+    /*
+     Expected question object format
+    */
 
-      <div id="options" class="options"></div>
+    let questions = [];
+    let rawQuestions = []; // Store original data for range selection
+    let answers = {};
+    let currentIndex = 0;
+    let timer = null;
+    let timeLeft = 0;
+    let currentZoom = 1;
+    const LS_KEY = 'practice_exam_answers_v1';
+    const ZOOM_KEY = 'practice_exam_zoom_v1';
 
-      <div class="center-actions">
-        <button id="prevBtn" class="btn secondary">Previous</button>
-        <button id="nextBtn" class="btn">Next</button>
-        <button id="finishBtn" class="finish">Finish & Grade</button>
-      </div>
-    </div>
+    const el = id => document.getElementById(id);
+    const qArea = el('questionArea'), previewArea = el('previewArea'), resultArea = el('resultArea');
 
-    <div id="previewArea" style="display:block" class="small-muted">
-      <p>No questions loaded yet — click <strong>Load & Preview</strong> or upload a file.</p>
-    </div>
-
-    <div id="resultArea" style="display:none;margin-top:12px"></div>
-
-  </div>
-
-  <div class="right card">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div><strong>Questions</strong></div>
-      <div class="small-muted" id="progressSummary">Answered 0 / 0</div>
-    </div>
-
-    <div class="gap"></div>
-
-    <div class="grid" id="questionGrid" aria-label="Question grid"></div>
-
-    <div class="legend">
-      <div class="small-muted"><button class="qbtn" style="width:30px;height:30px;border-radius:6px"></button> Unanswered</div>
-      <div class="small-muted"><button class="qbtn answered" style="width:30px;height:30px;border-radius:6px"></button> Answered</div>
-    </div>
-
-    <div class="footer">
-      <div class="small-muted">Runs entirely in-browser.</div>
-      <div><button id="jumpFirst" class="btn secondary">First</button></div>
-    </div>
-  </div>
-</div>
-
-<script>
-
-/* ---------------------------
-   Your Existing Script Starts
------------------------------ */
-
-/*
- Expected question object format
-*/
-
-let questions = [];
-let rawQuestions = []; // Store original data for range selection
-let answers = {}; 
-let currentIndex = 0;
-let timer = null;
-let timeLeft = 0;
-const LS_KEY = 'practice_exam_answers_v1';
-
-const el = id => document.getElementById(id);
-const qArea = el('questionArea'), previewArea = el('previewArea'), resultArea = el('resultArea');
-
-/* --- fetch & file loader --- */
-function loadFromFetch(filename){
-  return fetch(filename).then(r=>{
-    if(!r.ok) throw new Error('Fetch failed');
-    return r.json();
-  });
-}
-
-function loadFromFile(file){
-  return new Promise((resolve,reject)=>{
-    const fr = new FileReader();
-    fr.onload = e => {
-      try{
-        const data = JSON.parse(e.target.result);
-        resolve(data);
-      }catch(err){ reject(err) }
-    };
-    fr.onerror = reject;
-    fr.readAsText(file);
-  });
-}
-
-/* --- Grid rendering --- */
-function renderGrid(){
-  const grid = el('questionGrid');
-  grid.innerHTML = '';
-  questions.forEach((q,i)=>{
-    const btn = document.createElement('button');
-    btn.className = 'qbtn' + (answers[q.id] && answers[q.id].length? ' answered':'');
-    btn.textContent = i+1;
-    btn.onclick = ()=> { showQuestion(i); };
-    grid.appendChild(btn);
-  });
-  updateCounts();
-}
-
-/* --- Update counters --- */
-function updateCounts() {
-  el('totalQuestions').textContent = questions.length;
-
-  const answered = Object.values(answers).filter(a => a && a.length).length;
-  el('answeredCount').textContent = answered;
-  el('progressSummary').textContent = `Answered ${answered} / ${questions.length}`;
-
-  const grid = el('questionGrid').children;
-
-  for (let i = 0; i < grid.length; i++) {
-    const q = questions[i];
-    const user = (answers[q.id] || []).slice().sort();
-    const actual = (q.correct || []).slice().sort();
-    const isAnswered = user.length > 0;
-    const isCorrect = JSON.stringify(user) === JSON.stringify(actual);
-    const btn = grid[i];
-
-    // Default
-    btn.style.background = "#fff";
-    btn.style.borderColor = "#e6e9ee";
-    btn.style.color = "#000";
-
-    if (isAnswered) {
-      if (isCorrect) {
-        // GREEN (correct)
-        btn.style.background = "#e7fce9";
-        btn.style.borderColor = "var(--success)";
-        btn.style.color = "#055f1a";
-      } else {
-        // RED (wrong)
-        btn.style.background = "#fdeaea";
-        btn.style.borderColor = "var(--danger)";
-        btn.style.color = "#7a0000";
-      }
+    /* --- fetch & file loader --- */
+    function loadFromFetch(filename) {
+      return fetch(filename).then(r => {
+        if (!r.ok) throw new Error('Fetch failed');
+        return r.json();
+      });
     }
-  }
-}
 
+    function loadFromFile(file) {
+      return new Promise((resolve, reject) => {
+        const fr = new FileReader();
+        fr.onload = e => {
+          try {
+            const data = JSON.parse(e.target.result);
+            resolve(data);
+          } catch (err) { reject(err) }
+        };
+        fr.onerror = reject;
+        fr.readAsText(file);
+      });
+    }
 
-/* --- Question display --- */
-function showQuestion(index){
-  if(!questions.length) return;
-  currentIndex = Math.max(0, Math.min(index, questions.length-1));
-  const q = questions[currentIndex];
+    /* --- Grid rendering --- */
+    function renderGrid() {
+      const grid = el('questionGrid');
+      grid.innerHTML = '';
+      questions.forEach((q, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'qbtn';
+        btn.innerHTML = q.id || (i + 1);
+        btn.onclick = () => { showQuestion(i); };
+        grid.appendChild(btn);
+      });
+      updateCounts();
+    }
 
-  qArea.style.display = 'block';
-  previewArea.style.display = 'none';
+    /* --- Update counters --- */
+    function updateCounts() {
+      el('totalQuestions').textContent = questions.length;
 
-  el('qNumber').textContent = `Question ${currentIndex+1} / ${questions.length}`;
-  el('qInstruction').textContent = q.instruction || '';
-  el('qType').textContent = (Array.isArray(q.correct) && q.correct.length>1)? 'Choose multiple':'Choose one';
-  el('qText').innerHTML = q.question || '';
+      const answered = Object.values(answers).filter(a => a && a.length).length;
+      el('answeredCount').textContent = answered;
+      el('progressSummary').textContent = `Answered ${answered} / ${questions.length}`;
 
-  const opts = el('options'); 
-  opts.innerHTML = '';
+      const grid = el('questionGrid').children;
 
-  const multiple = Array.isArray(q.correct) && q.correct.length>1;
+      for (let i = 0; i < grid.length; i++) {
+        const q = questions[i];
+        const user = (answers[q.id] || []).slice().sort();
+        const actual = (q.correct || []).slice().sort();
+        const isAnswered = user.length > 0;
+        const isCorrect = JSON.stringify(user) === JSON.stringify(actual);
+        const btn = grid[i];
 
-  for(const [key,val] of Object.entries(q.options||{})){
-    const wrapper = document.createElement('label');
-    wrapper.className = 'option';
-    wrapper.setAttribute('data-key', key);
+        btn.className = 'qbtn';
 
-    /* RESET default border/background */
-    wrapper.style.borderColor = '#eef2f7';
-    wrapper.style.background = '#fafbfd';
-
-    const input = document.createElement('input');
-    input.type = multiple? 'checkbox':'radio';
-    input.name = 'choice';
-    input.value = key;
-
-    const selected = (answers[q.id]||[]).includes(key);
-    input.checked = selected;
-
-    input.onchange = onAnswerChange;
-
-    const textWrap = document.createElement('div');
-    textWrap.innerHTML = `<strong style="display:block">${key}.</strong> <div style="margin-top:4px">${val}</div>`;
-
-    wrapper.appendChild(input);
-    wrapper.appendChild(textWrap);
-
-    wrapper.onclick = e => {
-      if(e.target.tagName === 'INPUT') return;
-      input.checked = !input.checked;
-      input.dispatchEvent(new Event('change'));
-    };
-
-    opts.appendChild(wrapper);
-  }
-
-  updateCounts();
-}
-
-/* -------------------------------------
-   ⭐ NEW FUNCTION: Mark correct / wrong
--------------------------------------- */
-function markInstantResult(q) {
-
-  const opts = document.querySelectorAll('#options .option');
-  const correctSet = new Set(q.correct);
-
-  opts.forEach(opt => {
-
-    const key = opt.getAttribute('data-key');
-    const input = opt.querySelector('input');
-
-    // Reset first
-    opt.style.borderColor = '#eef2f7';
-    opt.style.background = '#fafbfd';
-
-    // If user selected this option
-    if (input.checked) {
-      if (correctSet.has(key)) {
-        opt.style.borderColor = 'var(--success)';
-        opt.style.background = '#f0fff4';   // green
-      } else {
-        opt.style.borderColor = 'var(--danger)';
-        opt.style.background = '#fff5f5';   // red
+        if (isAnswered) {
+          if (isCorrect) {
+            btn.classList.add('correct');
+          } else {
+            btn.classList.add('wrong');
+          }
+        }
       }
     }
 
-  });
 
-}
+    /* --- Question display --- */
+    function showQuestion(index) {
+      if (!questions.length) return;
+      currentIndex = Math.max(0, Math.min(index, questions.length - 1));
+      const q = questions[currentIndex];
 
-/* ---------------------------------------
-   UPDATED onAnswerChange()
----------------------------------------- */
-function onAnswerChange(){
-  const q = questions[currentIndex];
-  if(!q) return;
+      qArea.style.display = 'block';
+      previewArea.style.display = 'none';
 
-  const inputs = document.querySelectorAll('#options input');
-  const selected = [];
-  inputs.forEach(i=>{ if(i.checked) selected.push(i.value); });
+      el('qNumber').textContent = `Question ${currentIndex + 1} / ${questions.length}`;
+      el('qInstruction').textContent = q.instruction || '';
+      el('qType').textContent = (Array.isArray(q.correct) && q.correct.length > 1) ? 'Choose multiple' : 'Choose one';
+      el('qText').innerHTML = q.question || '';
 
-  answers[q.id] = selected;
-  saveProgress();
-  updateCounts();
+      const opts = el('options');
+      opts.innerHTML = '';
 
-  /* 🔥 highlight after selection */
-  markInstantResult(q);
-}
+      const multiple = Array.isArray(q.correct) && q.correct.length > 1;
 
-/* --- Save / load progress --- */
-function saveProgress(){
-  try{
-    localStorage.setItem(LS_KEY, JSON.stringify({answers, currentIndex}));
-  }catch(e){
-    console.warn('save failed',e);
-  }
-}
+      for (const [key, val] of Object.entries(q.options || {})) {
+        const wrapper = document.createElement('label');
+        wrapper.className = 'option';
+        wrapper.setAttribute('data-key', key);
 
-function loadProgress(){
-  try{
-    const raw = localStorage.getItem(LS_KEY);
-    if(!raw) return;
-    const parsed = JSON.parse(raw);
-    answers = parsed.answers || {};
-    currentIndex = parsed.currentIndex || 0;
-  }catch(e){ console.warn('load progress failed', e); }
-}
+        /* RESET default border/background */
+        wrapper.style.borderColor = 'var(--border)';
+        wrapper.style.background = 'var(--bg)';
+        wrapper.style.color = 'var(--text)';
 
-/* --- Timer --- */
-function startTimer(minutes){
-  if(timer) clearInterval(timer);
-  timeLeft = Math.max(0, Math.floor(minutes*60));
-  updateTimerDisplay();
-  if(timeLeft>0){
-    timer = setInterval(()=>{
-      timeLeft--;
-      if(timeLeft<=0){ clearInterval(timer); timer=null; finishAndGrade(); }
+        const input = document.createElement('input');
+        input.type = multiple ? 'checkbox' : 'radio';
+        input.name = 'choice';
+        input.value = key;
+
+        const selected = (answers[q.id] || []).includes(key);
+        input.checked = selected;
+
+        input.onchange = onAnswerChange;
+
+        const textWrap = document.createElement('div');
+        textWrap.innerHTML = `<strong style="display:block">${key}.</strong> <div style="margin-top:4px">${val}</div>`;
+
+        wrapper.appendChild(input);
+        wrapper.appendChild(textWrap);
+
+        wrapper.onclick = e => {
+          if (e.target.tagName === 'INPUT') return;
+          input.checked = !input.checked;
+          input.dispatchEvent(new Event('change'));
+        };
+
+        opts.appendChild(wrapper);
+      }
+
+      updateCounts();
+    }
+
+    /* -------------------------------------
+       ⭐ NEW FUNCTION: Mark correct / wrong
+    -------------------------------------- */
+    function markInstantResult(q) {
+
+      const opts = document.querySelectorAll('#options .option');
+      const correctSet = new Set(q.correct);
+
+      opts.forEach(opt => {
+
+        const key = opt.getAttribute('data-key');
+        const input = opt.querySelector('input');
+
+        // Reset first
+        opt.style.borderColor = 'var(--border)';
+        opt.style.background = 'var(--bg)';
+        opt.style.color = 'var(--text)';
+
+        // If user selected this option
+        if (input.checked) {
+          if (correctSet.has(key)) {
+            opt.style.borderColor = 'var(--success)';
+            opt.style.background = 'rgba(16, 185, 129, 0.1)';
+            opt.style.boxShadow = '0 0 10px rgba(16, 185, 129, 0.2)';
+          } else {
+            opt.style.borderColor = 'var(--danger)';
+            opt.style.background = 'rgba(239, 68, 68, 0.1)';
+            opt.style.boxShadow = '0 0 10px rgba(239, 68, 68, 0.2)';
+          }
+        } else {
+          opt.style.boxShadow = 'none';
+        }
+
+      });
+
+    }
+
+    /* ---------------------------------------
+       UPDATED onAnswerChange()
+    ---------------------------------------- */
+    function onAnswerChange() {
+      const q = questions[currentIndex];
+      if (!q) return;
+
+      const inputs = document.querySelectorAll('#options input');
+      const selected = [];
+      inputs.forEach(i => { if (i.checked) selected.push(i.value); });
+
+      answers[q.id] = selected;
+      saveProgress();
+      updateCounts();
+
+      /* 🔥 highlight after selection */
+      markInstantResult(q);
+    }
+
+    /* --- Save / load progress --- */
+    function saveProgress() {
+      try {
+        localStorage.setItem(LS_KEY, JSON.stringify({ answers, currentIndex }));
+      } catch (e) {
+        console.warn('save failed', e);
+      }
+    }
+
+    function loadProgress() {
+      try {
+        const raw = localStorage.getItem(LS_KEY);
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        answers = parsed.answers || {};
+        currentIndex = parsed.currentIndex || 0;
+      } catch (e) { console.warn('load progress failed', e); }
+    }
+
+    /* --- Timer --- */
+    function startTimer(minutes) {
+      if (timer) clearInterval(timer);
+      timeLeft = Math.max(0, Math.floor(minutes * 60));
       updateTimerDisplay();
-    },1000);
-  }
-}
+      if (timeLeft > 0) {
+        timer = setInterval(() => {
+          timeLeft--;
+          if (timeLeft <= 0) { clearInterval(timer); timer = null; finishAndGrade(); }
+          updateTimerDisplay();
+        }, 1000);
+      }
+    }
 
-function updateTimerDisplay(){
-  const mm = String(Math.floor(timeLeft/60)).padStart(2,'0');
-  const ss = String(timeLeft%60).padStart(2,'0');
-  el('timerDisplay').textContent = `${mm}:${ss}`;
-}
+    function updateTimerDisplay() {
+      const mm = String(Math.floor(timeLeft / 60)).padStart(2, '0');
+      const ss = String(timeLeft % 60).padStart(2, '0');
+      el('timerDisplay').textContent = `${mm}:${ss}`;
+    }
 
-/* --- Grading, results, details --- */
-function finishAndGrade(){
-  let correct = 0;
-  let total = questions.length;
+    /* --- Grading, results, details --- */
+    function finishAndGrade() {
+      let correct = 0;
+      let total = questions.length;
 
-  const details = questions.map(q=>{
-    const user = (answers[q.id]||[]).slice().sort();
-    const actual = (q.correct||[]).slice().sort();
-    const isCorrect = JSON.stringify(user) === JSON.stringify(actual);
-    if(isCorrect) correct++;
-    return {id:q.id, question:q.question, user, actual, correct:isCorrect};
-  });
+      const details = questions.map(q => {
+        const user = (answers[q.id] || []).slice().sort();
+        const actual = (q.correct || []).slice().sort();
+        const isCorrect = JSON.stringify(user) === JSON.stringify(actual);
+        if (isCorrect) correct++;
+        return { id: q.id, question: q.question, user, actual, correct: isCorrect };
+      });
 
-  qArea.style.display='none';
-  resultArea.style.display='block';
-  resultArea.innerHTML = `
+      qArea.style.display = 'none';
+      resultArea.style.display = 'block';
+      resultArea.innerHTML = `
     <div class="score-box card">
       <h3 style="margin:6px 0">${correct} / ${total}</h3>
       <div class="small-muted">Score</div>
@@ -446,34 +587,34 @@ function finishAndGrade(){
     </div>
   `;
 
-  el('showDetails').onclick = ()=> showDetails(details);
+      el('showDetails').onclick = () => showDetails(details);
 
-  el('downloadDetails').onclick = ()=> {
-    const blob = new Blob([JSON.stringify({score:correct,total,details},null,2)],{type:'application/json'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a'); 
-    a.href = url; 
-    a.download = 'exam_results.json'; 
-    a.click();
-    URL.revokeObjectURL(url);
-  };
+      el('downloadDetails').onclick = () => {
+        const blob = new Blob([JSON.stringify({ score: correct, total, details }, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'exam_results.json';
+        a.click();
+        URL.revokeObjectURL(url);
+      };
 
-  if(timer) { clearInterval(timer); timer=null; }
-}
+      if (timer) { clearInterval(timer); timer = null; }
+    }
 
-function showDetails(details){
-  const out = details.map((d,i)=>`
+    function showDetails(details) {
+      const out = details.map((d, i) => `
     <div style="padding:10px;border-bottom:1px solid #f1f5f9">
-      <strong>Q${i+1}:</strong> ${d.question}<br/>
-      <strong>Your:</strong> ${d.user.join(', ')||'—'} 
+      <strong>Q${i + 1}:</strong> ${d.question}<br/>
+      <strong>Your:</strong> ${d.user.join(', ') || '—'} 
       <strong>Correct:</strong> ${d.actual.join(', ')} 
-      <span style="color:${d.correct? 'var(--success)':'var(--danger)'}">
-        [${d.correct? 'OK':'WRONG'}]
+      <span style="color:${d.correct ? 'var(--success)' : 'var(--danger)'}">
+        [${d.correct ? 'OK' : 'WRONG'}]
       </span>
     </div>
   `).join('');
 
-  resultArea.innerHTML = `
+      resultArea.innerHTML = `
     <div class="card" style="padding:12px;max-height:520px;overflow:auto">
       ${out}
       <div style="margin-top:12px">
@@ -482,191 +623,263 @@ function showDetails(details){
     </div>
   `;
 
-  el('backToScore').onclick = ()=> {
-    resultArea.style.display='block';
-    finishAndGrade();
-  };
-}
-
-/* --- Reset --- */
-function resetAll(){
-  if(confirm('Reset progress and answers?')) {
-    answers = {}; 
-    currentIndex = 0; 
-    saveProgress();
-    renderGrid();
-    previewArea.style.display='block'; 
-    qArea.style.display='none'; 
-    resultArea.style.display='none';
-  }
-}
-
-/* --- Export --- */
-function exportResults(){
-  const data = {questionsCount:questions.length, answers};
-  const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a'); 
-  a.href = url; 
-  a.download = 'answers_export.json'; 
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-/* --- Range Application --- */
-function applyRange() {
-  const startVal = parseInt(el('startRange').value) || 0;
-  const endVal = parseInt(el('endRange').value) || Infinity;
-  
-  if (rawQuestions.length === 0) return true;
-
-  // Try to find indices based on ID property
-  let startIndex = rawQuestions.findIndex(q => q.id >= startVal);
-  if (startIndex === -1) startIndex = 0;
-
-  let endIndex = -1;
-  for (let i = rawQuestions.length - 1; i >= 0; i--) {
-    if (rawQuestions[i].id <= endVal) {
-      endIndex = i + 1;
-      break;
+      el('backToScore').onclick = () => {
+        resultArea.style.display = 'block';
+        finishAndGrade();
+      };
     }
-  }
-  if (endIndex === -1) endIndex = rawQuestions.length;
 
-  // If IDs don't match (e.g. user entered a small number for a2.json), 
-  // we might get endIndex < startIndex. In that case, fallback to simple index-based slicing
-  // OR if the user is using indexes 1-200.
-  if (endIndex <= startIndex || (startVal < rawQuestions[0].id && endVal < rawQuestions[0].id)) {
-     // Fallback to simple slice logic if no IDs found in range
-     const s = Math.max(0, startVal - 1);
-     const e = el('endRange').value ? Math.min(rawQuestions.length, endVal) : rawQuestions.length;
-     questions = rawQuestions.slice(s, e);
-  } else {
-     questions = rawQuestions.slice(startIndex, endIndex);
-  }
-  
-  if (questions.length === 0) {
-    alert("No questions found in this range (Checked IDs " + startVal + " to " + endVal + ")");
-    return false;
-  }
-  return true;
-}
+    /* --- Reset --- */
+    function resetAll() {
+      if (confirm('Reset progress and answers?')) {
+        answers = {};
+        currentIndex = 0;
+        saveProgress();
+        renderGrid();
+        previewArea.style.display = 'block';
+        qArea.style.display = 'none';
+        resultArea.style.display = 'none';
+      }
+    }
 
-/* --- UI Wiring --- */
-el('loadBtn').addEventListener('click', async ()=>{
-  const sel = el('fileSelect').value;
+    /* --- Export --- */
+    function exportResults() {
+      const data = { questionsCount: questions.length, answers };
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'answers_export.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
 
-  try{
-    const arr = await loadFromFetch(sel);
-    if(!Array.isArray(arr)) throw new Error('Not an array');
+    /* --- Range Application --- */
+    function applyRange() {
+      const startVal = parseInt(el('startRange').value) || 0;
+      const endVal = parseInt(el('endRange').value) || Infinity;
 
-    rawQuestions = arr;
-    if (!applyRange()) return;
+      if (rawQuestions.length === 0) return true;
 
-    el('previewArea').style.display='none';
-    qArea.style.display='block';
-    el('resultArea').style.display='none';
+      // Filter by strict ID matching FIRST for accurate filtering
+      questions = rawQuestions.filter(q => q.id >= startVal && q.id <= endVal);
 
-    loadProgress();
-    renderGrid();
-    showQuestion(0);
+      // If ID-based filtering returned empty, fallback to array index slicing
+      if (questions.length === 0) {
+        const s = Math.max(0, startVal - 1);
+        const e = el('endRange').value ? Math.min(rawQuestions.length, endVal) : rawQuestions.length;
+        questions = rawQuestions.slice(s, e);
+      }
 
-  }catch(fetchErr){
+      if (questions.length === 0) {
+        alert("No questions found in this range (Checked IDs " + startVal + " to " + endVal + "). Make sure the file loaded actually contains those question numbers.");
+        return false;
+      }
+      return true;
+    }
 
-    const f = el('fileInput').files[0];
-    if(f){
-      try{
-        const arr = await loadFromFile(f);
-        if(!Array.isArray(arr)) throw new Error('Uploaded file is not an array');
+    /* --- Zoom Handling --- */
+    function setZoom(val) {
+      currentZoom = Math.max(0.7, Math.min(2.0, val));
+      document.documentElement.style.setProperty('--zoom-scale', currentZoom);
+      localStorage.setItem(ZOOM_KEY, currentZoom);
+    }
+
+    el('zoomIn').onclick = () => setZoom(currentZoom + 0.1);
+    el('zoomOut').onclick = () => setZoom(currentZoom - 0.1);
+    el('zoomReset').onclick = () => setZoom(1.0);
+
+    /* --- Gesture Handling --- */
+    let touchStartX = 0;
+    let touchStartY = 0;
+    const SWIPE_THRESHOLD = 80;
+
+    qArea.addEventListener('pointerdown', e => {
+      touchStartX = e.clientX;
+      touchStartY = e.clientY;
+    });
+
+    qArea.addEventListener('pointerup', e => {
+      const diffX = e.clientX - touchStartX;
+      const diffY = e.clientY - touchStartY;
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > SWIPE_THRESHOLD) {
+        if (diffX > 0) {
+          showQuestion(currentIndex - 1);
+          showSwipeIcon('swipeLeft');
+        } else {
+          showQuestion(currentIndex + 1);
+          showSwipeIcon('swipeRight');
+        }
+      }
+    });
+
+    function showSwipeIcon(id) {
+      const icon = el(id);
+      icon.style.opacity = '1';
+      setTimeout(() => icon.style.opacity = '0', 400);
+    }
+
+    /* --- Resizing Logic --- */
+    function initResizer(resizerId, sideClass, storageKey, isRightSide) {
+      const resizer = el(resizerId);
+      let startX, startWidth;
+
+      resizer.addEventListener('pointerdown', e => {
+        startX = e.clientX;
+        const panel = document.querySelector('.' + sideClass);
+        startWidth = panel.offsetWidth;
+        resizer.classList.add('active');
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+
+        function onMove(moveE) {
+          const delta = moveE.clientX - startX;
+          let newWidth = isRightSide ? (startWidth - delta) : (startWidth + delta);
+          newWidth = Math.max(180, Math.min(600, newWidth));
+          document.documentElement.style.setProperty('--' + sideClass + '-width', newWidth + 'px');
+          localStorage.setItem(storageKey, newWidth + 'px');
+        }
+
+        function onUp() {
+          resizer.classList.remove('active');
+          document.body.style.cursor = '';
+          document.body.style.userSelect = '';
+          window.removeEventListener('pointermove', onMove);
+          window.removeEventListener('pointerup', onUp);
+        }
+
+        window.addEventListener('pointermove', onMove);
+        window.addEventListener('pointerup', onUp);
+      });
+    }
+
+    initResizer('leftResizer', 'left', 'exam_left_width', false);
+    initResizer('rightResizer', 'right', 'exam_right_width', true);
+
+    /* --- Theme Toggle --- */
+    el('themeToggle').onclick = () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('exam_theme', next);
+    };
+
+    /* --- UI Wiring --- */
+    el('loadBtn').addEventListener('click', async () => {
+      const sel = el('fileSelect').value;
+
+      try {
+        const arr = await loadFromFetch(sel);
+        if (!Array.isArray(arr)) throw new Error('Not an array');
 
         rawQuestions = arr;
         if (!applyRange()) return;
 
-        el('previewArea').style.display='none';
-        qArea.style.display='block';
-        el('resultArea').style.display='none';
+        el('previewArea').style.display = 'none';
+        qArea.style.display = 'block';
+        el('resultArea').style.display = 'none';
 
         loadProgress();
         renderGrid();
         showQuestion(0);
 
-      }catch(e){
-        alert('Failed to load file: ' + e.message);
+      } catch (fetchErr) {
+
+        const f = el('fileInput').files[0];
+        if (f) {
+          try {
+            const arr = await loadFromFile(f);
+            if (!Array.isArray(arr)) throw new Error('Uploaded file is not an array');
+
+            rawQuestions = arr;
+            if (!applyRange()) return;
+
+            el('previewArea').style.display = 'none';
+            qArea.style.display = 'block';
+            el('resultArea').style.display = 'none';
+
+            loadProgress();
+            renderGrid();
+            showQuestion(0);
+
+          } catch (e) {
+            alert('Failed to load file: ' + e.message);
+          }
+        } else {
+          alert('Failed to fetch "' + sel + '". Either host questions.json on a server or upload a file.');
+        }
       }
-    }else{
-      alert('Failed to fetch "'+sel+'". Either host questions.json on a server or upload a file.');
-    }
-  }
-});
+    });
 
-el('fileInput').addEventListener('change', async (e)=>{
-  const f = e.target.files[0];
-  if(!f) return;
+    el('fileInput').addEventListener('change', async (e) => {
+      const f = e.target.files[0];
+      if (!f) return;
 
-  try{
-    const arr = await loadFromFile(f);
-    if(!Array.isArray(arr)) throw new Error('Uploaded file is not an array');
+      try {
+        const arr = await loadFromFile(f);
+        if (!Array.isArray(arr)) throw new Error('Uploaded file is not an array');
 
-    rawQuestions = arr;
-    if (!applyRange()) return;
+        rawQuestions = arr;
+        if (!applyRange()) return;
 
-    previewArea.style.display='none';
-    qArea.style.display='block';
-    resultArea.style.display='none';
+        previewArea.style.display = 'none';
+        qArea.style.display = 'block';
+        resultArea.style.display = 'none';
 
-    loadProgress();
-    renderGrid();
-    showQuestion(0);
-
-  }catch(err){
-    alert('Error reading file: ' + err.message);
-  }
-});
-
-el('startBtn').addEventListener('click', ()=>{
-  if(!rawQuestions.length){
-    alert('Load a questions file first.');
-    return;
-  }
-  
-  // Re-apply range in case user changed it after loading
-  if (!applyRange()) return;
-  
-  const mins = Number(el('timerInput').value) || 0;
-  startTimer(mins);
-  showQuestion(0);
-  previewArea.style.display='none';
-  resultArea.style.display='none';
-  renderGrid(); // Ensure grid matches current range
-});
-
-el('prevBtn').addEventListener('click', ()=> showQuestion(currentIndex-1));
-el('nextBtn').addEventListener('click', ()=> showQuestion(currentIndex+1));
-el('finishBtn').addEventListener('click', ()=> {
-  if(confirm('Finish and grade the test?')) finishAndGrade();
-});
-el('exportBtn').addEventListener('click', exportResults);
-el('resetBtn').addEventListener('click', resetAll);
-el('jumpFirst').addEventListener('click', ()=> showQuestion(0));
-
-window.addEventListener('beforeunload', saveProgress);
-
-/* Try preload */
-(async ()=>{
-  try{
-    const arr = await loadFromFetch('a4.json');
-    if(Array.isArray(arr)){
-      rawQuestions = arr;
-      if (applyRange()) {
-        renderGrid();
-        el('previewArea').style.display='none';
-        qArea.style.display='block';
         loadProgress();
+        renderGrid();
         showQuestion(0);
+
+      } catch (err) {
+        alert('Error reading file: ' + err.message);
       }
-    }
-  }catch(e){ }
-})();
-</script>
+    });
+
+    el('startBtn').addEventListener('click', () => {
+      if (!rawQuestions.length) {
+        alert('Load a questions file first.');
+        return;
+      }
+
+      // Re-apply range in case user changed it after loading
+      if (!applyRange()) return;
+
+      const mins = Number(el('timerInput').value) || 0;
+      startTimer(mins);
+      showQuestion(0);
+      previewArea.style.display = 'none';
+      resultArea.style.display = 'none';
+      renderGrid(); // Ensure grid matches current range
+    });
+
+    el('prevBtn').addEventListener('click', () => showQuestion(currentIndex - 1));
+    el('nextBtn').addEventListener('click', () => showQuestion(currentIndex + 1));
+    el('finishBtn').addEventListener('click', () => {
+      if (confirm('Finish and grade the test?')) finishAndGrade();
+    });
+    el('exportBtn').addEventListener('click', exportResults);
+    el('resetBtn').addEventListener('click', resetAll);
+    el('jumpFirst').addEventListener('click', () => showQuestion(0));
+
+    window.addEventListener('beforeunload', saveProgress);
+
+    /* Try preload */
+    (async () => {
+      try {
+        const arr = await loadFromFetch('a4.json');
+        if (Array.isArray(arr)) {
+          rawQuestions = arr;
+          if (applyRange()) {
+            renderGrid();
+            el('previewArea').style.display = 'none';
+            qArea.style.display = 'block';
+            loadProgress();
+            showQuestion(0);
+          }
+        }
+      } catch (e) { }
+    })();
+  </script>
 </body>
+
 </html>
