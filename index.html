@@ -198,7 +198,10 @@
 
       <div style="margin-top:10px">
         <label class="small-muted">Or upload JSON</label>
-        <input id="fileInput" type="file" accept=".json" style="margin-top:6px" />
+        <input id="fileInput" type="file" accept=".json" style="margin-top:6px; margin-bottom:8px;" />
+        <div style="font-size: 13px;">
+          <a href="pdf-converter.html" style="color: var(--accent); text-decoration: none; font-weight: bold;">[+] Convert PDF to JSON Exam</a>
+        </div>
       </div>
 
       <div style="margin-top:12px">
@@ -215,6 +218,16 @@
           <label class="small-muted">End #</label>
           <input id="endRange" type="number" min="1" placeholder="Max" />
         </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <label class="small-muted">Specific IDs (comma separated)</label>
+        <input id="specificIds" type="text" placeholder="e.g. 9, 10, 14" class="select" style="margin-top:6px; margin-bottom:8px;" />
+        
+        <label style="display:flex; align-items:center; gap:8px; cursor:pointer; margin-top: 4px;" class="small-muted">
+          <input type="checkbox" id="multiSelectOnly" />
+          Only Multi-Select Questions
+        </label>
       </div>
 
       <div class="controls">
@@ -697,21 +710,38 @@
     function applyRange() {
       const startVal = parseInt(el('startRange').value) || 0;
       const endVal = parseInt(el('endRange').value) || Infinity;
+      const specificIdsStr = el('specificIds') ? el('specificIds').value.trim() : '';
+      const multiSelectOnly = el('multiSelectOnly') ? el('multiSelectOnly').checked : false;
 
       if (rawQuestions.length === 0) return true;
 
-      // Filter by strict ID matching FIRST for accurate filtering
-      questions = rawQuestions.filter(q => q.id >= startVal && q.id <= endVal);
+      // If specific IDs are provided, prioritize them
+      if (specificIdsStr) {
+        const specificIds = specificIdsStr.split(',').map(id => parseInt(id.trim())).filter(id => !isNaN(id));
+        if (specificIds.length > 0) {
+          questions = rawQuestions.filter(q => specificIds.includes(q.id));
+        } else {
+          questions = rawQuestions; // Fallback if invalid input
+        }
+      } else {
+        // Filter by strict ID matching FIRST for accurate filtering
+        questions = rawQuestions.filter(q => q.id >= startVal && q.id <= endVal);
 
-      // If ID-based filtering returned empty, fallback to array index slicing
-      if (questions.length === 0) {
-        const s = Math.max(0, startVal - 1);
-        const e = el('endRange').value ? Math.min(rawQuestions.length, endVal) : rawQuestions.length;
-        questions = rawQuestions.slice(s, e);
+        // If ID-based filtering returned empty, fallback to array index slicing
+        if (questions.length === 0) {
+          const s = Math.max(0, startVal - 1);
+          const e = el('endRange').value ? Math.min(rawQuestions.length, endVal) : rawQuestions.length;
+          questions = rawQuestions.slice(s, e);
+        }
+      }
+
+      // Apply Multi-Select filter
+      if (multiSelectOnly) {
+        questions = questions.filter(q => Array.isArray(q.correct) && q.correct.length > 1);
       }
 
       if (questions.length === 0) {
-        alert("No questions found in this range (Checked IDs " + startVal + " to " + endVal + "). Make sure the file loaded actually contains those question numbers.");
+        alert("No questions found serving these criteria.");
         return false;
       }
       return true;
