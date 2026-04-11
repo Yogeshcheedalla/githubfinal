@@ -233,6 +233,10 @@
           <input type="checkbox" id="multiSelectOnly" />
           Only Multi-Select Questions
         </label>
+        <label style="display:flex; align-items:center; gap:8px; cursor:pointer; margin-top: 4px;" class="small-muted">
+          <input type="checkbox" id="retestFlaggedOnly" />
+          Retest Flagged Only
+        </label>
       </div>
 
       <div class="controls">
@@ -732,6 +736,7 @@
       const endVal = parseInt(el('endRange').value) || Infinity;
       const specificIdsStr = el('specificIds') ? el('specificIds').value.trim() : '';
       const multiSelectOnly = el('multiSelectOnly') ? el('multiSelectOnly').checked : false;
+      const retestFlaggedOnly = el('retestFlaggedOnly') ? el('retestFlaggedOnly').checked : false;
 
       if (rawQuestions.length === 0) return true;
 
@@ -758,6 +763,11 @@
       // Apply Multi-Select filter
       if (multiSelectOnly) {
         questions = questions.filter(q => Array.isArray(q.correct) && q.correct.length > 1);
+      }
+
+      // Apply Flagged ONLY filter
+      if (retestFlaggedOnly) {
+        questions = questions.filter(q => reviewQuestions.includes(q.id));
       }
 
       if (questions.length === 0) {
