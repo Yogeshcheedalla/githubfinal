@@ -155,8 +155,13 @@
       background: rgba(239, 68, 68, 0.1); border-color: var(--danger); color: var(--danger); 
       text-shadow: 0 0 5px var(--danger);
     }
+    .qbtn.review { 
+      background: rgba(245, 158, 11, 0.1); border-color: #f59e0b; color: #f59e0b; 
+      text-shadow: 0 0 5px #f59e0b;
+    }
     [data-theme="dark"] .qbtn.correct { background: rgba(0, 255, 136, 0.05); }
     [data-theme="dark"] .qbtn.wrong { background: rgba(255, 0, 85, 0.05); }
+    [data-theme="dark"] .qbtn.review { background: rgba(245, 158, 11, 0.05); }
 
     .timer { font-size: 1.5rem; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; text-shadow: 0 0 8px rgba(0, 240, 255, 0.4); }
     
@@ -283,6 +288,7 @@
         <div class="center-actions" style="display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;">
           <button id="prevBtn" class="btn secondary">Previous</button>
           <button id="nextBtn" class="btn">Next</button>
+          <button id="markReviewBtn" class="btn secondary">Flag for Review</button>
           <button id="clearAnswerBtn" class="btn secondary">Clear Selection</button>
           <button id="showAnswerBtn" class="btn secondary">Show Answer</button>
           <button id="finishBtn" class="finish btn">Finish & Grade</button>
@@ -317,6 +323,8 @@
             style="width:30px;height:30px;border-radius:6px"></button> Correct</div>
         <div class="small-muted"><button class="qbtn wrong"
             style="width:30px;height:30px;border-radius:6px"></button> Incorrect</div>
+        <div class="small-muted"><button class="qbtn review"
+            style="width:30px;height:30px;border-radius:6px"></button> Review</div>
       </div>
 
       <div class="footer">
@@ -347,6 +355,7 @@
     let questions = [];
     let rawQuestions = []; // Store original data for range selection
     let answers = {};
+    let reviewQuestions = [];
     let currentIndex = 0;
     let timer = null;
     let timeLeft = 0;
@@ -420,6 +429,10 @@
             btn.classList.add('wrong');
           }
         }
+        
+        if (reviewQuestions.includes(q.id)) {
+          btn.classList.add('review');
+        }
       }
     }
 
@@ -482,6 +495,11 @@
       if (btn) {
         btn.setAttribute('data-revealed', 'false');
         btn.textContent = 'Show Answer';
+      }
+
+      const reviewBtn = el('markReviewBtn');
+      if (reviewBtn) {
+        reviewBtn.textContent = reviewQuestions.includes(q.id) ? 'Unflag Review' : 'Flag for Review';
       }
 
       updateCounts();
@@ -577,7 +595,7 @@
     /* --- Save / load progress --- */
     function saveProgress() {
       try {
-        localStorage.setItem(LS_KEY, JSON.stringify({ answers, currentIndex }));
+        localStorage.setItem(LS_KEY, JSON.stringify({ answers, currentIndex, reviewQuestions }));
       } catch (e) {
         console.warn('save failed', e);
       }
@@ -590,6 +608,7 @@
         const parsed = JSON.parse(raw);
         answers = parsed.answers || {};
         currentIndex = parsed.currentIndex || 0;
+        reviewQuestions = parsed.reviewQuestions || [];
       } catch (e) { console.warn('load progress failed', e); }
     }
 
@@ -685,6 +704,7 @@
     function resetAll() {
       if (confirm('Reset progress and answers?')) {
         answers = {};
+        reviewQuestions = [];
         currentIndex = 0;
         saveProgress();
         renderGrid();
@@ -948,6 +968,23 @@
         opt.style.boxShadow = 'none';
       });
     });
+
+    el('markReviewBtn').addEventListener('click', () => {
+      const q = questions[currentIndex];
+      if (!q) return;
+
+      const idx = reviewQuestions.indexOf(q.id);
+      if (idx > -1) {
+        reviewQuestions.splice(idx, 1);
+        el('markReviewBtn').textContent = 'Flag for Review';
+      } else {
+        reviewQuestions.push(q.id);
+        el('markReviewBtn').textContent = 'Unflag Review';
+      }
+      saveProgress();
+      updateCounts();
+    });
+
     el('showAnswerBtn').addEventListener('click', toggleCorrectAnswer);
     el('finishBtn').addEventListener('click', () => {
       if (confirm('Finish and grade the test?')) finishAndGrade();
