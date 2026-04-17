@@ -714,13 +714,6 @@
 
         wrapper.appendChild(input);
         wrapper.appendChild(textWrap);
-
-        wrapper.onclick = e => {
-          if (e.target.tagName === 'INPUT') return;
-          input.checked = !input.checked;
-          input.dispatchEvent(new Event('change'));
-        };
-
         opts.appendChild(wrapper);
       }
 
