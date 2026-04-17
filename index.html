@@ -1262,10 +1262,15 @@
 
     /* --- Keyboard Shortcuts --- */
     window.addEventListener('keydown', e => {
-      // Don't navigate if user is typing in an input, select, or textarea
+      // Don't navigate if user is typing in a text field, number field, or select
       const active = document.activeElement;
-      const isInput = active && (active.tagName === 'INPUT' || active.tagName === 'SELECT' || active.tagName === 'TEXTAREA');
-      if (isInput) return;
+      const isTextEntry = active && (
+        (active.tagName === 'INPUT' && !['radio', 'checkbox'].includes(active.type)) || 
+        active.tagName === 'SELECT' || 
+        active.tagName === 'TEXTAREA'
+      );
+      
+      if (isTextEntry) return;
 
       if (qArea.style.display === 'block') {
         if (e.key === 'Enter' || e.key === 'ArrowRight') {
