@@ -1197,6 +1197,14 @@
       // Re-apply range in case user changed it after loading
       if (!applyRange()) return;
 
+      // FIX: If Retest Flagged is enabled, clear answers for THESE questions to start fresh
+      if (el('retestFlaggedOnly') && el('retestFlaggedOnly').checked) {
+        questions.forEach(q => {
+          delete answers[q.id];
+        });
+        saveProgress();
+      }
+
       const mins = Number(el('timerInput').value) || 0;
       startTimer(mins);
       showQuestion(0);
