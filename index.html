@@ -903,7 +903,7 @@
         const actual = (q.correct || []).slice().sort();
         const isCorrect = JSON.stringify(user) === JSON.stringify(actual);
         if (isCorrect) correct++;
-        return { id: q.id, question: q.question, user, actual, correct: isCorrect };
+        return { id: q.id, question: q.question, user, actual, correct: isCorrect, options: q.options };
       });
 
       qArea.style.display = 'none';
@@ -914,12 +914,15 @@
       <div class="small-muted">Score</div>
       <div style="margin-top:10px">
         <button id="showDetails" class="btn secondary">Show Details</button>
-        <button id="downloadDetails" class="btn">Download JSON</button>
+        <button id="downloadDetails" class="btn secondary">Download JSON</button>
+        <button id="downloadPdfResults" class="btn">Download PDF</button>
       </div>
     </div>
   `;
 
       el('showDetails').onclick = () => showDetails(details);
+
+      el('downloadPdfResults').onclick = () => downloadResultsPDF(details, correct, total);
 
       el('downloadDetails').onclick = () => {
         const blob = new Blob([JSON.stringify({ score: correct, total, details }, null, 2)], { type: 'application/json' });
@@ -935,22 +938,34 @@
     }
 
     function showDetails(details) {
-      const out = details.map((d, i) => `
-    <div style="padding:10px;border-bottom:1px solid #f1f5f9">
-      <strong>Q${i + 1}:</strong> ${d.question}<br/>
-      <strong>Your:</strong> ${d.user.join(', ') || '—'} 
-      <strong>Correct:</strong> ${d.actual.join(', ')} 
-      <span style="color:${d.correct ? 'var(--success)' : 'var(--danger)'}">
-        [${d.correct ? 'OK' : 'WRONG'}]
-      </span>
-    </div>
-  `).join('');
+      const out = details.map((d, i) => {
+        const userText = d.user.map(key => `${key}. ${d.options[key] || ''}`).join('; ') || '—';
+        const actualText = d.actual.map(key => `${key}. ${d.options[key] || ''}`).join('; ');
+
+        return `
+          <div style="padding:15px; border-bottom:1px solid var(--border); background: ${d.correct ? 'rgba(16, 185, 129, 0.05)' : 'rgba(239, 68, 68, 0.05)'}">
+            <div style="margin-bottom:8px"><strong>Q${i + 1}:</strong> ${d.question}</div>
+            <div style="font-size: 0.9em; margin-bottom:4px">
+              <strong style="color:var(--muted)">Your Answer:</strong> ${userText}
+            </div>
+            <div style="font-size: 0.9em; margin-bottom:8px">
+              <strong style="color:var(--success)">Correct Answer:</strong> ${actualText}
+            </div>
+            <div style="font-weight:bold; color:${d.correct ? 'var(--success)' : 'var(--danger)'}">
+              ${d.correct ? '✓ Correct' : '✗ Incorrect'}
+            </div>
+          </div>
+        `;
+      }).join('');
 
       resultArea.innerHTML = `
-    <div class="card" style="padding:12px;max-height:520px;overflow:auto">
+    <div class="card" style="padding:0; max-height:600px; overflow:auto">
+      <div style="padding:20px; border-bottom:1px solid var(--border); font-weight:bold; font-size:1.1em; background:var(--card); position:sticky; top:0; z-index:1">
+        Detailed Results
+      </div>
       ${out}
-      <div style="margin-top:12px">
-        <button id="backToScore" class="btn secondary">Back</button>
+      <div style="padding:20px; border-top:1px solid var(--border)">
+        <button id="backToScore" class="btn secondary">Back to Score</button>
       </div>
     </div>
   `;
@@ -1047,6 +1062,74 @@
       });
 
       doc.save("flagged_questions.pdf");
+    }
+
+    function downloadResultsPDF(details, score, total) {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      let y = 15;
+      const margin = 15;
+      const pageWidth = doc.internal.pageSize.width;
+      const maxWidth = pageWidth - (margin * 2);
+
+      const stripHtml = html => {
+        const d = new DOMParser().parseFromString(html, 'text/html');
+        return d.body.textContent || "";
+      };
+
+      // Header
+      doc.setFontSize(22);
+      doc.setFont("helvetica", "bold");
+      doc.text("Exam Performance Report", margin, y);
+      y += 12;
+
+      doc.setFontSize(14);
+      doc.text(`Final Score: ${score} / ${total} (${Math.round((score / total) * 100)}%)`, margin, y);
+      y += 8;
+
+      doc.setFontSize(10);
+      doc.setFont("helvetica", "normal");
+      doc.text(`Generated on: ${new Date().toLocaleString()}`, margin, y);
+      y += 15;
+
+      details.forEach((d, index) => {
+        if (y > 250) { doc.addPage(); y = 15; }
+
+        // Question Number & Status
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(d.correct ? 16 : 239, d.correct ? 185 : 68, d.correct ? 129 : 68);
+        doc.text(`Q${index + 1}: ${d.correct ? "[CORRECT]" : "[INCORRECT]"}`, margin, y);
+        doc.setTextColor(0, 0, 0);
+        y += 6;
+
+        // Question Text
+        doc.setFont("helvetica", "normal");
+        const lines = doc.splitTextToSize(stripHtml(d.question), maxWidth);
+        doc.text(lines, margin, y);
+        y += (lines.length * 5) + 2;
+
+        // User Answer
+        const userText = d.user.map(key => `${key}. ${d.options[key] || ''}`).join('; ') || '—';
+        doc.setFont("helvetica", "bold");
+        doc.text("Your Answer:", margin, y);
+        doc.setFont("helvetica", "normal");
+        const userLines = doc.splitTextToSize(userText, maxWidth - 25);
+        doc.text(userLines, margin + 25, y);
+        y += (userLines.length * 5) + 2;
+
+        // Correct Answer
+        const actualText = d.actual.map(key => `${key}. ${d.options[key] || ''}`).join('; ');
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(16, 185, 129);
+        doc.text("Correct:", margin, y);
+        doc.setFont("helvetica", "normal");
+        const actualLines = doc.splitTextToSize(actualText, maxWidth - 25);
+        doc.text(actualLines, margin + 25, y);
+        doc.setTextColor(0, 0, 0);
+        y += (actualLines.length * 5) + 10;
+      });
+
+      doc.save("exam_results_report.pdf");
     }
 
     /* --- Range Application --- */
