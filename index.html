@@ -1301,6 +1301,7 @@
             el('previewArea').style.display = 'none';
             qArea.style.display = 'block';
             el('resultArea').style.display = 'none';
+            el('resultArea').innerHTML = '';
 
             loadProgress();
             renderGrid();
@@ -1329,6 +1330,7 @@
         previewArea.style.display = 'none';
         qArea.style.display = 'block';
         resultArea.style.display = 'none';
+        resultArea.innerHTML = '';
 
         loadProgress();
         renderGrid();
@@ -1361,6 +1363,7 @@
       showQuestion(0);
       previewArea.style.display = 'none';
       resultArea.style.display = 'none';
+      resultArea.innerHTML = '';
       renderGrid(); // Ensure grid matches current range
     });
 
