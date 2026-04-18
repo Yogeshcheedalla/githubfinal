@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Practice Exam — GH-300 Style</title>
+  <title>Online Practice Exam</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <style>
     :root {
       /* Light Theme (Default) */
@@ -393,8 +393,12 @@
     }
 
     @keyframes successFlash {
-      0% { background: var(--success); color: white; }
-      100% { }
+      0% {
+        background: var(--success);
+        color: white;
+      }
+
+      100% {}
     }
 
     .success-flash {
@@ -410,7 +414,7 @@
         <div class="brand">
           <div class="logo"></div>
           <div>
-            <div class="h2">GH-300 Test</div>
+            <div class="h2">Online Practice Exam</div>
             <div class="small">Azure/AWS Style</div>
           </div>
         </div>
@@ -481,6 +485,7 @@
       <div style="margin-top:12px" class="panel-title">Actions</div>
       <div class="controls">
         <button id="exportBtn" class="export-btn">Export Results</button>
+        <button id="downloadFlaggedBtn" class="export-btn">Download Flagged PDF</button>
         <button id="resetBtn" class="btn secondary">Reset</button>
       </div>
 
@@ -511,7 +516,8 @@
             <div><strong id="qNumber">Question 1</strong> <span class="small-muted" id="qInstruction"></span></div>
             <div class="small-muted" id="qType"></div>
           </div>
-          <button id="copyQuestionBtn" class="btn secondary" style="padding: 6px 12px; font-size: 13px; height: auto;">📋 Copy Question</button>
+          <button id="copyQuestionBtn" class="btn secondary"
+            style="padding: 6px 12px; font-size: 13px; height: auto;">📋 Copy Question</button>
         </div>
 
         <div id="qText" class="qtext"></div>
@@ -981,6 +987,68 @@
       URL.revokeObjectURL(url);
     }
 
+    /* --- PDF Export --- */
+    function downloadFlaggedPDF() {
+      if (reviewQuestions.length === 0) {
+        alert("No flagged questions to download.");
+        return;
+      }
+
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      let y = 15;
+      const margin = 15;
+      const pageWidth = doc.internal.pageSize.width;
+      const maxWidth = pageWidth - (margin * 2);
+
+      const stripHtml = html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        return doc.body.textContent || "";
+      };
+
+      doc.setFontSize(18);
+      doc.text("Flagged Questions & Answers", margin, y);
+      y += 10;
+      doc.setFontSize(10);
+      doc.text(`Generated on: ${new Date().toLocaleString()}`, margin, y);
+      y += 10;
+
+      reviewQuestions.forEach((id, index) => {
+        const q = rawQuestions.find(it => it.id === id);
+        if (!q) return;
+
+        if (y > 270) { doc.addPage(); y = 15; }
+
+        doc.setFont("helvetica", "bold");
+        const header = `Question ${index + 1} (ID: ${q.id})`;
+        doc.text(header, margin, y);
+        y += 6;
+
+        doc.setFont("helvetica", "normal");
+        const lines = doc.splitTextToSize(stripHtml(q.question), maxWidth);
+        doc.text(lines, margin, y);
+        y += (lines.length * 5) + 2;
+
+        for (const [key, val] of Object.entries(q.options || {})) {
+          if (y > 270) { doc.addPage(); y = 15; }
+          const optText = `${key}. ${stripHtml(val)}`;
+          const optLines = doc.splitTextToSize(optText, maxWidth - 5);
+          doc.text(optLines, margin + 5, y);
+          y += (optLines.length * 5);
+        }
+
+        y += 2;
+        if (y > 270) { doc.addPage(); y = 15; }
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(16, 185, 129); // Success color
+        doc.text(`Correct Answer: ${q.correct.join(', ')}`, margin, y);
+        doc.setTextColor(0, 0, 0); // Reset
+        y += 15;
+      });
+
+      doc.save("flagged_questions.pdf");
+    }
+
     /* --- Range Application --- */
     function applyRange() {
       const startVal = parseInt(el('startRange').value) || 0;
@@ -1263,6 +1331,7 @@
       if (confirm('Finish and grade the test?')) finishAndGrade();
     });
     el('exportBtn').addEventListener('click', exportResults);
+    el('downloadFlaggedBtn').addEventListener('click', downloadFlaggedPDF);
     el('resetBtn').addEventListener('click', resetAll);
     el('jumpFirst').addEventListener('click', () => showQuestion(0));
 
@@ -1273,11 +1342,11 @@
       // Don't navigate if user is typing in a text field, number field, or select
       const active = document.activeElement;
       const isTextEntry = active && (
-        (active.tagName === 'INPUT' && !['radio', 'checkbox'].includes(active.type)) || 
-        active.tagName === 'SELECT' || 
+        (active.tagName === 'INPUT' && !['radio', 'checkbox'].includes(active.type)) ||
+        active.tagName === 'SELECT' ||
         active.tagName === 'TEXTAREA'
       );
-      
+
       if (isTextEntry) return;
 
       if (qArea.style.display === 'block') {
