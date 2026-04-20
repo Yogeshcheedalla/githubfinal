@@ -278,6 +278,23 @@
       box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
     }
 
+    /* Feedback Classes - Immune to Hover overrides */
+    .option.correct-ans,
+    .option.correct-ans:hover {
+      border-color: var(--success) !important;
+      background: rgba(16, 185, 129, 0.1) !important;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.2) !important;
+      color: var(--success) !important;
+    }
+
+    .option.wrong-ans,
+    .option.wrong-ans:hover {
+      border-color: var(--danger) !important;
+      background: rgba(239, 68, 68, 0.1) !important;
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.2) !important;
+      color: var(--danger) !important;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
@@ -585,8 +602,12 @@
       </div>
 
       <div style="margin-top:14px" class="panel-title">Focus Mode</div>
-      <button id="focusToggleBtn" class="btn secondary" style="width:100%; margin-top:6px;" title="Enter distraction-free full-screen exam mode (F)">⛶ Enter Focus Mode</button>
-      <div style="font-size:11px; color:var(--muted); margin-top:5px;">Press <kbd style="border:1px solid var(--border);border-radius:4px;padding:1px 5px;background:var(--bg);">F</kbd> or <kbd style="border:1px solid var(--border);border-radius:4px;padding:1px 5px;background:var(--bg);">Esc</kbd> to toggle</div>
+      <button id="focusToggleBtn" class="btn secondary" style="width:100%; margin-top:6px;"
+        title="Enter distraction-free full-screen exam mode (F)">⛶ Enter Focus Mode</button>
+      <div style="font-size:11px; color:var(--muted); margin-top:5px;">Press <kbd
+          style="border:1px solid var(--border);border-radius:4px;padding:1px 5px;background:var(--bg);">F</kbd> or <kbd
+          style="border:1px solid var(--border);border-radius:4px;padding:1px 5px;background:var(--bg);">Esc</kbd> to
+        toggle</div>
 
     </div>
 
@@ -830,43 +851,42 @@
       }
 
       updateCounts();
+
+      // Show immediate feedback if answer exists
+      if (answers[q.id] && answers[q.id].length > 0) {
+        markInstantResult(q);
+      }
     }
 
     /* -------------------------------------
        ⭐ NEW FUNCTION: Mark correct / wrong
     -------------------------------------- */
     function markInstantResult(q) {
-
       const opts = document.querySelectorAll('#options .option');
       const correctSet = new Set(q.correct);
 
       opts.forEach(opt => {
-
         const key = opt.getAttribute('data-key');
         const input = opt.querySelector('input');
 
-        // Reset first
-        opt.style.borderColor = 'var(--border)';
-        opt.style.background = 'var(--bg)';
-        opt.style.color = 'var(--text)';
+        // Reset: Remove all feedback classes
+        opt.classList.remove('correct-ans', 'wrong-ans');
+        
+        // Clear any old inline manual style overrides
+        opt.style.borderColor = '';
+        opt.style.background = '';
+        opt.style.color = '';
+        opt.style.boxShadow = '';
 
-        // If user selected this option
+        // If this specific option is checked, apply the relevant feedback color
         if (input.checked) {
           if (correctSet.has(key)) {
-            opt.style.borderColor = 'var(--success)';
-            opt.style.background = 'rgba(16, 185, 129, 0.1)';
-            opt.style.boxShadow = '0 0 10px rgba(16, 185, 129, 0.2)';
+            opt.classList.add('correct-ans');
           } else {
-            opt.style.borderColor = 'var(--danger)';
-            opt.style.background = 'rgba(239, 68, 68, 0.1)';
-            opt.style.boxShadow = '0 0 10px rgba(239, 68, 68, 0.2)';
+            opt.classList.add('wrong-ans');
           }
-        } else {
-          opt.style.boxShadow = 'none';
         }
-
       });
-
     }
 
     function toggleCorrectAnswer() {
@@ -1481,13 +1501,7 @@
         btn.textContent = 'Show Answer';
       }
 
-      const opts = document.querySelectorAll('#options .option');
-      opts.forEach(opt => {
-        opt.style.borderColor = 'var(--border)';
-        opt.style.background = 'var(--bg)';
-        opt.style.color = 'var(--text)';
-        opt.style.boxShadow = 'none';
-      });
+      markInstantResult(q);
     });
 
     el('markReviewBtn').addEventListener('click', () => {
@@ -1521,7 +1535,7 @@
     /* --- Focus Mode --- */
     function enterFocusMode() {
       document.body.classList.add('focus-mode');
-      document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => {});
+      document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => { });
       el('focusToggleBtn').textContent = '⛶ Exit Focus Mode';
       el('focusToggleBtn').classList.add('active-focus');
       localStorage.setItem('exam_focus_mode', '1');
