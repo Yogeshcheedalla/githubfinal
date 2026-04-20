@@ -769,10 +769,16 @@
 
       for (let i = 0; i < grid.length; i++) {
         const q = questions[i];
-        const user = (answers[q.id] || []).slice().sort();
-        const actual = (q.correct || []).slice().sort();
+        if (!q) continue;
+
+        // Defensive check: Ensure user selection is an array
+        const user = Array.isArray(answers[q.id]) ? [...answers[q.id]].sort() : [];
+        
+        // Defensive check: Ensure correct answer is an array
+        const actual = Array.isArray(q.correct) ? [...q.correct].sort() : (q.correct ? [q.correct].sort() : []);
+        
         const isAnswered = user.length > 0;
-        const isCorrect = JSON.stringify(user) === JSON.stringify(actual);
+        const isCorrect = isAnswered && JSON.stringify(user) === JSON.stringify(actual);
         const btn = grid[i];
 
         btn.className = 'qbtn';
@@ -816,10 +822,7 @@
         wrapper.className = 'option';
         wrapper.setAttribute('data-key', key);
 
-        /* RESET default border/background */
-        wrapper.style.borderColor = 'var(--border)';
-        wrapper.style.background = 'var(--bg)';
-        wrapper.style.color = 'var(--text)';
+        /* Defaults handled by CSS class .option */
 
         const input = document.createElement('input');
         input.type = multiple ? 'checkbox' : 'radio';
@@ -862,8 +865,15 @@
        ⭐ NEW FUNCTION: Mark correct / wrong
     -------------------------------------- */
     function markInstantResult(q) {
+      if (!q) return;
       const opts = document.querySelectorAll('#options .option');
-      const correctSet = new Set(q.correct);
+      
+      // Defensive check: Ensure correct answer is a Set
+      const actualArr = Array.isArray(q.correct) ? q.correct : (q.correct ? [q.correct] : []);
+      const correctSet = new Set(actualArr);
+      
+      const userAnswer = answers[q.id] || [];
+      const hasAnswered = userAnswer.length > 0;
 
       opts.forEach(opt => {
         const key = opt.getAttribute('data-key');
@@ -878,12 +888,18 @@
         opt.style.color = '';
         opt.style.boxShadow = '';
 
-        // If this specific option is checked, apply the relevant feedback color
-        if (input.checked) {
-          if (correctSet.has(key)) {
-            opt.classList.add('correct-ans');
-          } else {
-            opt.classList.add('wrong-ans');
+        if (hasAnswered) {
+          const isSelected = userAnswer.includes(key);
+          const isCorrect = correctSet.has(key);
+
+          if (isSelected) {
+            if (isCorrect) {
+              // Highlight picked correct answer green
+              opt.classList.add('correct-ans');
+            } else {
+              // Highlight picked wrong selection red
+              opt.classList.add('wrong-ans');
+            }
           }
         }
       });
@@ -901,20 +917,24 @@
       if (isRevealed) {
         btn.setAttribute('data-revealed', 'false');
         btn.textContent = 'Show Answer';
+        // Restore based on user's current choice
         markInstantResult(q);
       } else {
         btn.setAttribute('data-revealed', 'true');
         btn.textContent = 'Hide Answer';
 
         const opts = document.querySelectorAll('#options .option');
-        const correctSet = new Set(q.correct);
+        const actualArr = Array.isArray(q.correct) ? q.correct : (q.correct ? [q.correct] : []);
+        const correctSet = new Set(actualArr);
 
         opts.forEach(opt => {
           const key = opt.getAttribute('data-key');
           if (correctSet.has(key)) {
-            opt.style.borderColor = 'var(--success)';
-            opt.style.background = 'rgba(16, 185, 129, 0.15)';
-            opt.style.boxShadow = '0 0 10px rgba(16, 185, 129, 0.3)';
+            // Use classes for consistency
+            opt.classList.add('correct-ans');
+          } else {
+            // Optionally clear others if revealed
+            opt.classList.remove('correct-ans', 'wrong-ans');
           }
         });
       }
