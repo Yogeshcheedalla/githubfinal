@@ -773,10 +773,10 @@
 
         // Defensive check: Ensure user selection is an array
         const user = Array.isArray(answers[q.id]) ? [...answers[q.id]].sort() : [];
-        
+
         // Defensive check: Ensure correct answer is an array
         const actual = Array.isArray(q.correct) ? [...q.correct].sort() : (q.correct ? [q.correct].sort() : []);
-        
+
         const isAnswered = user.length > 0;
         const isCorrect = isAnswered && JSON.stringify(user) === JSON.stringify(actual);
         const btn = grid[i];
@@ -867,11 +867,11 @@
     function markInstantResult(q) {
       if (!q) return;
       const opts = document.querySelectorAll('#options .option');
-      
+
       // Defensive check: Ensure correct answer is a Set
       const actualArr = Array.isArray(q.correct) ? q.correct : (q.correct ? [q.correct] : []);
       const correctSet = new Set(actualArr);
-      
+
       const userAnswer = answers[q.id] || [];
       const hasAnswered = userAnswer.length > 0;
 
@@ -881,7 +881,7 @@
 
         // Reset: Remove all feedback classes
         opt.classList.remove('correct-ans', 'wrong-ans');
-        
+
         // Clear any old inline manual style overrides
         opt.style.borderColor = '';
         opt.style.background = '';
@@ -1555,7 +1555,6 @@
     /* --- Focus Mode --- */
     function enterFocusMode() {
       document.body.classList.add('focus-mode');
-      document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => { });
       el('focusToggleBtn').textContent = '⛶ Exit Focus Mode';
       el('focusToggleBtn').classList.add('active-focus');
       localStorage.setItem('exam_focus_mode', '1');
@@ -1563,7 +1562,6 @@
 
     function exitFocusMode() {
       document.body.classList.remove('focus-mode');
-      if (document.fullscreenElement) document.exitFullscreen && document.exitFullscreen();
       el('focusToggleBtn').textContent = '⛶ Enter Focus Mode';
       el('focusToggleBtn').classList.remove('active-focus');
       localStorage.setItem('exam_focus_mode', '0');
@@ -1579,12 +1577,6 @@
 
     el('focusToggleBtn').addEventListener('click', toggleFocusMode);
     el('focusExitBtn').addEventListener('click', exitFocusMode);
-
-    document.addEventListener('fullscreenchange', () => {
-      if (!document.fullscreenElement && document.body.classList.contains('focus-mode')) {
-        exitFocusMode();
-      }
-    });
 
     /* --- Keyboard Shortcuts --- */
     window.addEventListener('keydown', e => {
