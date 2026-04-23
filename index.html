@@ -272,10 +272,16 @@
       transition: all 0.2s;
     }
 
-    .option:hover {
+    .option:hover,
+    .option.focused {
       border-color: var(--accent);
       background: var(--card);
       box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+    }
+
+    .option.focused {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
     }
 
     /* Feedback Classes - Immune to Hover overrides */
@@ -712,6 +718,7 @@
     let answers = {};
     let reviewQuestions = [];
     let currentIndex = 0;
+    let focusedOptionIndex = -1;
     let timer = null;
     let timeLeft = 0;
     let currentZoom = 1;
@@ -802,6 +809,7 @@
     function showQuestion(index) {
       if (!questions.length) return;
       currentIndex = Math.max(0, Math.min(index, questions.length - 1));
+      focusedOptionIndex = -1; // Reset focus when question changes
       const q = questions[currentIndex];
 
       qArea.style.display = 'block';
@@ -839,6 +847,13 @@
 
         wrapper.appendChild(input);
         wrapper.appendChild(textWrap);
+
+        // Sync focus on mouse enter
+        wrapper.addEventListener('mouseenter', () => {
+          focusedOptionIndex = Array.from(opts.children).indexOf(wrapper);
+          updateOptionFocus();
+        });
+
         opts.appendChild(wrapper);
       }
 
@@ -859,6 +874,18 @@
       if (answers[q.id] && answers[q.id].length > 0) {
         markInstantResult(q);
       }
+    }
+
+    function updateOptionFocus() {
+      const options = document.querySelectorAll('#options .option');
+      options.forEach((opt, i) => {
+        if (i === focusedOptionIndex) {
+          opt.classList.add('focused');
+          opt.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else {
+          opt.classList.remove('focused');
+        }
+      });
     }
 
     /* -------------------------------------
@@ -1603,7 +1630,23 @@
       }
 
       if (qArea.style.display === 'block') {
-        if (e.key === 'Enter' || e.key === 'ArrowRight') {
+        const options = document.querySelectorAll('#options .option');
+        if (e.key === 'ArrowDown') {
+          focusedOptionIndex = (focusedOptionIndex + 1) % options.length;
+          updateOptionFocus();
+          e.preventDefault();
+        } else if (e.key === 'ArrowUp') {
+          if (focusedOptionIndex <= 0) focusedOptionIndex = options.length - 1;
+          else focusedOptionIndex--;
+          updateOptionFocus();
+          e.preventDefault();
+        } else if (e.key === 'Enter') {
+          if (focusedOptionIndex >= 0 && focusedOptionIndex < options.length) {
+            options[focusedOptionIndex].querySelector('input').click();
+          } else {
+            showQuestion(currentIndex + 1);
+          }
+        } else if (e.key === 'ArrowRight') {
           showQuestion(currentIndex + 1);
         } else if (e.key === 'ArrowLeft') {
           showQuestion(currentIndex - 1);
